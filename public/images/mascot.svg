@@ -1,0 +1,15 @@
+<svg width="220" height="220" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mascotte renard souriant">
+  <circle cx="110" cy="110" r="100" fill="#FFE7BA"/>
+  <ellipse cx="110" cy="130" rx="70" ry="58" fill="#FFB347"/>
+  <ellipse cx="110" cy="145" rx="45" ry="34" fill="#FFF7E6"/>
+  <path d="M56 90L80 48L96 92Z" fill="#FF8F00"/>
+  <path d="M164 90L140 48L124 92Z" fill="#FF8F00"/>
+  <path d="M83 84L93 64L101 85Z" fill="#FFD08A"/>
+  <path d="M137 84L127 64L119 85Z" fill="#FFD08A"/>
+  <circle cx="85" cy="114" r="8" fill="#1E2A32"/>
+  <circle cx="135" cy="114" r="8" fill="#1E2A32"/>
+  <circle cx="110" cy="128" r="6" fill="#1E2A32"/>
+  <path d="M92 148C99 157 121 157 128 148" stroke="#1E2A32" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <circle cx="70" cy="130" r="8" fill="#FF8FA3" opacity="0.7"/>
+  <circle cx="150" cy="130" r="8" fill="#FF8FA3" opacity="0.7"/>
+</svg>

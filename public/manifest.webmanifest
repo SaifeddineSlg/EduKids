@@ -1,0 +1,16 @@
+{
+  "name": "App Educative Kids",
+  "short_name": "EduKids",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff7e6",
+  "theme_color": "#ff8f00",
+  "description": "Apprendre en s amusant avec un parcours adaptatif pour enfants.",
+  "icons": [
+    {
+      "src": "/images/mascot.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
