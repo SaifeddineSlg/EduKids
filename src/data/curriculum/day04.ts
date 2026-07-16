@@ -120,21 +120,21 @@ export const day04: DayCurriculum = {
     {
       subjectId: "orthographe",
       status: "ready",
-      title: "ou ou : le test avec ou bien",
+      title: "ou ou où : le test avec ou bien",
       xpReward: 24,
       story: {
-        hook: "Encore un petit test magique, cette fois pour ou et ou.",
-        concreteExample: "Regarde: Tu veux du jus ... de l eau ? Est-ce que c est ou ou ou ?",
+        hook: "Encore un petit test magique, cette fois pour ou et où.",
+        concreteExample: "Regarde: Tu veux du jus ... de l eau ? Est-ce que c est ou ou où ?",
         reveal: "On essaie de remplacer par ou bien : Tu veux du jus ou bien de l eau ? Ca fonctionne ! Donc on ecrit ou sans accent (un choix). Bravo !",
-        bridgeToConcept: "Si ou bien fonctionne, on ecrit ou sans accent (un choix). Sinon, ou avec accent indique un lieu (ou est-il ?).",
+        bridgeToConcept: "Si ou bien fonctionne, on ecrit ou sans accent (un choix). Sinon, on ecrit où avec accent, ca indique un lieu (où est-il ?).",
         illustrationEmoji: "🪄"
       },
       examples: [
         {
-          title: "Exemple 1 : Ou habites-tu ?",
+          title: "Exemple 1 : Où habites-tu ?",
           steps: [
             { text: "On essaie ou bien : Ou bien habites-tu ? Ca ne fonctionne pas.", illustrationEmoji: "🚫" },
-            { text: "Donc on ecrit ou avec accent (un lieu).", illustrationEmoji: "✅" }
+            { text: "Donc on ecrit où avec accent (un lieu).", illustrationEmoji: "✅" }
           ]
         },
         {
@@ -146,12 +146,12 @@ export const day04: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complete: Tu veux un chat ___ un chien ? (ou/ou)", answer: "ou", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "un chat ou bien un chien fonctionne, donc ou sans accent." },
-        { order: 2, prompt: "Complete: ___ vas-tu ce week-end ? (ou/ou)", answer: "où", kindWhenWrong: "Pas grave 😊 On regarde ca ensemble.", explanationWhenWrong: "ou bien vas-tu ne fonctionne pas, donc ou avec accent (lieu)." },
-        { order: 3, prompt: "Complete: Je ne sais pas ___ j ai range mes cles. (ou/ou)", answer: "où", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "ca parle d un lieu, donc ou avec accent." },
-        { order: 4, prompt: "Complete: Tu preferes le rouge ___ le bleu ? (ou/ou)", answer: "ou", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "le rouge ou bien le bleu fonctionne, donc ou sans accent." },
-        { order: 5, prompt: "Complete: Dis-moi ___ se trouve la sortie. (ou/ou)", answer: "où", kindWhenWrong: "Ce n est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "ca parle d un lieu, donc ou avec accent." },
-        { order: 6, prompt: "Defi : complete les deux mots. ___ veux-tu aller, a la mer ___ a la montagne ?", answer: "où ou", kindWhenWrong: "Bravo d avoir essaye ce defi 😊 Regardons ensemble.", explanationWhenWrong: "Ou veux-tu (lieu, avec accent) et a la mer ou bien a la montagne (choix, sans accent)." }
+        { order: 1, prompt: "Complete: Tu veux un chat ___ un chien ? (ou/où)", answer: "ou", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "un chat ou bien un chien fonctionne, donc ou sans accent." },
+        { order: 2, prompt: "Complete: ___ vas-tu ce week-end ? (ou/où)", answer: "où", kindWhenWrong: "Pas grave 😊 On regarde ca ensemble.", explanationWhenWrong: "ou bien vas-tu ne fonctionne pas, donc où avec accent (lieu)." },
+        { order: 3, prompt: "Complete: Je ne sais pas ___ j ai range mes cles. (ou/où)", answer: "où", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "ca parle d un lieu, donc où avec accent." },
+        { order: 4, prompt: "Complete: Tu preferes le rouge ___ le bleu ? (ou/où)", answer: "ou", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "le rouge ou bien le bleu fonctionne, donc ou sans accent." },
+        { order: 5, prompt: "Complete: Dis-moi ___ se trouve la sortie. (ou/où)", answer: "où", kindWhenWrong: "Ce n est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "ca parle d un lieu, donc où avec accent." },
+        { order: 6, prompt: "Defi : complete les deux mots. ___ veux-tu aller, à la mer ___ à la montagne ?", answer: "où ou", kindWhenWrong: "Bravo d avoir essaye ce defi 😊 Regardons ensemble.", explanationWhenWrong: "Où veux-tu (lieu, avec accent) et à la mer ou bien à la montagne (choix, sans accent)." }
       ]
     },
     {

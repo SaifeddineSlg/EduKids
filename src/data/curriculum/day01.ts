@@ -235,21 +235,21 @@ export const day01: DayCurriculum = {
     {
       subjectId: "orthographe",
       status: "ready",
-      title: "a ou a : le petit test magique",
+      title: "a ou à : le petit test magique",
       xpReward: 24,
       story: {
         hook: "Imagine un petit test magique que tu peux faire dans ta tete pour ne jamais te tromper.",
-        concreteExample: "Regarde: Il ... un velo. Est-ce que c est a ou a ?",
+        concreteExample: "Regarde: Il ... un velo. Est-ce que c est a ou à ?",
         reveal: "On essaie de remplacer par avait : Il avait un velo, ca fonctionne ! Donc on ecrit a, sans accent, car c est le verbe avoir. Bravo, tu as reussi le test magique !",
-        bridgeToConcept: "Ce petit test s appelle le test avec avait. Si avait fonctionne, on ecrit a sans accent (le verbe avoir).",
+        bridgeToConcept: "Ce petit test s appelle le test avec avait. Si avait fonctionne, on ecrit a sans accent (le verbe avoir). Sinon, on ecrit à avec un accent.",
         illustrationEmoji: "🪄"
       },
       examples: [
         {
-          title: "Exemple 1 : Elle va a l ecole",
+          title: "Exemple 1 : Elle va à l ecole",
           steps: [
             { text: "On essaie avait : Elle va avait l ecole. Ca ne fonctionne pas.", illustrationEmoji: "🚫" },
-            { text: "Donc on ecrit a avec l accent (ca indique un lieu).", illustrationEmoji: "✅" }
+            { text: "Donc on ecrit à avec l accent (ca indique un lieu).", illustrationEmoji: "✅" }
           ]
         },
         {
@@ -263,35 +263,35 @@ export const day01: DayCurriculum = {
       questions: [
         {
           order: 1,
-          prompt: "Complete: Il ___ un chat. (a ou a)",
+          prompt: "Complete: Il ___ un chat. (a ou à)",
           answer: "a",
           kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.",
           explanationWhenWrong: "On peut dire il avait un chat, donc c est a sans accent (verbe avoir)."
         },
         {
           order: 2,
-          prompt: "Complete: Je vais ___ la piscine. (a ou a)",
+          prompt: "Complete: Je vais ___ la piscine. (a ou à)",
           answer: "à",
           kindWhenWrong: "Pas grave 😊 On regarde ca ensemble.",
-          explanationWhenWrong: "On ne peut pas dire je vais avait la piscine, donc c est a avec accent."
+          explanationWhenWrong: "On ne peut pas dire je vais avait la piscine, donc c est à avec accent."
         },
         {
           order: 3,
-          prompt: "Complete: Elle ___ mange a midi. (a ou a)",
+          prompt: "Complete: Elle ___ mange à midi. (a ou à)",
           answer: "a",
           kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.",
           explanationWhenWrong: "On peut dire elle avait mange, donc c est a sans accent."
         },
         {
           order: 4,
-          prompt: "Complete: Nous jouons ___ la maison. (a ou a)",
+          prompt: "Complete: Nous jouons ___ la maison. (a ou à)",
           answer: "à",
           kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.",
-          explanationWhenWrong: "On ne peut pas dire nous jouons avait la maison, donc c est a avec accent."
+          explanationWhenWrong: "On ne peut pas dire nous jouons avait la maison, donc c est à avec accent."
         },
         {
           order: 5,
-          prompt: "Complete: Mon frere ___ trouve un tresor. (a ou a)",
+          prompt: "Complete: Mon frere ___ trouve un tresor. (a ou à)",
           answer: "a",
           kindWhenWrong: "Ce n est pas grave 😊 On regarde ensemble.",
           explanationWhenWrong: "On peut dire mon frere avait trouve, donc c est a sans accent."
@@ -301,7 +301,7 @@ export const day01: DayCurriculum = {
           prompt: "Defi : complete les deux mots. Il ___ donne son ballon ___ son ami.",
           answer: "a à",
           kindWhenWrong: "Bravo d avoir essaye ce defi 😊 Regardons ensemble.",
-          explanationWhenWrong: "Il a donne (avait donne fonctionne) et a son ami (avait son ami ne fonctionne pas)."
+          explanationWhenWrong: "Il a donne (avait donne fonctionne) et à son ami (avait son ami ne fonctionne pas)."
         }
       ]
     },

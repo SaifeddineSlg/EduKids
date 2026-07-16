@@ -122,7 +122,7 @@ export const day05: DayCurriculum = {
       xpReward: 24,
       story: {
         hook: "Imagine une boite a outils avec tous tes petits tests magiques de la semaine : avait, etaient, etait, ou bien.",
-        concreteExample: "Cette semaine, tu as appris a tester a/a, son/sont, et/est, ou/ou.",
+        concreteExample: "Cette semaine, tu as appris a tester a/à, son/sont, et/est, ou/où.",
         reveal: "Chaque fois que tu hesites, tu peux utiliser le bon test dans ta tete. Bravo, ta boite a outils est complete !",
         bridgeToConcept: "Reviser l orthographe, c est se rappeler quel test utiliser pour chaque mot qui se ressemble.",
         illustrationEmoji: "🧰"
@@ -144,12 +144,12 @@ export const day05: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complete: Elle ___ une jolie robe. (a ou a)", answer: "a", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Elle avait une jolie robe fonctionne, donc a sans accent." },
-        { order: 2, prompt: "Complete: Nous allons ___ la plage. (a ou a)", answer: "à", kindWhenWrong: "Pas grave 😊 On regarde ca ensemble.", explanationWhenWrong: "avait ne fonctionne pas ici, donc a avec accent." },
+        { order: 1, prompt: "Complete: Elle ___ une jolie robe. (a ou à)", answer: "a", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Elle avait une jolie robe fonctionne, donc a sans accent." },
+        { order: 2, prompt: "Complete: Nous allons ___ la plage. (a ou à)", answer: "à", kindWhenWrong: "Pas grave 😊 On regarde ca ensemble.", explanationWhenWrong: "avait ne fonctionne pas ici, donc à avec accent." },
         { order: 3, prompt: "Complete: Mes cousins ___ arrives hier. (son ou sont)", answer: "sont", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Mes cousins etaient arrives fonctionne, donc sont." },
         { order: 4, prompt: "Complete: Le ciel ___ gris aujourd hui. (et ou est)", answer: "est", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Le ciel etait gris fonctionne, donc est." },
-        { order: 5, prompt: "Complete: Tu prefere le the ___ le chocolat chaud ? (ou/ou)", answer: "ou", kindWhenWrong: "Ce n est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "le the ou bien le chocolat fonctionne, donc ou sans accent." },
-        { order: 6, prompt: "Defi : complete les trois mots. Il ___ range ses affaires ___ ses jouets, mais il ne sait plus ___ il a mis ses cles.", answer: "a et où", kindWhenWrong: "Bravo d avoir essaye ce defi 😊 Regardons ensemble.", explanationWhenWrong: "Il a range (avait fonctionne), affaires et jouets (relie deux mots), et ou (lieu, avec accent)." }
+        { order: 5, prompt: "Complete: Tu prefere le the ___ le chocolat chaud ? (ou/où)", answer: "ou", kindWhenWrong: "Ce n est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "le the ou bien le chocolat fonctionne, donc ou sans accent." },
+        { order: 6, prompt: "Defi : complete les trois mots. Il ___ range ses affaires ___ ses jouets, mais il ne sait plus ___ il a mis ses cles.", answer: "a et où", kindWhenWrong: "Bravo d avoir essaye ce defi 😊 Regardons ensemble.", explanationWhenWrong: "Il a range (avait fonctionne), affaires et jouets (relie deux mots), et où (lieu, avec accent)." }
       ]
     },
     {
