@@ -47,3 +47,28 @@ for all
 to anon, authenticated
 using (false)
 with check (false);
+
+create table if not exists public.day_completions (
+  id bigint generated always as identity primary key,
+  child_id text not null,
+  day_number int not null,
+  subject_results jsonb not null,
+  total_xp_earned int not null,
+  badge_earned boolean not null default false,
+  time_spent_seconds int not null default 0,
+  completed_at timestamptz not null default now(),
+  unique (child_id, day_number)
+);
+
+create index if not exists day_completions_child_id_idx
+  on public.day_completions (child_id);
+
+alter table public.day_completions enable row level security;
+
+drop policy if exists day_completions_no_direct_access on public.day_completions;
+create policy day_completions_no_direct_access
+on public.day_completions
+for all
+to anon, authenticated
+using (false)
+with check (false);

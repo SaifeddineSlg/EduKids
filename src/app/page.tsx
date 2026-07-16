@@ -1,27 +1,14 @@
 import Image from "next/image";
-import Link from "next/link";
 import { children } from "@/data/children";
-import { ChildProfileCard } from "@/components/features/home/ChildProfileCard";
+import { ProfileChoiceCard } from "@/components/features/home/ProfileChoiceCard";
 
 export default function HomePage() {
   return (
     <section className="stack-lg">
       <header className="hero">
         <div>
-          <p className="eyebrow">Mission du jour</p>
-          <h1>Apprendre comme des champions</h1>
-          <p>
-            Choisis ton profil pour demarrer une session ludique de 20 minutes avec revision,
-            nouvelle notion et quiz final.
-          </p>
-          <div className="hero-actions">
-            <Link href="/session?childId=child-1" className="primary-btn">
-              Lancer la session
-            </Link>
-            <Link href="/parent" className="ghost-btn">
-              Espace parent
-            </Link>
-          </div>
+          <p className="eyebrow">Qui es-tu ?</p>
+          <h1>Choisis ton profil pour commencer</h1>
         </div>
 
         <div className="mascot-wrap">
@@ -29,14 +16,11 @@ export default function HomePage() {
         </div>
       </header>
 
-      <section>
-        <h2>Profils enfants</h2>
-        <div className="grid-2">
-          {children.map((child) => (
-            <ChildProfileCard key={child.id} child={child} />
-          ))}
-        </div>
-      </section>
+      <div className="grid-2">
+        {children.map((child) => (
+          <ProfileChoiceCard key={child.id} child={child} />
+        ))}
+      </div>
     </section>
   );
 }

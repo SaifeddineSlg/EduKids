@@ -460,6 +460,140 @@ a {
   animation: pop 0.5s ease both;
 }
 
+.single-action-screen {
+  display: grid;
+  gap: 1.2rem;
+  justify-items: stretch;
+}
+
+.big-btn {
+  font-size: 1.15rem;
+  padding: 1rem 1.5rem;
+  min-height: 60px;
+}
+
+.story-emoji {
+  font-size: 3rem;
+  text-align: center;
+  margin: 0;
+}
+
+.story-step {
+  display: grid;
+  gap: 0.75rem;
+  animation: fade-slide-in 0.4s ease;
+}
+
+.story-highlight {
+  font-weight: 800;
+  font-size: 1.1rem;
+  background: #fff7e6;
+  border-radius: 14px;
+  padding: 0.75rem;
+}
+
+.animated-example-list {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.animated-example-step {
+  animation: fade-slide-in 0.4s ease;
+}
+
+.mascot-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.mascot-bubble {
+  background: #e6faf7;
+  border: 2px solid var(--secondary);
+  border-radius: 16px;
+  padding: 0.6rem 0.9rem;
+  font-weight: 700;
+}
+
+.day-subject-list {
+  display: grid;
+  gap: 0.4rem;
+  margin: 0.75rem 0;
+  padding-left: 1.2rem;
+  font-weight: 700;
+}
+
+.day-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.day-card {
+  display: grid;
+  gap: 0.25rem;
+  justify-items: center;
+  text-align: center;
+  background: var(--surface);
+  border-radius: 18px;
+  padding: 0.85rem 0.5rem;
+  box-shadow: var(--shadow);
+  font-weight: 700;
+}
+
+.day-card-status {
+  font-size: 1.4rem;
+}
+
+.day-card-detail {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.day-card--locked {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.day-card--today {
+  border: 3px solid var(--primary);
+  animation: pulse-glow 1.6s ease-in-out infinite;
+}
+
+.day-card--done {
+  border: 2px solid var(--success);
+}
+
+.profile-choice-card {
+  text-align: center;
+  justify-items: center;
+}
+
+@keyframes fade-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 8px 16px rgba(255, 143, 0, 0.25);
+  }
+  50% {
+    box-shadow: 0 8px 24px rgba(255, 143, 0, 0.55);
+  }
+}
+
 @keyframes rise-in {
   from {
     transform: translateY(10px);
@@ -505,5 +639,9 @@ a {
 
   .filters-row {
     grid-template-columns: 1fr;
+  }
+
+  .day-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }

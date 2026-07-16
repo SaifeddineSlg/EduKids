@@ -5,8 +5,6 @@ export type SubjectId =
   | "orthographe"
   | "calcul-mental";
 
-export type DifficultyLevel = 1 | 2 | 3 | 4;
-
 export interface ChildProfile {
   id: string;
   name: string;
@@ -29,59 +27,78 @@ export interface SubjectDefinition {
   accent: string;
 }
 
-export interface LessonBlock {
-  id: string;
-  title: string;
-  subjectId: SubjectId;
-  targetSchoolLevel: "5e" | "4e";
-  explanation: string;
-  easyExamples: string[];
-  commonMistakes: string[];
-  memoryTip: string;
-  summary: string;
-  illustrationHint: string;
+// --- Parcours guide de 30 jours ---
+
+export const SUBJECT_ORDER: SubjectId[] = [
+  "mathematiques",
+  "conjugaison",
+  "grammaire",
+  "orthographe",
+  "calcul-mental"
+];
+
+export interface DayContentStatus {
+  status: "ready" | "coming-soon";
 }
 
-export interface Exercise {
-  id: string;
-  lessonId: string;
-  question: string;
+export interface StoryStep {
+  hook: string;
+  concreteExample: string;
+  reveal: string;
+  bridgeToConcept: string;
+  illustrationEmoji: string;
+}
+
+export interface WorkedExampleStep {
+  text: string;
+  illustrationEmoji?: string;
+}
+
+export interface WorkedExample {
+  title: string;
+  steps: WorkedExampleStep[];
+}
+
+export interface DayQuestion {
+  order: 1 | 2 | 3 | 4 | 5 | 6;
+  prompt: string;
   answer: string;
   acceptedAnswers?: string[];
-  correctionExplanation?: string;
-  hint?: string;
-  difficulty: DifficultyLevel;
+  kindWhenWrong: string;
+  explanationWhenWrong: string;
 }
 
-export interface DailyPlan {
-  revisionMinutes: number;
-  lessonMinutes: number;
-  exercisesMinutes: number;
-  quizMinutes: number;
-  focusSubject: SubjectId;
-  focusLessonId: string;
+export interface SubjectDayLesson extends DayContentStatus {
+  subjectId: SubjectId;
+  title: string;
+  story: StoryStep;
+  examples: WorkedExample[];
+  questions: DayQuestion[];
+  xpReward: number;
 }
 
-export interface AttemptStats {
-  successRate: number;
-  recentFailures: number;
-  recentSuccesses: number;
+export interface DayCurriculum extends DayContentStatus {
+  dayNumber: number;
+  subjects: SubjectDayLesson[];
 }
 
-export type QuizType = "qcm" | "drag-drop" | "true-false" | "match" | "fill-blank" | "chrono";
+export interface SubjectResult {
+  subjectId: SubjectId;
+  correctCount: number;
+  xpEarned: number;
+}
 
-export interface QuizItem {
-  id: string;
-  lessonId: string;
-  type: QuizType;
-  prompt: string;
-  explanation: string;
-  options?: string[];
-  correctAnswer?: string;
-  leftItems?: string[];
-  rightItems?: string[];
-  correctMatches?: Record<string, string>;
-  dragItems?: string[];
-  correctOrder?: string[];
-  chronoSeconds?: number;
+export interface DayCompletionRecord {
+  dayNumber: number;
+  completedAt: string;
+  subjectResults: SubjectResult[];
+  totalXpEarned: number;
+  badgeEarned: boolean;
+  timeSpentSeconds: number;
+}
+
+export interface ChildPathProgress {
+  childId: string;
+  unlockedDay: number;
+  completions: DayCompletionRecord[];
 }

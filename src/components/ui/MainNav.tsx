@@ -3,11 +3,10 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import type { Route } from 'next'
-import type { UrlObject } from 'url'
 
 interface NavItem {
   key: string
-  href: Route | UrlObject
+  href: Route
   label: string
   matchPath: string
 }
@@ -19,24 +18,6 @@ const navItems: NavItem[] = [
     href: '/parent',
     label: 'Espace parent',
     matchPath: '/parent',
-  },
-  {
-    key: 'child-1',
-    href: { pathname: '/child/child-1' },
-    label: 'Profil Balkis',
-    matchPath: '/child',
-  },
-  {
-    key: 'child-2',
-    href: { pathname: '/child/child-2' },
-    label: 'Profil Bayrem',
-    matchPath: '/child',
-  },
-  {
-    key: 'session',
-    href: { pathname: '/session', query: { childId: 'child-1' } },
-    label: 'Session',
-    matchPath: '/session',
   },
 ]
 
@@ -50,6 +31,11 @@ function isActive(pathname: string, item: NavItem): boolean {
 
 export function MainNav() {
   const pathname = usePathname()
+
+  const isGuidedDayRoute = /^\/child\/[^/]+\/day\/[^/]+/.test(pathname)
+  if (isGuidedDayRoute) {
+    return null
+  }
 
   return (
     <header className="site-header">
