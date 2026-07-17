@@ -88,7 +88,9 @@ async function main() {
   const { data: existingUsers, error: listError } = await supabase.auth.admin.listUsers();
   if (listError) await fail("lister les utilisateurs", listError);
 
-  const existingAdmin = existingUsers.users.find((u) => u.email === ADMIN_EMAIL);
+  const existingAdmin = existingUsers.users.find(
+    (u) => u.email?.toLowerCase() === ADMIN_EMAIL.toLowerCase(),
+  );
   if (existingAdmin) {
     adminId = existingAdmin.id;
     console.log(`   Compte admin deja existant (${adminId}).`);

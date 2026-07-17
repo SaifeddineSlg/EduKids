@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Card } from "@/components/ui/Card";
+import { PasswordInput } from "@/components/ui/PasswordInput";
 import { createSupabaseBrowserClient } from "@/lib/supabase/browserClient";
 
 export default function ResetPasswordPage() {
@@ -36,13 +37,12 @@ export default function ResetPasswordPage() {
         <form className="stack-lg" onSubmit={handleSubmit}>
           <div>
             <label className="exercise-label" htmlFor="password">Nouveau mot de passe</label>
-            <input
+            <PasswordInput
               id="password"
-              type="password"
-              className="answer-input"
-              minLength={6}
               value={password}
-              onChange={(event) => setPassword(event.target.value)}
+              onChange={setPassword}
+              minLength={6}
+              autoComplete="new-password"
               required
             />
           </div>

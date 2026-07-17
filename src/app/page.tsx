@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Card } from "@/components/ui/Card";
+import { PasswordInput } from "@/components/ui/PasswordInput";
 import { createSupabaseBrowserClient } from "@/lib/supabase/browserClient";
 
 export default function LoginPage() {
@@ -21,7 +22,7 @@ export default function LoginPage() {
 
     const supabase = createSupabaseBrowserClient();
     const { data, error: signInError } = await supabase.auth.signInWithPassword({
-      email,
+      email: email.trim().toLowerCase(),
       password,
     });
 
@@ -63,12 +64,11 @@ export default function LoginPage() {
           </div>
           <div>
             <label className="exercise-label" htmlFor="password">Mot de passe</label>
-            <input
+            <PasswordInput
               id="password"
-              type="password"
-              className="answer-input"
               value={password}
-              onChange={(event) => setPassword(event.target.value)}
+              onChange={setPassword}
+              autoComplete="current-password"
               required
             />
           </div>

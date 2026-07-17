@@ -31,10 +31,11 @@ export async function POST(request: Request) {
   const supabase = getSupabaseServerClient();
 
   const origin = request.headers.get("origin") ?? new URL(request.url).origin;
+  const normalizedEmail = payload.email.trim().toLowerCase();
 
   // Cree le compte (sans mot de passe) et envoie un email d'invitation contenant
   // un lien vers /reset-password ou le parent choisit son propre mot de passe.
-  const { data, error } = await supabase.auth.admin.inviteUserByEmail(payload.email, {
+  const { data, error } = await supabase.auth.admin.inviteUserByEmail(normalizedEmail, {
     data: { display_name: payload.displayName },
     redirectTo: `${origin}/reset-password`,
   });
