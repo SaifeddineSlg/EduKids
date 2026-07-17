@@ -18,14 +18,14 @@ type RunnerPhase =
   | { kind: "day-complete"; averagePercent: number; passed: boolean; timeSpentSeconds: number };
 
 interface DayRunnerProps {
-  childId: string;
+  studentId: string;
   childName: string;
   day: DayCurriculum;
   initialSession: ActiveDaySession;
   showIntro: boolean;
 }
 
-export function DayRunner({ childId, childName, day, initialSession, showIntro }: DayRunnerProps) {
+export function DayRunner({ studentId, childName, day, initialSession, showIntro }: DayRunnerProps) {
   const router = useRouter();
   const [session, setSession] = useState(initialSession);
   const [phase, setPhase] = useState<RunnerPhase>(
@@ -49,14 +49,14 @@ export function DayRunner({ childId, childName, day, initialSession, showIntro }
       <SubjectLessonEngine
         key={`${session.subjectIndex}-${session.attemptNumber}`}
         lesson={lesson}
-        childId={childId}
+        studentId={studentId}
         dayNumber={day.dayNumber}
         attemptNumber={session.attemptNumber}
         initialStep={session.lessonStep}
         initialQuestionIndex={session.questionIndex}
         initialCorrectCount={session.currentSubjectCorrectCount ?? 0}
         onSubjectComplete={async (result) => {
-          const updatedSession = await completeSubject(childId, result);
+          const updatedSession = await completeSubject(studentId, result);
           setSession(updatedSession);
           setPhase({ kind: "subject-complete", result });
         }}
@@ -83,7 +83,7 @@ export function DayRunner({ childId, childName, day, initialSession, showIntro }
             );
 
             const { averagePercent, passed } = await completeDay(
-              childId,
+              studentId,
               day.dayNumber,
               session.attemptNumber,
               totalXpEarned,
@@ -104,7 +104,7 @@ export function DayRunner({ childId, childName, day, initialSession, showIntro }
     return (
       <DayFailedScreen
         averagePercent={phase.averagePercent}
-        onBackToPath={() => router.push(`/child/${childId}/path`)}
+        onBackToPath={() => router.push(`/parent/children/${studentId}/path`)}
       />
     );
   }
@@ -123,7 +123,7 @@ export function DayRunner({ childId, childName, day, initialSession, showIntro }
         startedAt: session.startedAt,
         completedAt: new Date().toISOString(),
       }}
-      onBackToPath={() => router.push(`/child/${childId}/path`)}
+      onBackToPath={() => router.push(`/parent/children/${studentId}/path`)}
     />
   );
 }

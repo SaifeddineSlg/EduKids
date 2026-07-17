@@ -11,7 +11,7 @@ import { MatchAnswer } from "@/components/features/path/question-inputs/MatchAns
 
 interface SixQuestionsStepProps {
   questions: DayQuestion[];
-  childId: string;
+  studentId: string;
   dayNumber: number;
   attemptNumber: number;
   subjectId: SubjectId;
@@ -22,7 +22,7 @@ interface SixQuestionsStepProps {
 
 export function SixQuestionsStep({
   questions,
-  childId,
+  studentId,
   dayNumber,
   attemptNumber,
   subjectId,
@@ -53,7 +53,7 @@ export function SixQuestionsStep({
 
     try {
       await submitAnswer({
-        childId,
+        studentId,
         dayNumber,
         attemptNumber,
         subjectId,

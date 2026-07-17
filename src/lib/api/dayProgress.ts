@@ -22,10 +22,8 @@ async function postJson<T>(url: string, body: unknown): Promise<T> {
   return json as T;
 }
 
-export async function fetchResumeState(childId: string): Promise<ResumeState> {
-  const response = await fetch(
-    `/api/progress/resume?childId=${encodeURIComponent(childId)}`,
-  );
+export async function fetchResumeState(studentId: string): Promise<ResumeState> {
+  const response = await fetch(`/api/progress/resume?studentId=${encodeURIComponent(studentId)}`);
   const json = await response.json();
   if (!response.ok || !json.ok) {
     throw new Error(json.error ?? "Echec du chargement de la progression");
@@ -34,19 +32,20 @@ export async function fetchResumeState(childId: string): Promise<ResumeState> {
 }
 
 export async function startDay(
-  childId: string,
+  studentId: string,
   dayNumber: number,
   mode: "resume" | "restart",
 ): Promise<ActiveDaySession> {
-  const result = await postJson<{ session: ActiveDaySession }>(
-    "/api/progress/day/start",
-    { childId, dayNumber, mode },
-  );
+  const result = await postJson<{ session: ActiveDaySession }>("/api/progress/day/start", {
+    studentId,
+    dayNumber,
+    mode,
+  });
   return result.session;
 }
 
 interface SubmitAnswerInput {
-  childId: string;
+  studentId: string;
   dayNumber: number;
   attemptNumber: number;
   subjectId: SubjectId;
@@ -59,59 +58,57 @@ interface SubmitAnswerInput {
   elapsedSeconds?: number;
 }
 
-export async function submitAnswer(
-  input: SubmitAnswerInput,
-): Promise<ActiveDaySession> {
-  const result = await postJson<{ session: ActiveDaySession }>(
-    "/api/progress/day/answer",
-    input,
-  );
+export async function submitAnswer(input: SubmitAnswerInput): Promise<ActiveDaySession> {
+  const result = await postJson<{ session: ActiveDaySession }>("/api/progress/day/answer", input);
   return result.session;
 }
 
 export async function advanceLessonStep(
-  childId: string,
+  studentId: string,
   lessonStep: LessonStep,
 ): Promise<ActiveDaySession> {
-  const result = await postJson<{ session: ActiveDaySession }>(
-    "/api/progress/day/subject-step",
-    { childId, lessonStep },
-  );
+  const result = await postJson<{ session: ActiveDaySession }>("/api/progress/day/subject-step", {
+    studentId,
+    lessonStep,
+  });
   return result.session;
 }
 
 export async function completeSubject(
-  childId: string,
+  studentId: string,
   subjectResult: SubjectResult,
 ): Promise<ActiveDaySession> {
-  const result = await postJson<{ session: ActiveDaySession }>(
-    "/api/progress/day/subject-complete",
-    { childId, subjectResult },
-  );
+  const result = await postJson<{ session: ActiveDaySession }>("/api/progress/day/subject-complete", {
+    studentId,
+    subjectResult,
+  });
   return result.session;
 }
 
 export async function completeDay(
-  childId: string,
+  studentId: string,
   dayNumber: number,
   attemptNumber: number,
   totalXpEarned: number,
   timeSpentSeconds: number,
 ): Promise<{ averagePercent: number; passed: boolean }> {
-  return postJson<{ averagePercent: number; passed: boolean }>(
-    "/api/progress/day/complete",
-    { childId, dayNumber, attemptNumber, totalXpEarned, timeSpentSeconds },
-  );
+  return postJson<{ averagePercent: number; passed: boolean }>("/api/progress/day/complete", {
+    studentId,
+    dayNumber,
+    attemptNumber,
+    totalXpEarned,
+    timeSpentSeconds,
+  });
 }
 
 export async function fetchDayHistory(
-  childId: string,
+  studentId: string,
   dayNumber: number,
   attemptNumber: number,
   subjectId?: SubjectId,
 ): Promise<QuestionAttemptDetail[]> {
   const params = new URLSearchParams({
-    childId,
+    studentId,
     dayNumber: String(dayNumber),
     attemptNumber: String(attemptNumber),
   });
@@ -128,10 +125,10 @@ export async function fetchDayHistory(
 }
 
 export async function fetchDayAttempts(
-  childId: string,
+  studentId: string,
   dayNumber?: number,
 ): Promise<DayAttemptRecord[]> {
-  const params = new URLSearchParams({ childId });
+  const params = new URLSearchParams({ studentId });
   if (dayNumber) {
     params.set("dayNumber", String(dayNumber));
   }

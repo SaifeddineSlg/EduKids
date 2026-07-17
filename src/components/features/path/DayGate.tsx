@@ -12,7 +12,7 @@ import { fetchResumeState } from "@/lib/api/dayProgress";
 import { startDay } from "@/lib/api/dayProgress";
 
 interface DayGateProps {
-  childId: string;
+  studentId: string;
   childName: string;
   day: DayCurriculum;
 }
@@ -26,7 +26,7 @@ type GateState =
   | { kind: "run"; session: ActiveDaySession; showIntro: boolean }
   | { kind: "error" };
 
-export function DayGate({ childId, childName, day }: DayGateProps) {
+export function DayGate({ studentId, childName, day }: DayGateProps) {
   const router = useRouter();
   const [state, setState] = useState<GateState>({ kind: "loading" });
 
@@ -35,10 +35,10 @@ export function DayGate({ childId, childName, day }: DayGateProps) {
 
     async function load() {
       try {
-        const resume = await fetchResumeState(childId);
+        const resume = await fetchResumeState(studentId);
 
         if (day.dayNumber > resume.unlockedDay) {
-          router.replace(`/child/${childId}/path`);
+          router.replace(`/parent/children/${studentId}/path`);
           return;
         }
 
@@ -58,7 +58,7 @@ export function DayGate({ childId, childName, day }: DayGateProps) {
           return;
         }
 
-        const session = await startDay(childId, day.dayNumber, "resume");
+        const session = await startDay(studentId, day.dayNumber, "resume");
         if (!cancelled) setState({ kind: "run", session, showIntro: true });
       } catch {
         if (!cancelled) setState({ kind: "error" });
@@ -70,7 +70,7 @@ export function DayGate({ childId, childName, day }: DayGateProps) {
     return () => {
       cancelled = true;
     };
-  }, [childId, day.dayNumber, day.status, router]);
+  }, [studentId, day.dayNumber, day.status, router]);
 
   if (state.kind === "loading" || state.kind === "locked") {
     return null;
@@ -110,11 +110,11 @@ export function DayGate({ childId, childName, day }: DayGateProps) {
       <ResumeChoiceScreen
         dayNumber={day.dayNumber}
         onResume={async () => {
-          const session = await startDay(childId, day.dayNumber, "resume");
+          const session = await startDay(studentId, day.dayNumber, "resume");
           setState({ kind: "run", session, showIntro: false });
         }}
         onRestart={async () => {
-          const session = await startDay(childId, day.dayNumber, "restart");
+          const session = await startDay(studentId, day.dayNumber, "restart");
           setState({ kind: "run", session, showIntro: true });
         }}
       />
@@ -127,14 +127,14 @@ export function DayGate({ childId, childName, day }: DayGateProps) {
         <DayCompleteScreen
           childName={childName}
           record={state.record}
-          onBackToPath={() => router.push(`/child/${childId}/path`)}
+          onBackToPath={() => router.push(`/parent/children/${studentId}/path`)}
         />
         <div className="single-action-screen">
           <button
             type="button"
             className="ghost-btn big-btn"
             onClick={async () => {
-              const session = await startDay(childId, day.dayNumber, "restart");
+              const session = await startDay(studentId, day.dayNumber, "restart");
               setState({ kind: "run", session, showIntro: true });
             }}
           >
@@ -147,7 +147,7 @@ export function DayGate({ childId, childName, day }: DayGateProps) {
 
   return (
     <DayRunner
-      childId={childId}
+      studentId={studentId}
       childName={childName}
       day={day}
       initialSession={state.session}

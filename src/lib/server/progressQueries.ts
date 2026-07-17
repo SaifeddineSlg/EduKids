@@ -7,7 +7,8 @@ import {
 } from "@/models/serverTypes";
 
 interface ActiveSessionRow {
-  child_id: string;
+  student_id: string;
+  school_level_id: string;
   day_number: number;
   attempt_number: number;
   subject_index: number;
@@ -31,7 +32,7 @@ interface DayAttemptRow {
 
 function mapSessionRow(row: ActiveSessionRow): ActiveDaySession {
   return {
-    childId: row.child_id,
+    studentId: row.student_id,
     dayNumber: row.day_number,
     attemptNumber: row.attempt_number,
     subjectIndex: row.subject_index,
@@ -56,14 +57,19 @@ function mapAttemptRow(row: DayAttemptRow): DayAttemptRecord {
   };
 }
 
+/**
+ * Recupere la session active d'un eleve, TOUS niveaux confondus (un eleve n'a
+ * qu'une seule tentative en cours a la fois, cf. contrainte PK(student_id, school_level_id)
+ * -- en pratique un eleve n'est actif que sur son propre niveau, donc une seule ligne).
+ */
 export async function getActiveSession(
   supabase: SupabaseClient,
-  childId: string,
+  studentId: string,
 ): Promise<ActiveDaySession | null> {
   const { data, error } = await supabase
     .from("active_day_sessions")
     .select("*")
-    .eq("child_id", childId)
+    .eq("student_id", studentId)
     .maybeSingle();
 
   if (error || !data) {
@@ -75,12 +81,14 @@ export async function getActiveSession(
 
 export async function getAllAttempts(
   supabase: SupabaseClient,
-  childId: string,
+  studentId: string,
+  schoolLevelId: string,
 ): Promise<DayAttemptRecord[]> {
   const { data, error } = await supabase
     .from("day_attempts")
     .select("*")
-    .eq("child_id", childId)
+    .eq("student_id", studentId)
+    .eq("school_level_id", schoolLevelId)
     .order("day_number", { ascending: true })
     .order("attempt_number", { ascending: true });
 

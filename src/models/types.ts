@@ -5,20 +5,6 @@ export type SubjectId =
   | "orthographe"
   | "calcul-mental";
 
-export interface ChildProfile {
-  id: string;
-  name: string;
-  age: number;
-  levelLabel: string;
-  xp: number;
-  points: number;
-  coins: number;
-  streakDays: number;
-  badges: string[];
-  masteredSkills: number;
-  skillsToReview: number;
-}
-
 export interface SubjectDefinition {
   id: SubjectId;
   title: string;

@@ -1,8 +1,23 @@
 import Link from "next/link";
-import { children } from "@/data/children";
+import { redirect } from "next/navigation";
+import { getSessionProfile } from "@/lib/auth/session";
+import { getSupabaseServerClient } from "@/lib/supabase/server";
 import { Card } from "@/components/ui/Card";
 
-export default function HistoryChildSelectPage() {
+export default async function HistoryChildSelectPage() {
+  const profile = await getSessionProfile();
+  if (!profile) {
+    redirect("/");
+  }
+
+  const supabase = getSupabaseServerClient();
+  const { data: students } = await supabase
+    .from("students")
+    .select("id, first_name, avatar")
+    .eq("parent_id", profile.id)
+    .is("archived_at", null)
+    .order("created_at", { ascending: true });
+
   return (
     <section className="stack-lg">
       <header className="hero compact">
@@ -13,10 +28,10 @@ export default function HistoryChildSelectPage() {
       </header>
 
       <div className="grid-2">
-        {children.map((child) => (
-          <Card key={child.id}>
-            <h2>{child.name}</h2>
-            <Link href={`/parent/history/${child.id}`} className="primary-btn">
+        {(students ?? []).map((student) => (
+          <Card key={student.id}>
+            <h2>{student.avatar} {student.first_name}</h2>
+            <Link href={`/parent/history/${student.id}`} className="primary-btn">
               Voir l&apos;historique
             </Link>
           </Card>

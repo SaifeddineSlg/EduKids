@@ -3,7 +3,7 @@ import { SubjectId, SubjectResult } from "@/models/types";
 export type LessonStep = "story" | "examples" | "questions";
 
 export interface ActiveDaySession {
-  childId: string;
+  studentId: string;
   dayNumber: number;
   attemptNumber: number;
   subjectIndex: number;

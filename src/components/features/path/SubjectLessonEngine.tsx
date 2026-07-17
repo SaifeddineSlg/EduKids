@@ -10,7 +10,7 @@ import { advanceLessonStep } from "@/lib/api/dayProgress";
 
 interface SubjectLessonEngineProps {
   lesson: SubjectDayLesson;
-  childId: string;
+  studentId: string;
   dayNumber: number;
   attemptNumber: number;
   initialStep: LessonStep;
@@ -21,7 +21,7 @@ interface SubjectLessonEngineProps {
 
 export function SubjectLessonEngine({
   lesson,
-  childId,
+  studentId,
   dayNumber,
   attemptNumber,
   initialStep,
@@ -34,7 +34,7 @@ export function SubjectLessonEngine({
   async function goToStep(step: LessonStep) {
     setSubStep(step);
     try {
-      await advanceLessonStep(childId, step);
+      await advanceLessonStep(studentId, step);
     } catch {
       // La transition reste visible localement ; une nouvelle tentative de sauvegarde
       // se fera au prochain appel reussi (ex: reponse a une question).
@@ -59,7 +59,7 @@ export function SubjectLessonEngine({
   return (
     <SixQuestionsStep
       questions={lesson.questions}
-      childId={childId}
+      studentId={studentId}
       dayNumber={dayNumber}
       attemptNumber={attemptNumber}
       subjectId={lesson.subjectId}

@@ -41,12 +41,12 @@ function emptyAnalytics(): ChildAnalytics {
   }
 }
 
-export async function fetchChildAnalytics(
-  childId: string,
+export async function fetchStudentAnalytics(
+  studentId: string,
 ): Promise<ChildAnalytics> {
   try {
     const response = await fetch(
-      `/api/progress/analytics?childId=${encodeURIComponent(childId)}`,
+      `/api/progress/analytics?studentId=${encodeURIComponent(studentId)}`,
     )
     if (!response.ok) {
       return emptyAnalytics()

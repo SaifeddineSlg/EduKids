@@ -8,16 +8,16 @@ import { DayCard } from "@/components/features/path/DayCard";
 import { Card } from "@/components/ui/Card";
 
 interface PathCalendarProps {
-  childId: string;
+  studentId: string;
 }
 
-export function PathCalendar({ childId }: PathCalendarProps) {
+export function PathCalendar({ studentId }: PathCalendarProps) {
   const [resume, setResume] = useState<ResumeState | null>(null);
 
   useEffect(() => {
     let cancelled = false;
 
-    fetchResumeState(childId)
+    fetchResumeState(studentId)
       .then((state) => {
         if (!cancelled) setResume(state);
       })
@@ -28,7 +28,7 @@ export function PathCalendar({ childId }: PathCalendarProps) {
     return () => {
       cancelled = true;
     };
-  }, [childId]);
+  }, [studentId]);
 
   if (!resume) {
     return null;
@@ -49,7 +49,7 @@ export function PathCalendar({ childId }: PathCalendarProps) {
         {days.map((dayNumber) => (
           <DayCard
             key={dayNumber}
-            childId={childId}
+            studentId={studentId}
             dayNumber={dayNumber}
             summary={resume.attemptsByDay[dayNumber]}
             isUnlocked={dayNumber <= resume.unlockedDay}

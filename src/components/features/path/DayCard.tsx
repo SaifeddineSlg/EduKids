@@ -2,7 +2,7 @@ import Link from "next/link";
 import { DaySummary } from "@/models/serverTypes";
 
 interface DayCardProps {
-  childId: string;
+  studentId: string;
   dayNumber: number;
   summary?: DaySummary;
   isUnlocked: boolean;
@@ -15,10 +15,10 @@ function formatDate(iso: string): string {
   return date.toLocaleDateString("fr-FR", { day: "2-digit", month: "2-digit" });
 }
 
-export function DayCard({ childId, dayNumber, summary, isUnlocked, isNext, isActive }: DayCardProps) {
+export function DayCard({ studentId, dayNumber, summary, isUnlocked, isNext, isActive }: DayCardProps) {
   if (summary?.best.passed) {
     return (
-      <Link href={`/child/${childId}/day/${dayNumber}`} className="day-card day-card--done">
+      <Link href={`/parent/children/${studentId}/day/${dayNumber}`} className="day-card day-card--done">
         <span className="day-card-status" aria-hidden>✅</span>
         <span className="day-card-number">Jour {dayNumber}</span>
         <span className="day-card-detail">⭐ {Math.round(summary.best.averagePercent)}%</span>
@@ -32,7 +32,7 @@ export function DayCard({ childId, dayNumber, summary, isUnlocked, isNext, isAct
 
   if (isActive) {
     return (
-      <Link href={`/child/${childId}/day/${dayNumber}`} className="day-card day-card--today">
+      <Link href={`/parent/children/${studentId}/day/${dayNumber}`} className="day-card day-card--today">
         <span className="day-card-status" aria-hidden>▶</span>
         <span className="day-card-number">Jour {dayNumber}</span>
         <span className="day-card-detail">En cours</span>
@@ -42,7 +42,7 @@ export function DayCard({ childId, dayNumber, summary, isUnlocked, isNext, isAct
 
   if (summary && !summary.best.passed) {
     return (
-      <Link href={`/child/${childId}/day/${dayNumber}`} className="day-card day-card--today">
+      <Link href={`/parent/children/${studentId}/day/${dayNumber}`} className="day-card day-card--today">
         <span className="day-card-status" aria-hidden>▶</span>
         <span className="day-card-number">Jour {dayNumber}</span>
         <span className="day-card-detail">⭐ {Math.round(summary.best.averagePercent)}% — a refaire</span>
@@ -52,7 +52,7 @@ export function DayCard({ childId, dayNumber, summary, isUnlocked, isNext, isAct
 
   if (isNext && isUnlocked) {
     return (
-      <Link href={`/child/${childId}/day/${dayNumber}`} className="day-card day-card--today">
+      <Link href={`/parent/children/${studentId}/day/${dayNumber}`} className="day-card day-card--today">
         <span className="day-card-status" aria-hidden>▶</span>
         <span className="day-card-number">Jour {dayNumber}</span>
         <span className="day-card-detail">A faire aujourd&apos;hui</span>
