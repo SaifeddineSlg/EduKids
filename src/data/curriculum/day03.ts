@@ -46,38 +46,95 @@ export const day03: DayCurriculum = {
     {
       subjectId: "conjugaison",
       status: "ready",
-      title: "Les verbes en -ir qui grandissent",
+      title: "Le présent des verbes en -ir qui grandissent",
       xpReward: 24,
       story: {
-        hook: "Imagine une plante qui grandit un peu plus chaque jour, avec un mot qui grandit aussi.",
-        concreteExample: "Regarde: je finis, tu finis, il finit, nous finissons, vous finissez, ils finissent. Tu remarques le petit -iss- qui apparait ?",
-        reveal: "Beaucoup de verbes en -ir (comme finir, choisir, grandir) ajoutent -iss- avec nous, vous, ils. Bravo, tu as repere ce petit groupe special !",
-        bridgeToConcept: "On appelle ca les verbes du deuxieme groupe : ils finissent toujours par -issons, -issez, -issent.",
+        hook: "Imagine une plante qui grandit un peu plus chaque jour : certains verbes en -ir grandissent eux aussi, avec un petit morceau qui s'ajoute.",
+        concreteExample: "Écoute : je finis, tu finis, il finit, nous finissons, vous finissez, ils finissent.",
+        reveal: "À quoi sert ce groupe de verbes ? Comme les verbes en -er, il sert à dire ce qui se passe maintenant. Comment le reconnaître ? On entend le petit -iss- qui apparaît avec nous, vous, ils : c'est la marque de ce groupe.",
+        bridgeToConcept: "Terminaisons à retenir pour finir, choisir, grandir : -is, -is, -it, -issons, -issez, -issent.",
         illustrationEmoji: "🌱"
       },
       examples: [
         {
-          title: "Exemple 1 : le verbe grandir",
+          title: "Des exemples de tous les jours",
           steps: [
-            { text: "Je grandis, tu grandis, il grandit.", illustrationEmoji: "🌱" },
-            { text: "Nous grandissons, vous grandissez, ils grandissent.", illustrationEmoji: "🌳" }
+            { text: "Je finis mes devoirs avant le dîner.", illustrationEmoji: "📚" },
+            { text: "Tu choisis un livre à la bibliothèque.", illustrationEmoji: "📖" },
+            { text: "Chaque année, nous grandissons un peu plus.", illustrationEmoji: "🌳" }
           ]
         },
         {
-          title: "Exemple 2 : le verbe choisir",
+          title: "Attention à l'erreur fréquente",
           steps: [
-            { text: "Je choisis, tu choisis, elle choisit.", illustrationEmoji: "🤔" },
-            { text: "Nous choisissons, vous choisissez, elles choisissent.", illustrationEmoji: "✅" }
+            { text: "Beaucoup d'enfants oublient le -iss- et écrivent « nous finons ». C'est une erreur !", illustrationEmoji: "❌" },
+            { text: "Avec nous, vous, ils, il faut toujours ajouter -iss- avant la terminaison : nous finissons.", illustrationEmoji: "✅" }
+          ]
+        },
+        {
+          title: "L'astuce pour ne plus se tromper, et le résumé",
+          steps: [
+            { text: "Astuce : dis le verbe à voix haute avec nous. Si tu entends « iss », c'est un verbe de ce groupe : nous fin-iss-ons.", illustrationEmoji: "🔊" },
+            { text: "Résumé : avec je, tu, il, ces verbes ressemblent aux verbes en -er (-is, -is, -it), mais avec nous, vous, ils, ils ajoutent -iss- avant la terminaison.", illustrationEmoji: "📝" }
           ]
         }
       ],
       questions: [
-        { order: 1, prompt: "Complete: Je ____ (finir) mes devoirs.", answer: "finis", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, finir devient finis : je finis." },
-        { order: 2, prompt: "Complete: Tu ____ (choisir) un livre.", answer: "choisis", kindWhenWrong: "Pas grave 😊 On regarde ca ensemble.", explanationWhenWrong: "Avec tu, choisir devient choisis." },
-        { order: 3, prompt: "Complete: Nous ____ (grandir) chaque annee.", answer: "grandissons", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec nous, grandir devient grandissons (avec -iss-)." },
-        { order: 4, prompt: "Complete: Vous ____ (finir) la course.", answer: "finissez", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec vous, finir devient finissez." },
-        { order: 5, prompt: "Complete: Elles ____ (choisir) leurs jouets.", answer: "choisissent", kindWhenWrong: "Ce n est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Avec elles, choisir devient choisissent." },
-        { order: 6, prompt: "Defi : complete les deux mots. Nous ____ (reussir) car vous ____ (reflechir) bien.", answer: "reussissons reflechissez", kindWhenWrong: "Bravo d avoir essaye ce defi 😊 Regardons ensemble.", explanationWhenWrong: "Nous reussissons et vous reflechissez, toujours avec -iss- pour nous/vous/ils." }
+        {
+          order: 1,
+          type: "input",
+          prompt: "Complète : Je ____ (finir) mes devoirs.",
+          answer: "finis",
+          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
+          explanationWhenWrong: "Avec je, finir devient finis : je finis."
+        },
+        {
+          order: 2,
+          type: "input",
+          prompt: "Complète : Tu ____ (choisir) un livre.",
+          answer: "choisis",
+          kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.",
+          explanationWhenWrong: "Avec tu, choisir devient choisis."
+        },
+        {
+          order: 3,
+          type: "mcq",
+          prompt: "Choisis la bonne réponse : Nous ____ (grandir) chaque année.",
+          options: ["grandis", "grandissons", "grandissez"],
+          answer: "grandissons",
+          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
+          explanationWhenWrong: "Avec nous, grandir devient grandissons, avec -iss-."
+        },
+        {
+          order: 4,
+          type: "input",
+          prompt: "Complète : Vous ____ (finir) la course.",
+          answer: "finissez",
+          kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.",
+          explanationWhenWrong: "Avec vous, finir devient finissez."
+        },
+        {
+          order: 5,
+          type: "mcq",
+          prompt: "Choisis la bonne réponse : Elles ____ (choisir) leurs jouets.",
+          options: ["choisit", "choisissez", "choisissent"],
+          answer: "choisissent",
+          kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.",
+          explanationWhenWrong: "Avec elles, choisir devient choisissent."
+        },
+        {
+          order: 6,
+          type: "match",
+          prompt: "Défi : associe chaque sujet à la bonne forme du verbe réussir au présent.",
+          answer: "Je = réussis ; Nous = réussissons ; Ils = réussissent",
+          matchPairs: [
+            { left: "Je", right: "réussis" },
+            { left: "Nous", right: "réussissons" },
+            { left: "Ils", right: "réussissent" }
+          ],
+          kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.",
+          explanationWhenWrong: "Je réussis, nous réussissons (avec -iss-), ils réussissent (avec -iss-)."
+        }
       ]
     },
     {

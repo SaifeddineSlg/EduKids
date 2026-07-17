@@ -45,38 +45,95 @@ export const day04: DayCurriculum = {
     {
       subjectId: "conjugaison",
       status: "ready",
-      title: "Aller et faire, encore deux verbes speciaux",
+      title: "Le présent des verbes aller et faire",
       xpReward: 24,
       story: {
-        hook: "Comme etre et avoir, il existe d autres verbes tres utilises qui changent beaucoup.",
-        concreteExample: "Je vais a l ecole. Tu fais tes devoirs. Tu remarques que vais et fais ne ressemblent pas a aller ou faire ?",
-        reveal: "Ce sont les verbes aller et faire, encore deux verbes irreguliers tres frequents. Bravo, tu les reconnais !",
-        bridgeToConcept: "Au present : je vais, tu vas, il va, nous allons, vous allez, ils vont / je fais, tu fais, il fait, nous faisons, vous faites, ils font.",
+        hook: "Comme être et avoir, il existe d'autres verbes très utilisés qui changent beaucoup de forme au présent.",
+        concreteExample: "Écoute : je vais à l'école. Tu fais tes devoirs. Vais et fais ne ressemblent pas du tout à aller ou faire !",
+        reveal: "Ce sont les verbes aller et faire. À quoi servent-ils ? Aller sert à dire où on se déplace, faire sert à dire quelle action on réalise. Comment les reconnaître ? Comme être et avoir, ce sont des verbes irréguliers très fréquents, à apprendre par cœur.",
+        bridgeToConcept: "Terminaisons à retenir : aller → vais, vas, va, allons, allez, vont. Faire → fais, fais, fait, faisons, faites, font.",
         illustrationEmoji: "🏃"
       },
       examples: [
         {
-          title: "Exemple 1 : le verbe aller",
+          title: "Des exemples de tous les jours",
           steps: [
-            { text: "Je vais, tu vas, il va.", illustrationEmoji: "🚶" },
-            { text: "Nous allons, vous allez, ils vont.", illustrationEmoji: "🚶" }
+            { text: "Je vais à la piscine le mercredi.", illustrationEmoji: "🏊" },
+            { text: "Tu fais ton lit tous les matins.", illustrationEmoji: "🛏️" },
+            { text: "Nous allons au marché avec papa.", illustrationEmoji: "🛒" }
           ]
         },
         {
-          title: "Exemple 2 : le verbe faire",
+          title: "Attention à l'erreur fréquente",
           steps: [
-            { text: "Je fais, tu fais, elle fait.", illustrationEmoji: "🛠️" },
-            { text: "Nous faisons, vous faites, elles font.", illustrationEmoji: "🛠️" }
+            { text: "Beaucoup d'enfants écrivent « vous faisez ». C'est une erreur !", illustrationEmoji: "❌" },
+            { text: "La bonne forme est vous faites, une forme à mémoriser car elle ne suit aucune règle simple.", illustrationEmoji: "✅" }
+          ]
+        },
+        {
+          title: "L'astuce pour ne plus se tromper, et le résumé",
+          steps: [
+            { text: "Astuce : associe toujours aller à un lieu (je vais où ?) et faire à une action (je fais quoi ?) pour ne jamais les confondre.", illustrationEmoji: "🧭" },
+            { text: "Résumé : aller et faire sont deux verbes irréguliers très fréquents, dont chaque forme se mémorise séparément.", illustrationEmoji: "📝" }
           ]
         }
       ],
       questions: [
-        { order: 1, prompt: "Complete: Je ____ (aller) a la piscine.", answer: "vais", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, aller devient vais." },
-        { order: 2, prompt: "Complete: Tu ____ (faire) le menage.", answer: "fais", kindWhenWrong: "Pas grave 😊 On regarde ca ensemble.", explanationWhenWrong: "Avec tu, faire devient fais." },
-        { order: 3, prompt: "Complete: Nous ____ (aller) au parc.", answer: "allons", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec nous, aller devient allons." },
-        { order: 4, prompt: "Complete: Vous ____ (faire) un beau dessin.", answer: "faites", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec vous, faire devient faites." },
-        { order: 5, prompt: "Complete: Ils ____ (aller) chez leurs cousins.", answer: "vont", kindWhenWrong: "Ce n est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Avec ils, aller devient vont." },
-        { order: 6, prompt: "Defi : complete les deux mots. Nous ____ (faire) un gateau et vous ____ (aller) le chercher.", answer: "faisons allez", kindWhenWrong: "Bravo d avoir essaye ce defi 😊 Regardons ensemble.", explanationWhenWrong: "Nous faisons (faire) et vous allez (aller)." }
+        {
+          order: 1,
+          type: "input",
+          prompt: "Complète : Je ____ (aller) à la piscine.",
+          answer: "vais",
+          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
+          explanationWhenWrong: "Avec je, aller devient vais."
+        },
+        {
+          order: 2,
+          type: "input",
+          prompt: "Complète : Tu ____ (faire) le ménage.",
+          answer: "fais",
+          kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.",
+          explanationWhenWrong: "Avec tu, faire devient fais."
+        },
+        {
+          order: 3,
+          type: "mcq",
+          prompt: "Choisis la bonne réponse : Nous ____ (aller) au parc.",
+          options: ["allons", "allez", "vont"],
+          answer: "allons",
+          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
+          explanationWhenWrong: "Avec nous, aller devient allons."
+        },
+        {
+          order: 4,
+          type: "input",
+          prompt: "Complète : Vous ____ (faire) un beau dessin.",
+          answer: "faites",
+          kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.",
+          explanationWhenWrong: "Avec vous, faire devient faites."
+        },
+        {
+          order: 5,
+          type: "mcq",
+          prompt: "Choisis la bonne réponse : Ils ____ (aller) chez leurs cousins.",
+          options: ["allons", "allez", "vont"],
+          answer: "vont",
+          kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.",
+          explanationWhenWrong: "Avec ils, aller devient vont."
+        },
+        {
+          order: 6,
+          type: "match",
+          prompt: "Défi : associe chaque sujet à la bonne forme du verbe faire au présent.",
+          answer: "Nous = faisons ; Vous = faites ; Elles = font",
+          matchPairs: [
+            { left: "Nous", right: "faisons" },
+            { left: "Vous", right: "faites" },
+            { left: "Elles", right: "font" }
+          ],
+          kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.",
+          explanationWhenWrong: "Nous faisons, vous faites, elles font : chaque forme du verbe faire se mémorise séparément."
+        }
       ]
     },
     {

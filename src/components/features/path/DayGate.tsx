@@ -3,10 +3,13 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { DayCurriculum } from "@/models/types";
-import { getDayCompletion, isDayUnlocked } from "@/lib/pathProgress";
+import { ActiveDaySession, DayAttemptRecord } from "@/models/serverTypes";
 import { DayRunner } from "@/components/features/path/DayRunner";
 import { DayCompleteScreen } from "@/components/features/path/DayCompleteScreen";
+import { ResumeChoiceScreen } from "@/components/features/path/ResumeChoiceScreen";
 import { Card } from "@/components/ui/Card";
+import { fetchResumeState } from "@/lib/api/dayProgress";
+import { startDay } from "@/lib/api/dayProgress";
 
 interface DayGateProps {
   childId: string;
@@ -14,29 +17,84 @@ interface DayGateProps {
   day: DayCurriculum;
 }
 
+type GateState =
+  | { kind: "loading" }
+  | { kind: "locked" }
+  | { kind: "coming-soon" }
+  | { kind: "resume-choice" }
+  | { kind: "completed"; record: DayAttemptRecord }
+  | { kind: "run"; session: ActiveDaySession; showIntro: boolean }
+  | { kind: "error" };
+
 export function DayGate({ childId, childName, day }: DayGateProps) {
   const router = useRouter();
-  const [checked, setChecked] = useState(false);
-  const [allowed, setAllowed] = useState(false);
-  const [alreadyDone, setAlreadyDone] = useState(false);
+  const [state, setState] = useState<GateState>({ kind: "loading" });
 
   useEffect(() => {
-    const unlocked = isDayUnlocked(childId, day.dayNumber);
-    if (!unlocked) {
-      router.replace(`/child/${childId}/path`);
-      return;
+    let cancelled = false;
+
+    async function load() {
+      try {
+        const resume = await fetchResumeState(childId);
+
+        if (day.dayNumber > resume.unlockedDay) {
+          router.replace(`/child/${childId}/path`);
+          return;
+        }
+
+        if (day.status === "coming-soon") {
+          if (!cancelled) setState({ kind: "coming-soon" });
+          return;
+        }
+
+        if (resume.activeSession && resume.activeSession.dayNumber === day.dayNumber) {
+          if (!cancelled) setState({ kind: "resume-choice" });
+          return;
+        }
+
+        const summary = resume.attemptsByDay[day.dayNumber];
+        if (summary && summary.best.passed) {
+          if (!cancelled) setState({ kind: "completed", record: summary.best });
+          return;
+        }
+
+        const session = await startDay(childId, day.dayNumber, "resume");
+        if (!cancelled) setState({ kind: "run", session, showIntro: true });
+      } catch {
+        if (!cancelled) setState({ kind: "error" });
+      }
     }
 
-    setAllowed(true);
-    setAlreadyDone(Boolean(getDayCompletion(childId, day.dayNumber)));
-    setChecked(true);
-  }, [childId, day.dayNumber, router]);
+    void load();
 
-  if (!checked || !allowed) {
+    return () => {
+      cancelled = true;
+    };
+  }, [childId, day.dayNumber, day.status, router]);
+
+  if (state.kind === "loading" || state.kind === "locked") {
     return null;
   }
 
-  if (day.status === "coming-soon") {
+  if (state.kind === "error") {
+    return (
+      <section className="single-action-screen">
+        <Card>
+          <h2>Connexion impossible</h2>
+          <p>Verifie ta connexion internet puis reessaie.</p>
+        </Card>
+        <button
+          type="button"
+          className="primary-btn big-btn"
+          onClick={() => setState({ kind: "loading" })}
+        >
+          Reessayer
+        </button>
+      </section>
+    );
+  }
+
+  if (state.kind === "coming-soon") {
     return (
       <section className="single-action-screen">
         <Card>
@@ -47,18 +105,53 @@ export function DayGate({ childId, childName, day }: DayGateProps) {
     );
   }
 
-  if (alreadyDone) {
-    const completion = getDayCompletion(childId, day.dayNumber);
-    if (completion) {
-      return (
-        <DayCompleteScreen
-          childName={childName}
-          record={completion}
-          onBackToPath={() => router.push(`/child/${childId}/path`)}
-        />
-      );
-    }
+  if (state.kind === "resume-choice") {
+    return (
+      <ResumeChoiceScreen
+        dayNumber={day.dayNumber}
+        onResume={async () => {
+          const session = await startDay(childId, day.dayNumber, "resume");
+          setState({ kind: "run", session, showIntro: false });
+        }}
+        onRestart={async () => {
+          const session = await startDay(childId, day.dayNumber, "restart");
+          setState({ kind: "run", session, showIntro: true });
+        }}
+      />
+    );
   }
 
-  return <DayRunner childId={childId} childName={childName} day={day} />;
+  if (state.kind === "completed") {
+    return (
+      <>
+        <DayCompleteScreen
+          childName={childName}
+          record={state.record}
+          onBackToPath={() => router.push(`/child/${childId}/path`)}
+        />
+        <div className="single-action-screen">
+          <button
+            type="button"
+            className="ghost-btn big-btn"
+            onClick={async () => {
+              const session = await startDay(childId, day.dayNumber, "restart");
+              setState({ kind: "run", session, showIntro: true });
+            }}
+          >
+            Refaire ce jour
+          </button>
+        </div>
+      </>
+    );
+  }
+
+  return (
+    <DayRunner
+      childId={childId}
+      childName={childName}
+      day={day}
+      initialSession={state.session}
+      showIntro={state.showIntro}
+    />
+  );
 }

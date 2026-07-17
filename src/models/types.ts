@@ -59,13 +59,18 @@ export interface WorkedExample {
   steps: WorkedExampleStep[];
 }
 
+export type QuestionType = "input" | "mcq" | "match";
+
 export interface DayQuestion {
   order: 1 | 2 | 3 | 4 | 5 | 6;
+  type?: QuestionType; // absent = "input" (comportement historique)
   prompt: string;
   answer: string;
   acceptedAnswers?: string[];
   kindWhenWrong: string;
   explanationWhenWrong: string;
+  options?: string[]; // requis si type = "mcq"
+  matchPairs?: { left: string; right: string }[]; // requis si type = "match"
 }
 
 export interface SubjectDayLesson extends DayContentStatus {
@@ -86,19 +91,4 @@ export interface SubjectResult {
   subjectId: SubjectId;
   correctCount: number;
   xpEarned: number;
-}
-
-export interface DayCompletionRecord {
-  dayNumber: number;
-  completedAt: string;
-  subjectResults: SubjectResult[];
-  totalXpEarned: number;
-  badgeEarned: boolean;
-  timeSpentSeconds: number;
-}
-
-export interface ChildPathProgress {
-  childId: string;
-  unlockedDay: number;
-  completions: DayCompletionRecord[];
 }

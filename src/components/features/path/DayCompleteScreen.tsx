@@ -1,13 +1,13 @@
 "use client";
 
-import { DayCompletionRecord } from "@/models/types";
+import { DayAttemptRecord } from "@/models/serverTypes";
 import { subjects } from "@/data/subjects";
 import { Card } from "@/components/ui/Card";
 import { StarBurst } from "@/components/features/path/StarBurst";
 
 interface DayCompleteScreenProps {
   childName: string;
-  record: DayCompletionRecord;
+  record: DayAttemptRecord;
   onBackToPath: () => void;
 }
 
@@ -41,7 +41,7 @@ export function DayCompleteScreen({ childName, record, onBackToPath }: DayComple
 
         <div className="chips-row">
           <span className="reward-chip">⭐ {record.totalXpEarned} XP gagne</span>
-          {record.badgeEarned ? <span className="reward-chip">🏅 Badge gagne</span> : null}
+          <span className="reward-chip">🏅 Badge gagne</span>
           <span className="reward-chip">⏱️ {formatMinutesSeconds(record.timeSpentSeconds)}</span>
         </div>
       </Card>

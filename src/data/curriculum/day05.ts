@@ -44,36 +44,95 @@ export const day05: DayCurriculum = {
     {
       subjectId: "conjugaison",
       status: "ready",
-      title: "Revoir tous les verbes de la semaine",
+      title: "La grande révision des verbes de la semaine",
       xpReward: 24,
       story: {
-        hook: "Imagine un grand concert ou tous les verbes de la semaine viennent chanter ensemble.",
-        concreteExample: "Cette semaine, on a rencontre les verbes en -er, en -ir, etre, avoir, aller, faire.",
-        reveal: "Chaque verbe a sa petite musique, mais tu les connais maintenant tous un peu mieux. Bravo pour cette semaine de travail !",
-        bridgeToConcept: "Reviser la conjugaison, c est se rappeler la musique de chaque groupe de verbes.",
+        hook: "Imagine un grand concert où tous les verbes de la semaine viennent chanter ensemble sur la même scène.",
+        concreteExample: "Cette semaine, tu as rencontré les verbes en -er, les verbes en -ir, être, avoir, aller et faire.",
+        reveal: "À quoi sert cette révision ? À vérifier que tu reconnais chaque groupe de verbes et sa musique. Comment s'y retrouver ? On regarde d'abord si le verbe est régulier (-er, -ir) ou irrégulier (être, avoir, aller, faire), puis on applique la bonne terminaison.",
+        bridgeToConcept: "Terminaisons à retenir : -er → -e, -es, -e, -ons, -ez, -ent. -ir (comme finir) → -is, -is, -it, -issons, -issez, -issent. Être, avoir, aller, faire sont irréguliers et se mémorisent par cœur.",
         illustrationEmoji: "🎤"
       },
       examples: [
         {
-          title: "Exemple 1 : verbe en -er",
+          title: "Des exemples de tous les jours, tous groupes mélangés",
           steps: [
-            { text: "Nous chantons (terminaison ons).", illustrationEmoji: "🎵" }
+            { text: "Nous chantons une chanson (verbe en -er).", illustrationEmoji: "🎵" },
+            { text: "Vous finissez votre goûter (verbe en -ir).", illustrationEmoji: "🍪" },
+            { text: "Ils sont contents et ils vont au parc (verbes être et aller).", illustrationEmoji: "✨" }
           ]
         },
         {
-          title: "Exemple 2 : verbe etre",
+          title: "Attention à l'erreur fréquente",
           steps: [
-            { text: "Ils sont contents (verbe irregulier).", illustrationEmoji: "✨" }
+            { text: "L'erreur la plus fréquente est d'appliquer la terminaison des verbes en -er à un verbe irrégulier, par exemple « ils sontent » au lieu de ils sont.", illustrationEmoji: "❌" },
+            { text: "Les verbes être, avoir, aller, faire ne suivent aucune des règles habituelles : il faut les connaître par cœur, un par un.", illustrationEmoji: "✅" }
+          ]
+        },
+        {
+          title: "L'astuce pour ne plus se tromper, et le résumé",
+          steps: [
+            { text: "Astuce : avant d'écrire une terminaison, demande-toi toujours si le verbe est régulier ou irrégulier.", illustrationEmoji: "🧠" },
+            { text: "Résumé : cette semaine, tu as appris que chaque groupe de verbes a sa propre musique, et que certains verbes très utilisés ne suivent aucune règle.", illustrationEmoji: "📝" }
           ]
         }
       ],
       questions: [
-        { order: 1, prompt: "Complete: Je ____ (parler) doucement.", answer: "parle", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, parler devient parle." },
-        { order: 2, prompt: "Complete: Tu ____ (finir) ton repas.", answer: "finis", kindWhenWrong: "Pas grave 😊 On regarde ca ensemble.", explanationWhenWrong: "Avec tu, finir devient finis." },
-        { order: 3, prompt: "Complete: Nous ____ (etre) prets.", answer: "sommes", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec nous, etre devient sommes." },
-        { order: 4, prompt: "Complete: Vous ____ (avoir) raison.", answer: "avez", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec vous, avoir devient avez." },
-        { order: 5, prompt: "Complete: Ils ____ (aller) a la fete.", answer: "vont", kindWhenWrong: "Ce n est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Avec ils, aller devient vont." },
-        { order: 6, prompt: "Defi : complete les trois mots. Je ____ (faire) un gateau, tu ____ (choisir) le glacage, et nous ____ (etre) fiers.", answer: "fais choisis sommes", kindWhenWrong: "Bravo d avoir essaye ce defi 😊 Regardons ensemble.", explanationWhenWrong: "Je fais (faire), tu choisis (choisir), nous sommes (etre)." }
+        {
+          order: 1,
+          type: "input",
+          prompt: "Complète : Je ____ (parler) doucement.",
+          answer: "parle",
+          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
+          explanationWhenWrong: "Avec je, parler devient parle."
+        },
+        {
+          order: 2,
+          type: "input",
+          prompt: "Complète : Tu ____ (finir) ton repas.",
+          answer: "finis",
+          kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.",
+          explanationWhenWrong: "Avec tu, finir devient finis."
+        },
+        {
+          order: 3,
+          type: "mcq",
+          prompt: "Choisis la bonne réponse : Nous ____ (être) prêts.",
+          options: ["sommes", "êtes", "sont"],
+          answer: "sommes",
+          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
+          explanationWhenWrong: "Avec nous, être devient sommes."
+        },
+        {
+          order: 4,
+          type: "input",
+          prompt: "Complète : Vous ____ (avoir) raison.",
+          answer: "avez",
+          kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.",
+          explanationWhenWrong: "Avec vous, avoir devient avez."
+        },
+        {
+          order: 5,
+          type: "mcq",
+          prompt: "Choisis la bonne réponse : Ils ____ (aller) à la fête.",
+          options: ["allons", "allez", "vont"],
+          answer: "vont",
+          kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.",
+          explanationWhenWrong: "Avec ils, aller devient vont."
+        },
+        {
+          order: 6,
+          type: "match",
+          prompt: "Défi : associe chaque sujet à la bonne forme du verbe faire au présent.",
+          answer: "Je = fais ; Tu = fais ; Nous = faisons",
+          matchPairs: [
+            { left: "Je", right: "fais" },
+            { left: "Tu", right: "fais" },
+            { left: "Nous", right: "faisons" }
+          ],
+          kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.",
+          explanationWhenWrong: "Je fais, tu fais (les deux se ressemblent), nous faisons (avec -ons)."
+        }
       ]
     },
     {

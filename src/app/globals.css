@@ -239,6 +239,12 @@ a {
   border: 2px solid #ffd08a;
 }
 
+.ghost-btn.is-active {
+  background: var(--secondary);
+  border-color: #0e7f73;
+  color: #ffffff;
+}
+
 .primary-btn:hover,
 .ghost-btn:hover {
   transform: translateY(-2px);

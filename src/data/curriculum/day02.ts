@@ -46,39 +46,95 @@ export const day02: DayCurriculum = {
     {
       subjectId: "conjugaison",
       status: "ready",
-      title: "Etre et avoir, les deux verbes magiques",
+      title: "Le présent des verbes être et avoir",
       xpReward: 24,
       story: {
-        hook: "Imagine deux verbes tellement utilises qu ils sont un peu magiques et ne suivent pas la meme musique que les autres.",
-        concreteExample: "Je suis content. J ai un velo. Tu entends ? Ce n est pas je etre ou je avoir, ca change completement.",
-        reveal: "Ces verbes sont etre et avoir. Au present : je suis, tu es, il est, nous sommes, vous etes, ils sont / j ai, tu as, il a, nous avons, vous avez, ils ont. Bravo, tu viens de reconnaitre les verbes magiques !",
-        bridgeToConcept: "On les appelle des verbes irreguliers car ils ne suivent pas les terminaisons habituelles des verbes en -er.",
+        hook: "Il existe deux verbes tellement utilisés qu'ils sont un peu magiques : ils ne suivent pas la même musique que les verbes en -er.",
+        concreteExample: "Écoute : je suis content. J'ai un vélo. Ce n'est pas « je êtres » ou « je avoir », tout change complètement !",
+        reveal: "Ces verbes sont être et avoir. À quoi servent-ils ? Être sert à dire ce qu'on est ou comment on se sent ; avoir sert à dire ce qu'on possède. Comment les reconnaître ? Ils ne se terminent jamais par -e, -es, -e, -ons, -ez, -ent comme les verbes en -er : ce sont des verbes irréguliers.",
+        bridgeToConcept: "Terminaisons à retenir : être → suis, es, est, sommes, êtes, sont. Avoir → ai, as, a, avons, avez, ont.",
         illustrationEmoji: "✨"
       },
       examples: [
         {
-          title: "Exemple 1 : le verbe etre",
+          title: "Des exemples de tous les jours",
           steps: [
-            { text: "Je suis, tu es, il est.", illustrationEmoji: "🧍" },
-            { text: "Nous sommes, vous etes, ils sont.", illustrationEmoji: "🧍" },
-            { text: "Chaque personne a sa propre forme, tres differente des verbes en -er.", illustrationEmoji: "🔎" }
+            { text: "Je suis fatigué après l'école.", illustrationEmoji: "🧍" },
+            { text: "Tu as un joli cartable.", illustrationEmoji: "🎒" },
+            { text: "Nous sommes contents de nos vacances.", illustrationEmoji: "😊" }
           ]
         },
         {
-          title: "Exemple 2 : le verbe avoir",
+          title: "Attention à l'erreur fréquente",
           steps: [
-            { text: "J ai, tu as, elle a.", illustrationEmoji: "🎒" },
-            { text: "Nous avons, vous avez, elles ont.", illustrationEmoji: "🎒" }
+            { text: "Beaucoup d'enfants écrivent « je suis » avec un s à la fin comme un verbe en -er. C'est déjà correct : suis ne prend jamais de s supplémentaire !", illustrationEmoji: "❌" },
+            { text: "L'erreur la plus fréquente est d'oublier l'accent : on écrit vous êtes, avec un accent circonflexe sur le e.", illustrationEmoji: "✅" }
+          ]
+        },
+        {
+          title: "L'astuce pour ne plus se tromper, et le résumé",
+          steps: [
+            { text: "Astuce : être et avoir sont des verbes tellement importants qu'on les apprend par cœur, comme une chanson qu'on connaît déjà.", illustrationEmoji: "🎵" },
+            { text: "Résumé : être et avoir changent complètement de forme selon la personne, il n'y a pas de règle simple, il faut les mémoriser.", illustrationEmoji: "📝" }
           ]
         }
       ],
       questions: [
-        { order: 1, prompt: "Complete: Je ____ (etre) content.", answer: "suis", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, le verbe etre devient suis : je suis content." },
-        { order: 2, prompt: "Complete: Tu ____ (avoir) un chat.", answer: "as", kindWhenWrong: "Pas grave 😊 On regarde ca ensemble.", explanationWhenWrong: "Avec tu, le verbe avoir devient as : tu as un chat." },
-        { order: 3, prompt: "Complete: Nous ____ (etre) fatigues.", answer: "sommes", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec nous, le verbe etre devient sommes." },
-        { order: 4, prompt: "Complete: Vous ____ (avoir) de la chance.", answer: "avez", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec vous, le verbe avoir devient avez." },
-        { order: 5, prompt: "Complete: Ils ____ (etre) heureux.", answer: "sont", kindWhenWrong: "Ce n est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Avec ils, le verbe etre devient sont." },
-        { order: 6, prompt: "Defi : complete les deux mots. Nous ____ (avoir) de la chance car elles ____ (etre) gentilles.", answer: "avons sont", kindWhenWrong: "Bravo d avoir essaye ce defi 😊 Regardons ensemble.", explanationWhenWrong: "Nous avons (verbe avoir) et elles sont (verbe etre)." }
+        {
+          order: 1,
+          type: "input",
+          prompt: "Complète : Je ____ (être) content.",
+          answer: "suis",
+          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
+          explanationWhenWrong: "Avec je, le verbe être devient suis : je suis content."
+        },
+        {
+          order: 2,
+          type: "input",
+          prompt: "Complète : Tu ____ (avoir) un chat.",
+          answer: "as",
+          kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.",
+          explanationWhenWrong: "Avec tu, le verbe avoir devient as : tu as un chat."
+        },
+        {
+          order: 3,
+          type: "mcq",
+          prompt: "Choisis la bonne réponse : Nous ____ (être) fatigués.",
+          options: ["sommes", "êtes", "sont"],
+          answer: "sommes",
+          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
+          explanationWhenWrong: "Avec nous, le verbe être devient sommes."
+        },
+        {
+          order: 4,
+          type: "input",
+          prompt: "Complète : Vous ____ (avoir) de la chance.",
+          answer: "avez",
+          kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.",
+          explanationWhenWrong: "Avec vous, le verbe avoir devient avez."
+        },
+        {
+          order: 5,
+          type: "mcq",
+          prompt: "Choisis la bonne réponse : Ils ____ (être) heureux.",
+          options: ["sommes", "êtes", "sont"],
+          answer: "sont",
+          kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.",
+          explanationWhenWrong: "Avec ils, le verbe être devient sont."
+        },
+        {
+          order: 6,
+          type: "match",
+          prompt: "Défi : associe chaque sujet à la bonne forme du verbe avoir au présent.",
+          answer: "Nous = avons ; Elles = ont ; Il = a",
+          matchPairs: [
+            { left: "Nous", right: "avons" },
+            { left: "Elles", right: "ont" },
+            { left: "Il", right: "a" }
+          ],
+          kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.",
+          explanationWhenWrong: "Nous avons, elles ont, il a : le verbe avoir change complètement de forme selon la personne."
+        }
       ]
     },
     {

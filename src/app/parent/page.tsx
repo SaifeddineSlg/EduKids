@@ -1,13 +1,10 @@
 'use client'
 
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { children } from '@/data/children'
 import { Card } from '@/components/ui/Card'
-import {
-  ChildAnalytics,
-  getChildAnalytics,
-  getChildAnalyticsFromCloud,
-} from '@/lib/progressDb'
+import { ChildAnalytics, fetchChildAnalytics } from '@/lib/progressDb'
 
 function getDefaultAnalytics(): ChildAnalytics {
   return {
@@ -35,8 +32,7 @@ export default function ParentDashboardPage() {
 
       await Promise.all(
         children.map(async (child) => {
-          const cloud = await getChildAnalyticsFromCloud(child.id)
-          values[child.id] = cloud ?? getChildAnalytics(child.id)
+          values[child.id] = await fetchChildAnalytics(child.id)
         }),
       )
 
@@ -97,6 +93,10 @@ export default function ParentDashboardPage() {
                       </li>
                     ))}
                   </ul>
+
+                  <Link href={`/parent/history/${child.id}`} className="primary-btn">
+                    Voir l&apos;historique detaille
+                  </Link>
                 </>
               )
             })()}

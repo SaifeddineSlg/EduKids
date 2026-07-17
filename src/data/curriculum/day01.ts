@@ -83,75 +83,95 @@ export const day01: DayCurriculum = {
     {
       subjectId: "conjugaison",
       status: "ready",
-      title: "Les verbes en -er qui font une petite musique",
+      title: "Le présent des verbes en -er",
       xpReward: 24,
       story: {
-        hook: "Imagine une chanson avec toujours les memes petites notes a la fin de chaque ligne.",
-        concreteExample: "Ecoute: je joue, tu joues, il joue, nous jouons, vous jouez, ils jouent. Tu entends la musique qui change un peu a chaque fois ?",
-        reveal: "Ces petites fins (e, es, e, ons, ez, ent) sont toujours les memes pour presque tous les verbes en -er. Bravo, tu viens d entendre la musique du present !",
-        bridgeToConcept: "On appelle ca la conjugaison au present des verbes du premier groupe (les verbes en -er).",
+        hook: "Le présent, c'est le temps qu'on utilise pour parler de maintenant, de ce qui se passe en ce moment même, comme une photo prise à cet instant précis.",
+        concreteExample: "Écoute cette petite musique : je joue, tu joues, il joue, nous jouons, vous jouez, ils jouent.",
+        reveal: "À quoi sert le présent ? Il sert à dire ce qui se passe maintenant. Comment le reconnaître ? On regarde qui fait l'action (je, tu, il, nous, vous, ils) et on ajoute la bonne terminaison à la fin du verbe. Bravo, tu viens d'entendre la musique du présent !",
+        bridgeToConcept: "Terminaisons à retenir pour les verbes en -er au présent : -e, -es, -e, -ons, -ez, -ent.",
         illustrationEmoji: "🎵"
       },
       examples: [
         {
-          title: "Exemple 1 : le verbe chanter",
+          title: "Des exemples de tous les jours",
           steps: [
-            { text: "Je chante, tu chantes, il chante.", illustrationEmoji: "🎤" },
-            { text: "Nous chantons, vous chantez, ils chantent.", illustrationEmoji: "🎤" },
-            { text: "Tu remarques : avec tu, on ajoute toujours un s.", illustrationEmoji: "🔎" }
+            { text: "Le matin, je mange des céréales.", illustrationEmoji: "🥣" },
+            { text: "Tu joues avec ton ballon dans le jardin.", illustrationEmoji: "⚽" },
+            { text: "Le soir, nous regardons un film ensemble.", illustrationEmoji: "🎬" }
           ]
         },
         {
-          title: "Exemple 2 : le verbe manger",
+          title: "Attention à l'erreur fréquente",
           steps: [
-            { text: "Je mange, tu manges, elle mange.", illustrationEmoji: "🍎" },
-            { text: "Nous mangeons, vous mangez, elles mangent.", illustrationEmoji: "🍎" },
-            { text: "Avec nous, on ajoute toujours ons.", illustrationEmoji: "🔎" }
+            { text: "Beaucoup d'enfants écrivent « je parles » avec un s. C'est une erreur !", illustrationEmoji: "❌" },
+            { text: "Avec je, il ne faut jamais mettre de s : on écrit je parle.", illustrationEmoji: "✅" },
+            { text: "Avec tu, c'est l'inverse : il faut toujours un s, comme dans tu parles.", illustrationEmoji: "✅" }
+          ]
+        },
+        {
+          title: "L'astuce pour ne plus se tromper, et le résumé",
+          steps: [
+            { text: "Astuce : chante dans ta tête la petite musique -e, -es, -e, -ons, -ez, -ent en pensant à je, tu, il, nous, vous, ils.", illustrationEmoji: "🎵" },
+            { text: "Résumé : au présent, un verbe en -er change de terminaison selon la personne qui fait l'action, mais son début ne change jamais.", illustrationEmoji: "📝" }
           ]
         }
       ],
       questions: [
         {
           order: 1,
-          prompt: "Complete: Je ____ (parler) avec ma soeur.",
+          type: "input",
+          prompt: "Complète : Je ____ (parler) avec ma sœur.",
           answer: "parle",
-          kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec je, la terminaison du present est e : je parle."
+          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
+          explanationWhenWrong: "Avec je, la terminaison du présent est -e : je parle."
         },
         {
           order: 2,
-          prompt: "Complete: Tu ____ (jouer) dans le jardin.",
+          type: "input",
+          prompt: "Complète : Tu ____ (jouer) dans le jardin.",
           answer: "joues",
-          kindWhenWrong: "Pas grave 😊 On regarde ca ensemble.",
+          kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.",
           explanationWhenWrong: "Avec tu, on ajoute toujours un s : tu joues."
         },
         {
           order: 3,
-          prompt: "Complete: Nous ____ (chanter) une belle chanson.",
+          type: "mcq",
+          prompt: "Choisis la bonne réponse : Nous ____ (chanter) une belle chanson.",
+          options: ["chante", "chantons", "chantez"],
           answer: "chantons",
-          kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec nous, la terminaison est toujours ons : nous chantons."
+          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
+          explanationWhenWrong: "Avec nous, la terminaison est toujours -ons : nous chantons."
         },
         {
           order: 4,
-          prompt: "Complete: Vous ____ (regarder) un dessin anime.",
+          type: "input",
+          prompt: "Complète : Vous ____ (regarder) un dessin animé.",
           answer: "regardez",
           kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.",
-          explanationWhenWrong: "Avec vous, la terminaison est toujours ez : vous regardez."
+          explanationWhenWrong: "Avec vous, la terminaison est toujours -ez : vous regardez."
         },
         {
           order: 5,
-          prompt: "Complete: Ils ____ (danser) dans la cour.",
+          type: "mcq",
+          prompt: "Choisis la bonne réponse : Ils ____ (danser) dans la cour.",
+          options: ["danse", "dansez", "dansent"],
           answer: "dansent",
-          kindWhenWrong: "Ce n est pas grave 😊 On regarde ensemble.",
-          explanationWhenWrong: "Avec ils, la terminaison est toujours ent : ils dansent."
+          kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.",
+          explanationWhenWrong: "Avec ils, la terminaison est toujours -ent : ils dansent."
         },
         {
           order: 6,
-          prompt: "Defi : complete les deux mots. Nous ____ (aimer) quand elles ____ (rigoler).",
-          answer: "aimons rigolent",
-          kindWhenWrong: "Bravo d avoir essaye ce defi 😊 Regardons ensemble.",
-          explanationWhenWrong: "Nous aimons (terminaison ons) et elles rigolent (terminaison ent)."
+          type: "match",
+          prompt: "Défi : associe chaque sujet à la bonne forme du verbe aimer au présent.",
+          answer: "Je = aime ; Nous = aimons ; Elles = aiment",
+          matchPairs: [
+            { left: "Je", right: "aime" },
+            { left: "Nous", right: "aimons" },
+            { left: "Elles", right: "aiment" }
+          ],
+          kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.",
+          explanationWhenWrong: "Je aime (-e), nous aimons (-ons), elles aiment (-ent) : chaque sujet a sa propre terminaison."
         }
       ]
     },

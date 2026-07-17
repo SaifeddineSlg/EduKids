@@ -4,13 +4,13 @@ import {
   isSupabaseServerConfigured,
 } from '@/lib/supabase/server'
 
-interface AttemptRow {
+interface QuestionAttemptRow {
   child_id: string
-  lesson_id: string
-  activity_kind: 'exercise' | 'quiz'
+  day_number: number
+  subject_id: string
   correct: boolean
   elapsed_seconds: number | null
-  created_at: string
+  answered_at: string
 }
 
 export async function GET(request: Request) {
@@ -33,12 +33,10 @@ export async function GET(request: Request) {
 
   const supabase = getSupabaseServerClient()
   const { data, error } = await supabase
-    .from('progress_attempts')
-    .select(
-      'child_id, lesson_id, activity_kind, correct, elapsed_seconds, created_at',
-    )
+    .from('question_attempts')
+    .select('child_id, day_number, subject_id, correct, elapsed_seconds, answered_at')
     .eq('child_id', childId)
-    .order('created_at', { ascending: true })
+    .order('answered_at', { ascending: true })
 
   if (error) {
     return NextResponse.json(
@@ -47,19 +45,13 @@ export async function GET(request: Request) {
     )
   }
 
-  const attempts = (data ?? []) as AttemptRow[]
+  const attempts = (data ?? []) as QuestionAttemptRow[]
   const totalAttempts = attempts.length
   const correctAttempts = attempts.filter((item) => item.correct).length
   const accuracy =
     totalAttempts === 0
       ? 0
       : Math.round((correctAttempts / totalAttempts) * 100)
-  const exerciseAttempts = attempts.filter(
-    (item) => item.activity_kind === 'exercise',
-  ).length
-  const quizAttempts = attempts.filter(
-    (item) => item.activity_kind === 'quiz',
-  ).length
 
   const durations = attempts
     .filter((item) => typeof item.elapsed_seconds === 'number')
@@ -73,12 +65,13 @@ export async function GET(request: Request) {
 
   const lessonMap = new Map<string, { total: number; correct: number }>()
   attempts.forEach((item) => {
-    const current = lessonMap.get(item.lesson_id) ?? { total: 0, correct: 0 }
+    const lessonId = `day-${item.day_number}-${item.subject_id}`
+    const current = lessonMap.get(lessonId) ?? { total: 0, correct: 0 }
     current.total += 1
     if (item.correct) {
       current.correct += 1
     }
-    lessonMap.set(item.lesson_id, current)
+    lessonMap.set(lessonId, current)
   })
 
   const masteredLessons: string[] = []
@@ -98,8 +91,8 @@ export async function GET(request: Request) {
 
   const weeklyScore = attempts
     .filter((item) => {
-      const created = new Date(item.created_at).getTime()
-      const diff = Date.now() - created
+      const answered = new Date(item.answered_at).getTime()
+      const diff = Date.now() - answered
       return diff <= 7 * 24 * 60 * 60 * 1000
     })
     .reduce((score, item) => score + (item.correct ? 10 : 3), 0)
@@ -109,7 +102,7 @@ export async function GET(request: Request) {
     day.setDate(day.getDate() - (6 - index))
     const dayKey = day.toISOString().slice(0, 10)
     const dayAttempts = attempts.filter(
-      (item) => item.created_at.slice(0, 10) === dayKey,
+      (item) => item.answered_at.slice(0, 10) === dayKey,
     )
 
     return {
@@ -125,8 +118,8 @@ export async function GET(request: Request) {
       totalAttempts,
       correctAttempts,
       accuracy,
-      exerciseAttempts,
-      quizAttempts,
+      exerciseAttempts: totalAttempts,
+      quizAttempts: 0,
       averageSeconds,
       masteredLessons,
       lessonsToReview,
