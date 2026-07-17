@@ -259,6 +259,14 @@ alter table public.active_day_sessions drop constraint if exists active_day_sess
 alter table public.active_day_sessions add constraint active_day_sessions_student_level_unique
   unique (student_id, school_level_id);
 
+-- child_id n'est plus renseigne par le code applicatif (qui utilise desormais
+-- student_id/school_level_id) : sa contrainte NOT NULL d'origine bloquait tous les
+-- inserts/upserts de progression (erreur "null value in column child_id violates
+-- not-null constraint"). On la retire ; la colonne reste en lecture pour l'historique.
+alter table public.active_day_sessions alter column child_id drop not null;
+alter table public.day_attempts alter column child_id drop not null;
+alter table public.question_attempts alter column child_id drop not null;
+
 -- Fonction RPC mise a jour : accepte student_id/school_level_id en plus de day_number/attempt_number.
 create or replace function public.complete_day_attempt(
   p_student_id uuid,
