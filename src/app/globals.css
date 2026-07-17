@@ -478,6 +478,43 @@ a {
   min-height: 60px;
 }
 
+.day-exit-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.day-exit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'Baloo 2', 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--secondary);
+  background: #ffffff;
+  border: 2px solid var(--secondary);
+  border-radius: 999px;
+  padding: 0.5rem 1.1rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.day-exit-btn:hover,
+.day-exit-btn:focus-visible {
+  background: var(--secondary);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 480px) {
+  .day-exit-btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+}
+
 .story-emoji {
   font-size: 3rem;
   text-align: center;

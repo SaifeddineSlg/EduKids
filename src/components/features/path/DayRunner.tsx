@@ -46,21 +46,32 @@ export function DayRunner({ studentId, childName, day, initialSession, showIntro
     const lesson = day.subjects[session.subjectIndex];
 
     return (
-      <SubjectLessonEngine
-        key={`${session.subjectIndex}-${session.attemptNumber}`}
-        lesson={lesson}
-        studentId={studentId}
-        dayNumber={day.dayNumber}
-        attemptNumber={session.attemptNumber}
-        initialStep={session.lessonStep}
-        initialQuestionIndex={session.questionIndex}
-        initialCorrectCount={session.currentSubjectCorrectCount ?? 0}
-        onSubjectComplete={async (result) => {
-          const updatedSession = await completeSubject(studentId, result);
-          setSession(updatedSession);
-          setPhase({ kind: "subject-complete", result });
-        }}
-      />
+      <>
+        <div className="day-exit-bar">
+          <button
+            type="button"
+            className="day-exit-btn"
+            onClick={() => router.push(`/parent/children/${studentId}/path`)}
+          >
+            <span aria-hidden="true">🏠</span> Faire une pause
+          </button>
+        </div>
+        <SubjectLessonEngine
+          key={`${session.subjectIndex}-${session.attemptNumber}`}
+          lesson={lesson}
+          studentId={studentId}
+          dayNumber={day.dayNumber}
+          attemptNumber={session.attemptNumber}
+          initialStep={session.lessonStep}
+          initialQuestionIndex={session.questionIndex}
+          initialCorrectCount={session.currentSubjectCorrectCount ?? 0}
+          onSubjectComplete={async (result) => {
+            const updatedSession = await completeSubject(studentId, result);
+            setSession(updatedSession);
+            setPhase({ kind: "subject-complete", result });
+          }}
+        />
+      </>
     );
   }
 

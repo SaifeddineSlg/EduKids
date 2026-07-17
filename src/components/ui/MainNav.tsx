@@ -62,7 +62,7 @@ export function MainNav() {
   return (
     <header className="site-header">
       <div className="site-header-inner">
-        <Link href="/" className="site-brand">
+        <Link href={role ? (role === 'admin' ? '/admin' : '/parent') : '/'} className="site-brand">
           EduKids
         </Link>
 
