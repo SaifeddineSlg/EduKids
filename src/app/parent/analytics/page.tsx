@@ -87,9 +87,13 @@ export default function ParentAnalyticsPage() {
 
               <h3>Historique 7 jours</h3>
               <ul className="stats-list">
-                {stats.last7DaysActivity.map((day) => (
+                {[...stats.last7DaysActivity].reverse().map((day) => (
                   <li key={`${student.id}-${day.day}`}>
-                    {day.day}: {day.correct}/{day.attempts} reussites
+                    {new Date(day.day).toLocaleDateString("fr-FR", {
+                      weekday: "long",
+                      day: "numeric",
+                      month: "short",
+                    })}: {day.correct}/{day.attempts} reussites
                   </li>
                 ))}
               </ul>
