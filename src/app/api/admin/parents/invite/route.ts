@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { getSupabaseServerClient, isSupabaseServerConfigured } from "@/lib/supabase/server";
 import { requireAdminProfile } from "@/lib/auth/requireAdmin";
+import { resolveSiteUrl } from "@/lib/server/siteUrl";
 
 interface InvitePayload {
   email: string;
@@ -30,7 +31,7 @@ export async function POST(request: Request) {
 
   const supabase = getSupabaseServerClient();
 
-  const origin = request.headers.get("origin") ?? new URL(request.url).origin;
+  const origin = resolveSiteUrl(request);
   const normalizedEmail = payload.email.trim().toLowerCase();
 
   // Cree le compte (sans mot de passe) et envoie un email d'invitation contenant
