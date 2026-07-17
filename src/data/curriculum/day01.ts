@@ -273,9 +273,9 @@ export const day01: DayCurriculum = {
           ]
         },
         {
-          title: "Exemple 2 : Il a mange une pomme",
+          title: "Exemple 2 : Il a mangé une pomme",
           steps: [
-            { text: "On essaie avait : Il avait mange une pomme. Ca fonctionne !", illustrationEmoji: "✅" },
+            { text: "On essaie avait : Il avait mangé une pomme. Ca fonctionne !", illustrationEmoji: "✅" },
             { text: "Donc on ecrit a sans accent (le verbe avoir).", illustrationEmoji: "✅" }
           ]
         }
@@ -297,10 +297,10 @@ export const day01: DayCurriculum = {
         },
         {
           order: 3,
-          prompt: "Complete: Elle ___ mange à midi. (a ou à)",
+          prompt: "Complete: Elle ___ mangé à midi. (a ou à)",
           answer: "a",
           kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "On peut dire elle avait mange, donc c est a sans accent."
+          explanationWhenWrong: "On peut dire elle avait mangé, donc c est a sans accent."
         },
         {
           order: 4,
@@ -311,17 +311,17 @@ export const day01: DayCurriculum = {
         },
         {
           order: 5,
-          prompt: "Complete: Mon frere ___ trouve un tresor. (a ou à)",
+          prompt: "Complete: Mon frere ___ trouvé un tresor. (a ou à)",
           answer: "a",
           kindWhenWrong: "Ce n est pas grave 😊 On regarde ensemble.",
-          explanationWhenWrong: "On peut dire mon frere avait trouve, donc c est a sans accent."
+          explanationWhenWrong: "On peut dire mon frere avait trouvé, donc c est a sans accent."
         },
         {
           order: 6,
-          prompt: "Defi : complete les deux mots. Il ___ donne son ballon ___ son ami.",
+          prompt: "Defi : complete les deux mots. Il ___ donné son ballon ___ son ami.",
           answer: "a à",
           kindWhenWrong: "Bravo d avoir essaye ce defi 😊 Regardons ensemble.",
-          explanationWhenWrong: "Il a donne (avait donne fonctionne) et à son ami (avait son ami ne fonctionne pas)."
+          explanationWhenWrong: "Il a donné (avait donné fonctionne) et à son ami (avait son ami ne fonctionne pas)."
         }
       ]
     },

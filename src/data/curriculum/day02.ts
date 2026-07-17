@@ -209,7 +209,7 @@ export const day02: DayCurriculum = {
         { order: 2, prompt: "Complete: Il porte ___ manteau. (son ou sont)", answer: "son", kindWhenWrong: "Pas grave 😊 On regarde ca ensemble.", explanationWhenWrong: "Il porte etaient manteau ne fonctionne pas, donc c est son (petit mot)." },
         { order: 3, prompt: "Complete: Les fleurs ___ belles. (son ou sont)", answer: "sont", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Les fleurs etaient belles fonctionne, donc c est sont." },
         { order: 4, prompt: "Complete: Elle range ___ cahier. (son ou sont)", answer: "son", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Elle range etaient cahier ne fonctionne pas, donc c est son." },
-        { order: 5, prompt: "Complete: Mes amis ___ arrives. (son ou sont)", answer: "sont", kindWhenWrong: "Ce n est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Mes amis etaient arrives fonctionne, donc c est sont." },
+        { order: 5, prompt: "Complete: Mes amis ___ arrivés. (son ou sont)", answer: "sont", kindWhenWrong: "Ce n est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Mes amis etaient arrivés fonctionne, donc c est sont." },
         { order: 6, prompt: "Defi : complete les deux mots. Paul et ___ chien ___ alles se promener.", answer: "son sont", kindWhenWrong: "Bravo d avoir essaye ce defi 😊 Regardons ensemble.", explanationWhenWrong: "son chien (petit mot) et ils etaient alles fonctionne donc sont (verbe etre)." }
       ]
     },

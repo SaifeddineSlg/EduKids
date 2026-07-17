@@ -38,7 +38,7 @@ export const day05: DayCurriculum = {
         { order: 3, prompt: "Sur 100 fleurs, 30 sont rouges. Quel pourcentage ?", answer: "30%", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "30 sur 100, c est 30%." },
         { order: 4, prompt: "2x + 4 = 16. Combien vaut x ?", answer: "6", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "16 - 4 = 12, puis 12 / 2 = 6." },
         { order: 5, prompt: "Un jouet de 100 euros a 15% de reduction. Combien d euros de moins ?", answer: "15", kindWhenWrong: "Ce n est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "15% de 100, c est 15 euros de moins." },
-        { order: 6, prompt: "Defi : x + 5 = 12, et une pizza coupee en 4 dont on mange x parts. Quelle fraction as-tu mangee ?", answer: "7/4", kindWhenWrong: "Bravo d avoir essaye ce defi 😊 Regardons ensemble.", explanationWhenWrong: "x = 12 - 5 = 7. La fraction mangee (imaginaire, pour s entrainer) s ecrit 7/4." }
+        { order: 6, prompt: "Defi : x + 5 = 12, et une pizza coupee en 4 dont on mange x parts. Quelle fraction as-tu mangée ?", answer: "7/4", kindWhenWrong: "Bravo d avoir essaye ce defi 😊 Regardons ensemble.", explanationWhenWrong: "x = 12 - 5 = 7. La fraction mangée (imaginaire, pour s entrainer) s ecrit 7/4." }
       ]
     },
     {
@@ -205,10 +205,10 @@ export const day05: DayCurriculum = {
       questions: [
         { order: 1, prompt: "Complete: Elle ___ une jolie robe. (a ou à)", answer: "a", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Elle avait une jolie robe fonctionne, donc a sans accent." },
         { order: 2, prompt: "Complete: Nous allons ___ la plage. (a ou à)", answer: "à", kindWhenWrong: "Pas grave 😊 On regarde ca ensemble.", explanationWhenWrong: "avait ne fonctionne pas ici, donc à avec accent." },
-        { order: 3, prompt: "Complete: Mes cousins ___ arrives hier. (son ou sont)", answer: "sont", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Mes cousins etaient arrives fonctionne, donc sont." },
+        { order: 3, prompt: "Complete: Mes cousins ___ arrivés hier. (son ou sont)", answer: "sont", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Mes cousins etaient arrivés fonctionne, donc sont." },
         { order: 4, prompt: "Complete: Le ciel ___ gris aujourd hui. (et ou est)", answer: "est", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Le ciel etait gris fonctionne, donc est." },
         { order: 5, prompt: "Complete: Tu prefere le the ___ le chocolat chaud ? (ou/où)", answer: "ou", kindWhenWrong: "Ce n est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "le the ou bien le chocolat fonctionne, donc ou sans accent." },
-        { order: 6, prompt: "Defi : complete les trois mots. Il ___ range ses affaires ___ ses jouets, mais il ne sait plus ___ il a mis ses cles.", answer: "a et où", kindWhenWrong: "Bravo d avoir essaye ce defi 😊 Regardons ensemble.", explanationWhenWrong: "Il a range (avait fonctionne), affaires et jouets (relie deux mots), et où (lieu, avec accent)." }
+        { order: 6, prompt: "Defi : complete les trois mots. Il ___ rangé ses affaires ___ ses jouets, mais il ne sait plus ___ il a mis ses cles.", answer: "a et où", kindWhenWrong: "Bravo d avoir essaye ce defi 😊 Regardons ensemble.", explanationWhenWrong: "Il a rangé (avait rangé fonctionne), affaires et jouets (relie deux mots), et où (lieu, avec accent)." }
       ]
     },
     {

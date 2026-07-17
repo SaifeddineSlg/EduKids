@@ -11,8 +11,8 @@ export const day03: DayCurriculum = {
       xpReward: 24,
       story: {
         hook: "Imagine une pizza entiere que tu dois partager avec tes amis, en parts bien egales.",
-        concreteExample: "Une pizza est coupee en 4 parts egales. Tu manges 1 part. Quelle fraction de la pizza as-tu mangee ?",
-        reveal: "Tu as mange 1 part sur les 4 parts. On ecrit ca 1/4 (un quart). Bravo, tu viens de lire une fraction !",
+        concreteExample: "Une pizza est coupee en 4 parts egales. Tu manges 1 part. Quelle fraction de la pizza as-tu mangée ?",
+        reveal: "Tu as mangé 1 part sur les 4 parts. On ecrit ca 1/4 (un quart). Bravo, tu viens de lire une fraction !",
         bridgeToConcept: "Une fraction, c est un nombre de parts (en haut) sur un nombre total de parts (en bas).",
         illustrationEmoji: "🍕"
       },
@@ -22,7 +22,7 @@ export const day03: DayCurriculum = {
           steps: [
             { text: "La pizza a 8 parts egales.", illustrationEmoji: "🍕" },
             { text: "Tu manges 3 parts.", illustrationEmoji: "😋" },
-            { text: "Tu as mange 3/8 de la pizza.", illustrationEmoji: "✅" }
+            { text: "Tu as mangé 3/8 de la pizza.", illustrationEmoji: "✅" }
           ]
         },
         {
@@ -30,17 +30,17 @@ export const day03: DayCurriculum = {
           steps: [
             { text: "Le gateau a 6 parts egales.", illustrationEmoji: "🎂" },
             { text: "Ton frere mange 2 parts.", illustrationEmoji: "😋" },
-            { text: "Il a mange 2/6 du gateau.", illustrationEmoji: "✅" }
+            { text: "Il a mangé 2/6 du gateau.", illustrationEmoji: "✅" }
           ]
         }
       ],
       questions: [
-        { order: 1, prompt: "Une tarte est coupee en 4 parts. Tu manges 1 part. Quelle fraction as-tu mangee ?", answer: "1/4", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Tu as mange 1 part sur 4, donc 1/4." },
+        { order: 1, prompt: "Une tarte est coupee en 4 parts. Tu manges 1 part. Quelle fraction as-tu mangée ?", answer: "1/4", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Tu as mangé 1 part sur 4, donc 1/4." },
         { order: 2, prompt: "Une pizza est coupee en 8 parts. Tu manges 2 parts. Quelle fraction ?", answer: "2/8", kindWhenWrong: "Pas grave 😊 On regarde ca ensemble.", explanationWhenWrong: "2 parts sur 8, donc 2/8." },
         { order: 3, prompt: "Un gateau est coupe en 6 parts. On en mange 3. Quelle fraction ?", answer: "3/6", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "3 parts sur 6, donc 3/6." },
         { order: 4, prompt: "Une pizza a 10 parts. Tu en manges 4. Quelle fraction ?", answer: "4/10", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "4 parts sur 10, donc 4/10." },
-        { order: 5, prompt: "Une tarte a 12 parts. On en mange 5. Quelle fraction reste-t-il non mangee ?", answer: "7/12", kindWhenWrong: "Ce n est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "12 - 5 = 7 parts restantes sur 12, donc 7/12." },
-        { order: 6, prompt: "Defi : une pizza a 8 parts. Toi et ton ami mangez chacun 2 parts. Quelle fraction avez-vous mangee ensemble ?", answer: "4/8", kindWhenWrong: "Bravo d avoir essaye ce defi 😊 Regardons ensemble.", explanationWhenWrong: "2 + 2 = 4 parts mangees sur 8, donc 4/8." }
+        { order: 5, prompt: "Une tarte a 12 parts. On en mange 5. Quelle fraction reste-t-il non mangée ?", answer: "7/12", kindWhenWrong: "Ce n est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "12 - 5 = 7 parts restantes sur 12, donc 7/12." },
+        { order: 6, prompt: "Defi : une pizza a 8 parts. Toi et ton ami mangez chacun 2 parts. Quelle fraction avez-vous mangée ensemble ?", answer: "4/8", kindWhenWrong: "Bravo d avoir essaye ce defi 😊 Regardons ensemble.", explanationWhenWrong: "2 + 2 = 4 parts mangées sur 8, donc 4/8." }
       ]
     },
     {
