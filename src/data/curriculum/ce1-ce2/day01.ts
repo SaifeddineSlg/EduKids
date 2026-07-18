@@ -49,7 +49,7 @@ export const day01: DayCurriculum = {
       story: {
         hook: "Tu connais déjà je joue, tu joues, il joue. Aujourd'hui, découvrons la suite de la chanson !",
         concreteExample: "Écoute : nous jouons, vous jouez, ils jouent. Tu entends les nouvelles terminaisons ?",
-        reveal: "À quoi servent ces terminaisons ? Elles disent qui fait l'action. Comment les reconnaître ? Avec nous, on entend -ons. Avec vous, on entend -ez. Avec ils/elles, on entend -ent (mais on ne l'entend pas à l'oral !).",
+        reveal: "À quoi servent ces terminaisons ? Elles disent qui fait l'action. Comment les reconnaître ? Avec nous, on entend -ons. Avec vous, on entend -ez. Avec ils ou elles, on entend -ent, mais on ne l'entend pas à l'oral !",
         bridgeToConcept: "Terminaisons complètes au présent : -e, -es, -e, -ons, -ez, -ent.",
         illustrationEmoji: "🎵"
       },
@@ -65,34 +65,36 @@ export const day01: DayCurriculum = {
         {
           title: "Attention à l'erreur fréquente",
           steps: [
-            { text: "Beaucoup d'enfants oublient le s à la fin de vous. C'est une erreur !", illustrationEmoji: "❌" },
+            { text: "Beaucoup d'enfants oublient le z à la fin de vous. C'est une erreur !", illustrationEmoji: "❌" },
             { text: "Avec vous, il faut toujours -ez : vous jouez, vous chantez.", illustrationEmoji: "✅" }
           ]
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Nous ____ (chanter) une chanson.", answer: "chantons", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec nous, la terminaison est -ons : nous chantons." },
-        { order: 2, prompt: "Complète : Vous ____ (jouer) dans le jardin.", answer: "jouez", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec vous, la terminaison est -ez : vous jouez." },
+        { order: 1, prompt: "Complète : Nous ____ (chanter) une chanson.", answer: "chantons", kindWhenWrong: "Ce n'est pas grave ! On regarde ensemble.", explanationWhenWrong: "Tu étais proche ! Avec nous, la terminaison est -ons : nous chantons. Essaie de le lire à voix haute.", strictAccents: true },
+        { order: 2, prompt: "Complète : Vous ____ (jouer) dans le jardin.", answer: "jouez", kindWhenWrong: "Pas grave, on continue ensemble.", explanationWhenWrong: "Avec vous, la terminaison est toujours -ez : vous jouez, jamais -ent.", strictAccents: true },
         {
           order: 3,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Ils ____ (regarder) la télévision.",
           options: ["regardons", "regardez", "regardent"],
           answer: "regardent",
-          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec ils, la terminaison est -ent : ils regardent."
+          kindWhenWrong: "Ce n'est pas grave ! On regarde ensemble.",
+          explanationWhenWrong: "Avec ils, la terminaison est -ent : ils regardent. On ne l'entend pas à l'oral, mais il faut l'écrire.",
+          strictAccents: true
         },
-        { order: 4, prompt: "Complète : Elles ____ (danser) ensemble.", answer: "dansent", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec elles, la terminaison est -ent : elles dansent." },
+        { order: 4, prompt: "Complète : Elles ____ (danser) ensemble.", answer: "dansent", kindWhenWrong: "Pas grave du tout, on y retourne ensemble.", explanationWhenWrong: "Avec elles, la terminaison est -ent : elles dansent, comme pour ils.", strictAccents: true },
         {
           order: 5,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Nous ____ (aimer) les vacances.",
           options: ["aimons", "aimez", "aiment"],
           answer: "aimons",
-          kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.",
-          explanationWhenWrong: "Avec nous, la terminaison est -ons : nous aimons."
+          kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.",
+          explanationWhenWrong: "Avec nous, la terminaison est -ons : nous aimons.",
+          strictAccents: true
         },
-        { order: 6, prompt: "Défi : complète les deux mots. Vous ____ (chercher) vos clés et ils ____ (trouver) une solution.", answer: "cherchez trouvent", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Vous cherchez (-ez) et ils trouvent (-ent)." }
+        { order: 6, prompt: "Défi : complète les deux mots. Vous ____ (chercher) vos clés et ils ____ (trouver) une solution.", answer: "cherchez trouvent", kindWhenWrong: "Bravo d'avoir essayé ce défi ! On regarde ensemble.", explanationWhenWrong: "Vous cherchez avec -ez, et ils trouvent avec -ent. Deux terminaisons différentes dans la même phrase !", strictAccents: true }
       ]
     },
     {
@@ -149,24 +151,24 @@ export const day01: DayCurriculum = {
           title: "Des exemples de tous les jours",
           steps: [
             { text: "Le soleil brille : s au début du mot.", illustrationEmoji: "☀️" },
-            { text: "Un poisson nage : ss entre deux voyelles (o et o).", illustrationEmoji: "🐟" }
+            { text: "Un poisson nage : ss entre deux voyelles, le o et le o.", illustrationEmoji: "🐟" }
           ]
         },
         {
           title: "L'astuce pour ne plus se tromper",
           steps: [
-            { text: "Regarde s'il y a une voyelle avant ET après le son [s].", illustrationEmoji: "🔍" },
+            { text: "Regarde s'il y a une voyelle avant et après le son [s].", illustrationEmoji: "🔍" },
             { text: "Si oui, il faut ss. Sinon, un seul s suffit.", illustrationEmoji: "✅" }
           ]
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : le ___oleil (soleil). (s ou ss)", answer: "s", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Au début du mot, on écrit s : soleil." },
-        { order: 2, prompt: "Complète : un poi___on (poisson). (s ou ss)", answer: "ss", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Entre deux voyelles, on écrit ss : poisson." },
-        { order: 3, prompt: "Complète : une cla___e (classe). (s ou ss)", answer: "ss", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Entre deux voyelles, on écrit ss : classe." },
-        { order: 4, prompt: "Complète : un ___ac (sac). (s ou ss)", answer: "s", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Au début du mot, on écrit s : sac." },
-        { order: 5, prompt: "Complète : une tra___e (trace). (s ou ss)", answer: "c", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Trace s'écrit avec un c, c'est une exception à retenir." },
-        { order: 6, prompt: "Défi : complète les deux mots. Le poi___on (poisson) nage dans le ba___in (bassin).", answer: "ss ss", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Poisson et bassin ont tous les deux ss entre deux voyelles." }
+        { order: 1, prompt: "Complète : le ___oleil (soleil). (s ou ss)", answer: "s", kindWhenWrong: "Ce n'est pas grave ! On regarde ensemble.", explanationWhenWrong: "Au tout début d'un mot, le son [s] s'écrit toujours avec un seul s : soleil.", strictAccents: true },
+        { order: 2, prompt: "Complète : un poi___on (poisson). (s ou ss)", answer: "ss", kindWhenWrong: "Pas grave, on continue ensemble.", explanationWhenWrong: "Tu étais proche ! Entre deux voyelles (le i et le o), on écrit ss : poisson.", strictAccents: true },
+        { order: 3, prompt: "Complète : une cla___e (classe). (s ou ss)", answer: "ss", kindWhenWrong: "Ce n'est pas grave ! On regarde ensemble.", explanationWhenWrong: "Entre le a et le e, il y a deux voyelles autour du son [s], donc on écrit ss : classe.", strictAccents: true },
+        { order: 4, prompt: "Complète : un ___ac (sac). (s ou ss)", answer: "s", kindWhenWrong: "Pas grave du tout, on y retourne ensemble.", explanationWhenWrong: "Au début du mot, on écrit un seul s : sac.", strictAccents: true },
+        { order: 5, prompt: "Complète : une tra___e (trace). (s ou ss)", answer: "c", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "Trace s'écrit avec un c, pas un s ni un ss : c'est une exception à retenir par coeur.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux mots. Le poi___on (poisson) nage dans le ba___in (bassin).", answer: "ss ss", kindWhenWrong: "Bravo d'avoir essayé ce défi ! On regarde ensemble.", explanationWhenWrong: "Poisson et bassin ont chacun le son [s] entre deux voyelles, donc les deux s'écrivent avec ss.", strictAccents: true }
       ]
     },
     {

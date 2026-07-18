@@ -70,8 +70,8 @@ export const day03: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Si j'avais une baguette magique, je ____ (voyager) partout.", answer: "voyagerais", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, le conditionnel de voyager est voyagerais." },
-        { order: 2, prompt: "Complète : Tu ____ (aimer) un chien, je le sais bien.", answer: "aimerais", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec tu, le conditionnel de aimer est aimerais." },
+        { order: 1, prompt: "Complète : Si j'avais une baguette magique, je ____ (voyager) partout.", answer: "voyagerais", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, le conditionnel présent de voyager est voyagerais : on garde le radical voyager- puis on ajoute -ais.", strictAccents: true },
+        { order: 2, prompt: "Complète : Tu ____ (aimer) un chien, je le sais bien.", answer: "aimerais", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec tu, le conditionnel présent de aimer est aimerais : radical aimer- puis -ais.", strictAccents: true },
         {
           order: 3,
           type: "mcq",
@@ -79,11 +79,12 @@ export const day03: DayCurriculum = {
           options: ["voudrait", "voudrais", "voudraient"],
           answer: "voudrait",
           kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec elle, le conditionnel de vouloir est voudrait."
+          explanationWhenWrong: "Avec elle, le conditionnel présent de vouloir est voudrait, avec un t et non un s.",
+          strictAccents: true
         },
-        { order: 4, prompt: "Complète : Nous ____ (aimer) partir en vacances.", answer: "aimerions", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec nous, le conditionnel de aimer est aimerions." },
-        { order: 5, prompt: "Complète : Vous ____ (pouvoir) venir avec nous.", answer: "pourriez", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Avec vous, le conditionnel de pouvoir est pourriez." },
-        { order: 6, prompt: "Défi : complète les deux verbes. Ils ____ (aimer) rester ici et nous ____ (vouloir) bien les accueillir.", answer: "aimeraient voudrions", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Ils aimeraient (aimer) et nous voudrions (vouloir)." }
+        { order: 4, prompt: "Complète : Nous ____ (aimer) partir en vacances.", answer: "aimerions", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec nous, le conditionnel présent de aimer est aimerions : radical aimer- puis -ions.", strictAccents: true },
+        { order: 5, prompt: "Complète : Vous ____ (pouvoir) venir avec nous.", answer: "pourriez", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Avec vous, le conditionnel présent de pouvoir est pourriez, à partir du radical irrégulier pourr-.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux verbes. Ils ____ (aimer) rester ici et nous ____ (vouloir) bien les accueillir.", answer: "aimeraient voudrions", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Tu étais proche ! Avec ils, aimer donne aimeraient. Avec nous, vouloir donne voudrions.", strictAccents: true }
       ]
     },
     {
@@ -152,12 +153,12 @@ export const day03: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : ___ belle robe ! (quelle/qu'elle)", answer: "quelle", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Quelle s'exclame devant le nom robe." },
-        { order: 2, prompt: "Complète : Je crois ___ arrive bientôt. (quelle/qu'elle)", answer: "qu'elle", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "On peut dire qu'il arrive, donc c'est qu'elle." },
-        { order: 3, prompt: "Complète : ___ heure est-il ? (quelle/qu'elle)", answer: "quelle", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Quelle interroge devant le nom heure." },
-        { order: 4, prompt: "Complète : Il pense ___ viendra demain. (quelle/qu'elle)", answer: "qu'elle", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "On peut dire qu'il viendra, donc c'est qu'elle." },
-        { order: 5, prompt: "Complète : ___ surprise merveilleuse ! (quelle/qu'elle)", answer: "quelle", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Quelle s'exclame devant le nom surprise." },
-        { order: 6, prompt: "Défi : complète les deux mots. ___ (quelle) chance ___ (qu'elle) a eue !", answer: "quelle qu'elle", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Quelle chance (exclamation) et qu'elle a eue (que + elle)." }
+        { order: 1, prompt: "Complète : ___ belle robe ! (quelle/qu'elle)", answer: "quelle", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "On s'exclame directement devant le nom robe, donc on écrit quelle, comme un adjectif exclamatif.", strictAccents: true },
+        { order: 2, prompt: "Complète : Je crois ___ arrive bientôt. (quelle/qu'elle)", answer: "qu'elle", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "On peut remplacer par qu'il arrive (ça fonctionne), donc c'est qu'elle, contraction de que + elle.", strictAccents: true },
+        { order: 3, prompt: "Complète : ___ heure est-il ? (quelle/qu'elle)", answer: "quelle", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "On interroge directement devant le nom heure, donc on écrit quelle.", strictAccents: true },
+        { order: 4, prompt: "Complète : Il pense ___ viendra demain. (quelle/qu'elle)", answer: "qu'elle", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "On peut remplacer par qu'il viendra (ça fonctionne), donc c'est qu'elle, contraction de que + elle.", strictAccents: true },
+        { order: 5, prompt: "Complète : ___ surprise merveilleuse ! (quelle/qu'elle)", answer: "quelle", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "On s'exclame directement devant le nom surprise, donc on écrit quelle.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux mots. ___ (quelle) chance ___ (qu'elle) a eue !", answer: "quelle qu'elle", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Tu étais proche ! Quelle chance s'exclame devant le nom chance, et qu'elle a eue remplace que + elle a eue.", strictAccents: true }
       ]
     },
     {

@@ -77,9 +77,10 @@ export const day04: DayCurriculum = {
           options: ["arriva", "arrive", "arrivera"],
           answer: "arriva",
           kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Arriva est la forme du passé simple, utilisée dans les récits."
+          explanationWhenWrong: "Arriva est la forme du passé simple : elle raconte une action terminée dans un récit écrit, comme dans un conte.",
+          strictAccents: true
         },
-        { order: 2, prompt: "Complète au passé simple : elle ____ (finir) son travail avant la nuit.", answer: "finit", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec elle, le passé simple de finir est finit." },
+        { order: 2, prompt: "Complète au passé simple : elle ____ (finir) son travail avant la nuit.", answer: "finit", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec elle, le passé simple de finir est finit, comme au présent, mais ici l'action est terminée dans le récit.", strictAccents: true },
         {
           order: 3,
           type: "mcq",
@@ -87,11 +88,12 @@ export const day04: DayCurriculum = {
           options: ["coururent", "courent", "couraient"],
           answer: "coururent",
           kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Coururent est la forme du passé simple avec ils."
+          explanationWhenWrong: "Coururent est la forme du passé simple avec ils, reconnaissable à sa terminaison en -urent.",
+          strictAccents: true
         },
-        { order: 4, prompt: "Complète au passé simple : le roi ____ (avoir) beaucoup d'enfants.", answer: "eut", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec il, le passé simple de avoir est eut." },
-        { order: 5, prompt: "Complète au passé simple : la princesse ____ (vivre) heureuse.", answer: "vécut", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Avec elle, le passé simple de vivre est vécut." },
-        { order: 6, prompt: "Défi : dans quel type de texte trouve-t-on surtout le passé simple ?", answer: "les contes", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Le passé simple s'utilise surtout dans les contes et les récits écrits." }
+        { order: 4, prompt: "Complète au passé simple : le roi ____ (avoir) beaucoup d'enfants.", answer: "eut", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec il, le passé simple du verbe avoir est eut, qui se prononce comme le mot eu.", strictAccents: true },
+        { order: 5, prompt: "Complète au passé simple : la princesse ____ (vivre) heureuse.", answer: "vécut", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Avec elle, le passé simple du verbe vivre est vécut, avec un accent aigu sur le e.", strictAccents: true },
+        { order: 6, prompt: "Défi : dans quel type de texte trouve-t-on surtout le passé simple ?", answer: "les contes", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Le passé simple s'utilise surtout à l'écrit, dans les contes et les récits littéraires.", strictAccents: true }
       ]
     },
     {
@@ -168,12 +170,12 @@ export const day04: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : ___ les enfants sont là. (tout/tous/toute/toutes)", answer: "tous", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Enfants est masculin pluriel, donc tous." },
-        { order: 2, prompt: "Complète : ___ la classe est sortie. (tout/tous/toute/toutes)", answer: "toute", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Classe est féminin singulier, donc toute." },
-        { order: 3, prompt: "Complète : ___ le gâteau a disparu. (tout/tous/toute/toutes)", answer: "tout", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Gâteau est masculin singulier, donc tout sans s." },
-        { order: 4, prompt: "Complète : ___ les filles chantent. (tout/tous/toute/toutes)", answer: "toutes", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Filles est féminin pluriel, donc toutes." },
-        { order: 5, prompt: "Complète : ___ les garçons jouent dehors. (tout/tous/toute/toutes)", answer: "tous", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Garçons est masculin pluriel, donc tous." },
-        { order: 6, prompt: "Défi : complète les deux mots. ___ (toute) la famille et ___ (tous) les amis étaient réunis.", answer: "toute tous", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Toute la famille (féminin singulier) et tous les amis (masculin pluriel)." }
+        { order: 1, prompt: "Complète : ___ les enfants sont là. (tout/tous/toute/toutes)", answer: "tous", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Enfants est masculin pluriel, donc on écrit tous, avec un s final.", strictAccents: true },
+        { order: 2, prompt: "Complète : ___ la classe est sortie. (tout/tous/toute/toutes)", answer: "toute", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Classe est féminin singulier, donc on écrit toute, avec un e final.", strictAccents: true },
+        { order: 3, prompt: "Complète : ___ le gâteau a disparu. (tout/tous/toute/toutes)", answer: "tout", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Gâteau est masculin singulier, donc on écrit tout, sans e ni s.", strictAccents: true },
+        { order: 4, prompt: "Complète : ___ les filles chantent. (tout/tous/toute/toutes)", answer: "toutes", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Filles est féminin pluriel, donc on écrit toutes, avec un e et un s.", strictAccents: true },
+        { order: 5, prompt: "Complète : ___ les garçons jouent dehors. (tout/tous/toute/toutes)", answer: "tous", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Garçons est masculin pluriel, donc on écrit tous, avec un s final.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux mots. ___ (toute) la famille et ___ (tous) les amis étaient réunis.", answer: "toute tous", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Tu étais proche ! Famille est féminin singulier (toute), amis est masculin pluriel (tous).", strictAccents: true }
       ]
     },
     {

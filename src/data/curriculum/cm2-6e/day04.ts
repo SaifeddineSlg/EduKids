@@ -70,20 +70,21 @@ export const day04: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Mets à l'impératif (tu) : (Manger) tes légumes !", answer: "mange", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "À l'impératif, tu manges devient mange (sans s)." },
-        { order: 2, prompt: "Mets à l'impératif (vous) : (Prendre) vos affaires.", answer: "prenez", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "À l'impératif, vous prenez reste prenez." },
-        { order: 3, prompt: "Mets à l'impératif (nous) : (Finir) ce travail ensemble.", answer: "finissons", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "À l'impératif, nous finissons reste finissons." },
+        { order: 1, prompt: "Mets à l'impératif (tu) : (Manger) tes légumes !", answer: "mange", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "À l'impératif, les verbes en -er perdent le s de la 2e personne du singulier : tu manges devient mange !", strictAccents: true },
+        { order: 2, prompt: "Mets à l'impératif (vous) : (Prendre) vos affaires.", answer: "prenez", kindWhenWrong: "Pas grave, on regarde ça ensemble.", explanationWhenWrong: "À l'impératif avec vous, prendre garde la même forme qu'au présent : prenez.", strictAccents: true },
+        { order: 3, prompt: "Mets à l'impératif (nous) : (Finir) ce travail ensemble.", answer: "finissons", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "À l'impératif avec nous, finir garde la même forme qu'au présent : finissons.", strictAccents: true },
         {
           order: 4,
           type: "mcq",
           prompt: "Choisis la bonne réponse à l'impératif (tu) : (Ranger) ta chambre !",
           options: ["Range", "Ranges", "Rangez"],
           answer: "Range",
-          kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.",
-          explanationWhenWrong: "À l'impératif, tu ranges devient Range (sans s)."
+          kindWhenWrong: "Pas grave du tout, on y retourne ensemble.",
+          explanationWhenWrong: "À l'impératif, les verbes en -er perdent le s de la 2e personne du singulier : tu ranges devient Range !",
+          strictAccents: true
         },
-        { order: 5, prompt: "Mets à l'impératif (vous) : (Être) sages pendant le trajet.", answer: "soyez", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "À l'impératif, être devient soyez avec vous." },
-        { order: 6, prompt: "Défi : complète les deux verbes à l'impératif. (Écouter, tu) bien et (avoir, vous) confiance.", answer: "écoute ayez", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Écoute (tu, sans s) et ayez (vous, verbe avoir à l'impératif)." }
+        { order: 5, prompt: "Mets à l'impératif (vous) : (Être) sages pendant le trajet.", answer: "soyez", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "Être est irrégulier à l'impératif : avec vous, on écrit soyez, à retenir par cœur.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux verbes à l'impératif. (Écouter, tu) bien et (avoir, vous) confiance.", answer: "écoute ayez", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble.", explanationWhenWrong: "Écoute (verbe en -er, tu, donc sans s) et ayez (avoir à l'impératif avec vous, irrégulier).", strictAccents: true }
       ]
     },
     {
@@ -152,12 +153,12 @@ export const day04: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Je préfère ___ le chocolat. (plutôt/plus tôt)", answer: "plutôt", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "C'est une préférence, donc plutôt en un mot." },
-        { order: 2, prompt: "Complète : Il est arrivé ___ que prévu. (plutôt/plus tôt)", answer: "plus tôt", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "On peut dire le contraire de plus tard, donc plus tôt." },
-        { order: 3, prompt: "Complète : Demain, lève-toi ___ que d'habitude. (plutôt/plus tôt)", answer: "plus tôt", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Ça parle du temps, contraire de plus tard : plus tôt." },
-        { order: 4, prompt: "Complète : Elle est ___ timide que bavarde. (plutôt/plus tôt)", answer: "plutôt", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "C'est une nuance de caractère, donc plutôt." },
-        { order: 5, prompt: "Complète : Nous sommes partis ___ pour éviter les bouchons. (plutôt/plus tôt)", answer: "plus tôt", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Ça parle du temps de départ, donc plus tôt." },
-        { order: 6, prompt: "Défi : complète les deux mots. Je préfère ___ (plutôt) partir ___ (plus tôt) demain matin.", answer: "plutôt plus tôt", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Plutôt (préférence) et plus tôt (temps, contraire de plus tard)." }
+        { order: 1, prompt: "Complète : Je préfère ___ le chocolat. (plutôt/plus tôt)", answer: "plutôt", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "Ici, on exprime une préférence : on écrit plutôt en un seul mot, avec un accent circonflexe sur le o.", strictAccents: true },
+        { order: 2, prompt: "Complète : Il est arrivé ___ que prévu. (plutôt/plus tôt)", answer: "plus tôt", kindWhenWrong: "Pas grave, on regarde ça ensemble.", explanationWhenWrong: "On peut dire le contraire de plus tard : c'est donc plus tôt, en deux mots.", strictAccents: true },
+        { order: 3, prompt: "Complète : Demain, lève-toi ___ que d'habitude. (plutôt/plus tôt)", answer: "plus tôt", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "Ça parle du temps, c'est le contraire de plus tard : on écrit plus tôt en deux mots.", strictAccents: true },
+        { order: 4, prompt: "Complète : Elle est ___ timide que bavarde. (plutôt/plus tôt)", answer: "plutôt", kindWhenWrong: "Pas grave du tout, on y retourne ensemble.", explanationWhenWrong: "C'est une nuance de caractère, une préférence entre deux traits : on écrit plutôt en un seul mot.", strictAccents: true },
+        { order: 5, prompt: "Complète : Nous sommes partis ___ pour éviter les bouchons. (plutôt/plus tôt)", answer: "plus tôt", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "Ça parle du moment du départ : on écrit plus tôt en deux mots.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux mots. Je préfère ___ (plutôt) partir ___ (plus tôt) demain matin.", answer: "plutôt plus tôt", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble.", explanationWhenWrong: "Plutôt exprime une préférence (un seul mot) et plus tôt parle du temps, contraire de plus tard (deux mots).", strictAccents: true }
       ]
     },
     {

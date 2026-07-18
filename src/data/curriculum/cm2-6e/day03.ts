@@ -70,20 +70,21 @@ export const day03: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Demain, je ____ (venir) te voir.", answer: "viendrai", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, le futur de venir est viendrai." },
-        { order: 2, prompt: "Complète : Tu ____ (voir) ce beau spectacle.", answer: "verras", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec tu, le futur de voir est verras." },
+        { order: 1, prompt: "Complète : Demain, je ____ (venir) te voir.", answer: "viendrai", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "Venir a un radical irrégulier au futur : viendr-. Avec je, on écrit viendrai.", strictAccents: true },
+        { order: 2, prompt: "Complète : Tu ____ (voir) ce beau spectacle.", answer: "verras", kindWhenWrong: "Pas grave, on regarde ça ensemble.", explanationWhenWrong: "Voir a un radical irrégulier au futur : verr-. Avec tu, on écrit verras.", strictAccents: true },
         {
           order: 3,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Elle ____ (pouvoir) venir demain.",
           options: ["pourra", "pourras", "pourront"],
           answer: "pourra",
-          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec elle, le futur de pouvoir est pourra."
+          kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.",
+          explanationWhenWrong: "Pouvoir a un radical irrégulier au futur : pourr-. Avec elle, on écrit pourra, sans s final.",
+          strictAccents: true
         },
-        { order: 4, prompt: "Complète : Nous ____ (venir) vous rendre visite.", answer: "viendrons", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec nous, le futur de venir est viendrons." },
-        { order: 5, prompt: "Complète : Vous ____ (voir) le résultat bientôt.", answer: "verrez", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Avec vous, le futur de voir est verrez." },
-        { order: 6, prompt: "Défi : complète les deux verbes. Ils ____ (venir) demain et ils ____ (voir) toute la famille.", answer: "viendront verront", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Ils viendront (venir) et ils verront (voir)." }
+        { order: 4, prompt: "Complète : Nous ____ (venir) vous rendre visite.", answer: "viendrons", kindWhenWrong: "Pas grave du tout, on y retourne ensemble.", explanationWhenWrong: "Avec nous, le futur de venir se forme sur viendr- : viendrons.", strictAccents: true },
+        { order: 5, prompt: "Complète : Vous ____ (voir) le résultat bientôt.", answer: "verrez", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "Avec vous, le futur de voir se forme sur verr- : verrez.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux verbes. Ils ____ (venir) demain et ils ____ (voir) toute la famille.", answer: "viendront verront", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble.", explanationWhenWrong: "Ils viendront (radical viendr- de venir) et ils verront (radical verr- de voir).", strictAccents: true }
       ]
     },
     {
@@ -160,12 +161,12 @@ export const day03: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Je ___ venir demain. (peu/peux/peut)", answer: "peux", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, pouvoir donne peux." },
-        { order: 2, prompt: "Complète : Il ___ t'aider si tu veux. (peu/peux/peut)", answer: "peut", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec il, pouvoir donne peut." },
-        { order: 3, prompt: "Complète : Il reste ___ de gâteau. (peu/peux/peut)", answer: "peu", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Peu signifie pas beaucoup, sans x ni t." },
-        { order: 4, prompt: "Complète : Tu ___ venir avec nous. (peu/peux/peut)", answer: "peux", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec tu, pouvoir donne peux." },
-        { order: 5, prompt: "Complète : Elle ___ finir son travail à temps. (peu/peux/peut)", answer: "peut", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Avec elle, pouvoir donne peut." },
-        { order: 6, prompt: "Défi : complète les trois mots. Je ___ (peux) t'aider un ___ (peu) si tu ___ (peux) attendre.", answer: "peux peu peux", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Je peux (pouvoir), un peu (quantité), tu peux (pouvoir)." }
+        { order: 1, prompt: "Complète : Je ___ venir demain. (peu/peux/peut)", answer: "peux", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "Avec je, le verbe pouvoir au présent donne peux, avec un x.", strictAccents: true },
+        { order: 2, prompt: "Complète : Il ___ t'aider si tu veux. (peu/peux/peut)", answer: "peut", kindWhenWrong: "Pas grave, on regarde ça ensemble.", explanationWhenWrong: "Avec il, le verbe pouvoir au présent donne peut, avec un t.", strictAccents: true },
+        { order: 3, prompt: "Complète : Il reste ___ de gâteau. (peu/peux/peut)", answer: "peu", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "Ici, peu signifie pas beaucoup : ce n'est pas le verbe pouvoir, donc pas de x ni de t.", strictAccents: true },
+        { order: 4, prompt: "Complète : Tu ___ venir avec nous. (peu/peux/peut)", answer: "peux", kindWhenWrong: "Pas grave du tout, on y retourne ensemble.", explanationWhenWrong: "Avec tu, le verbe pouvoir au présent donne peux, avec un x.", strictAccents: true },
+        { order: 5, prompt: "Complète : Elle ___ finir son travail à temps. (peu/peux/peut)", answer: "peut", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "Avec elle, le verbe pouvoir au présent donne peut, avec un t.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les trois mots. Je ___ (peux) t'aider un ___ (peu) si tu ___ (peux) attendre.", answer: "peux peu peux", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble.", explanationWhenWrong: "Je peux (pouvoir, avec je), un peu (quantité, invariable), tu peux (pouvoir, avec tu).", strictAccents: true }
       ]
     },
     {

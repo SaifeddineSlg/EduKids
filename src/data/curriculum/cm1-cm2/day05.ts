@@ -70,9 +70,9 @@ export const day05: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Hier, j'____ (avoir) mangé une pomme.", answer: "ai", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, avoir au présent devient ai : j'ai mangé." },
-        { order: 2, prompt: "Complète : Hier, je ____ (être) allé à la piscine.", answer: "suis", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec je, être au présent devient suis : je suis allé." },
-        { order: 3, prompt: "Complète : Si j'avais une baguette magique, je ____ (voyager) partout.", answer: "voyagerais", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, le conditionnel de voyager est voyagerais." },
+        { order: 1, prompt: "Complète : Hier, j'____ (avoir) mangé une pomme.", answer: "ai", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, le verbe avoir au présent devient ai : j'ai mangé, au passé composé.", strictAccents: true },
+        { order: 2, prompt: "Complète : Hier, je ____ (être) allé à la piscine.", answer: "suis", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec je, le verbe être au présent devient suis : je suis allé, car aller se conjugue avec être.", strictAccents: true },
+        { order: 3, prompt: "Complète : Si j'avais une baguette magique, je ____ (voyager) partout.", answer: "voyagerais", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, le conditionnel présent de voyager est voyagerais.", strictAccents: true },
         {
           order: 4,
           type: "mcq",
@@ -80,10 +80,11 @@ export const day05: DayCurriculum = {
           options: ["arriva", "arrive", "arrivera"],
           answer: "arriva",
           kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.",
-          explanationWhenWrong: "Arriva est la forme du passé simple."
+          explanationWhenWrong: "Arriva est la forme du passé simple, utilisée pour raconter dans un récit écrit.",
+          strictAccents: true
         },
-        { order: 5, prompt: "Complète : Nous ____ (avoir) parlé de nos vacances.", answer: "avons", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Avec nous, avoir au présent devient avons : nous avons parlé." },
-        { order: 6, prompt: "Défi : complète les deux verbes. Ils ____ (être) arrivés et ils ____ (vouloir) se reposer.", answer: "sont voudraient", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Ils sont arrivés (passé composé avec être) et ils voudraient (conditionnel de vouloir)." }
+        { order: 5, prompt: "Complète : Nous ____ (avoir) parlé de nos vacances.", answer: "avons", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Avec nous, le verbe avoir au présent devient avons : nous avons parlé.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux verbes. Ils ____ (être) arrivés et ils ____ (vouloir) se reposer.", answer: "sont voudraient", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Tu étais proche ! Ils sont arrivés est un passé composé avec être, et ils voudraient est le conditionnel présent de vouloir.", strictAccents: true }
       ]
     },
     {
@@ -152,12 +153,12 @@ export const day05: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : ___ arrive bientôt. (on/on n')", answer: "on n'", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Arrive commence par une voyelle, donc on n'." },
-        { order: 2, prompt: "Complète : Il ___ trompé de route. (c'est/s'est)", answer: "s'est", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "On peut dire il s'était trompé, donc c'est s'est." },
-        { order: 3, prompt: "Complète : ___ heure est-il ? (quelle/qu'elle)", answer: "quelle", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Quelle interroge devant le nom heure." },
-        { order: 4, prompt: "Complète : ___ les enfants sont là. (tout/tous/toute/toutes)", answer: "tous", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Enfants est masculin pluriel, donc tous." },
-        { order: 5, prompt: "Complète : ___ la classe est sortie. (tout/tous/toute/toutes)", answer: "toute", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Classe est féminin singulier, donc toute." },
-        { order: 6, prompt: "Défi : complète les trois mots. ___ (on n') attend plus, ___ (c'est) l'heure ___ (qu'elle) a choisie.", answer: "on n' c'est qu'elle", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "On n'attend (voyelle), c'est l'heure (présentation), qu'elle a choisie (que + elle)." }
+        { order: 1, prompt: "Complète : ___ arrive bientôt. (on/on n')", answer: "on n'", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Arrive commence par une voyelle, donc on ajoute n' pour la liaison : on n'arrive.", strictAccents: true },
+        { order: 2, prompt: "Complète : Il ___ trompé de route. (c'est/s'est)", answer: "s'est", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "On peut dire il s'était trompé, donc on écrit s'est, le verbe pronominal se tromper au passé composé.", strictAccents: true },
+        { order: 3, prompt: "Complète : ___ heure est-il ? (quelle/qu'elle)", answer: "quelle", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "On interroge directement devant le nom heure, donc on écrit quelle.", strictAccents: true },
+        { order: 4, prompt: "Complète : ___ les enfants sont là. (tout/tous/toute/toutes)", answer: "tous", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Enfants est masculin pluriel, donc on écrit tous, avec un s final.", strictAccents: true },
+        { order: 5, prompt: "Complète : ___ la classe est sortie. (tout/tous/toute/toutes)", answer: "toute", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Classe est féminin singulier, donc on écrit toute, avec un e final.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les trois mots. ___ (on n') attend plus, ___ (c'est) l'heure ___ (qu'elle) a choisie.", answer: "on n' c'est qu'elle", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Tu étais proche ! On n'attend commence par une voyelle, c'est l'heure présente quelque chose, et qu'elle a choisie remplace que + elle a choisie.", strictAccents: true }
       ]
     },
     {

@@ -72,28 +72,30 @@ export const day04: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Je ____ à l'école.", answer: "vais", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, on dit vais : je vais à l'école." },
-        { order: 2, prompt: "Complète : Tu ____ au parc.", answer: "vas", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec tu, on dit vas : tu vas au parc." },
+        { order: 1, prompt: "Complète : Je ____ à l'école.", answer: "vais", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Avec je, le verbe aller devient vais : je vais à l'école. Essaie de le lire à voix haute.", strictAccents: true },
+        { order: 2, prompt: "Complète : Tu ____ au parc.", answer: "vas", kindWhenWrong: "Pas grave, on regarde ça ensemble 😊", explanationWhenWrong: "Avec tu, le verbe aller devient vas : tu vas au parc. Tu étais proche !", strictAccents: true },
         {
           order: 3,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Il ____ à la piscine.",
           options: ["vais", "vas", "va"],
           answer: "va",
-          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec il, on dit va : il va à la piscine."
+          kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊",
+          explanationWhenWrong: "Avec il ou elle, le verbe aller devient va : il va à la piscine.",
+          strictAccents: true
         },
-        { order: 4, prompt: "Complète : Elle ____ chez sa mamie.", answer: "va", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec elle, on dit va : elle va chez sa mamie." },
+        { order: 4, prompt: "Complète : Elle ____ chez sa mamie.", answer: "va", kindWhenWrong: "Pas grave du tout, on y retourne ensemble 😊", explanationWhenWrong: "Avec elle, comme avec il, le verbe aller devient va : elle va chez sa mamie.", strictAccents: true },
         {
           order: 5,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Je ____ au marché avec maman.",
           options: ["vais", "vas", "va"],
           answer: "vais",
-          kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.",
-          explanationWhenWrong: "Avec je, on dit vais : je vais au marché."
+          kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊",
+          explanationWhenWrong: "Avec je, on dit toujours vais : je vais au marché.",
+          strictAccents: true
         },
-        { order: 6, prompt: "Défi : complète les deux mots. Tu ____ à l'école et il ____ au sport.", answer: "vas va", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Tu vas (avec tu) et il va (avec il)." }
+        { order: 6, prompt: "Défi : complète les deux mots. Tu ____ à l'école et il ____ au sport.", answer: "vas va", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble 😊", explanationWhenWrong: "Tu vas à l'école (avec tu, on écrit vas) et il va au sport (avec il, on écrit va). Relis la phrase entière à voix haute.", strictAccents: true }
       ]
     },
     {
@@ -178,12 +180,12 @@ export const day04: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : un ti___bre (timbre). (n ou m)", answer: "m", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Devant b, on écrit m : timbre." },
-        { order: 2, prompt: "Complète : une ja___be (jambe). (n ou m)", answer: "m", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Devant b, on écrit m : jambe." },
-        { order: 3, prompt: "Complète : i___portant (important). (n ou m)", answer: "m", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Devant p, on écrit m : important." },
-        { order: 4, prompt: "Complète : la ca___pagne (campagne). (n ou m)", answer: "m", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Devant p, on écrit m : campagne." },
-        { order: 5, prompt: "Complète : to___ber (tomber). (n ou m)", answer: "m", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Devant b, on écrit m : tomber." },
-        { order: 6, prompt: "Défi : complète les deux mots. Il me se___ble (semble) qu'il faut e___porter (emporter) un parapluie.", answer: "m m", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Semble (m devant b) et emporter (m devant p) : les deux suivent la règle." }
+        { order: 1, prompt: "Complète : un ti___bre (timbre). (n ou m)", answer: "m", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Devant la lettre b, on remplace toujours le n par un m : timbre. Essaie de le réécrire lentement.", strictAccents: true },
+        { order: 2, prompt: "Complète : une ja___be (jambe). (n ou m)", answer: "m", kindWhenWrong: "Pas grave, on regarde ça ensemble 😊", explanationWhenWrong: "Devant la lettre b, on écrit m : jambe. Tu étais proche !", strictAccents: true },
+        { order: 3, prompt: "Complète : i___portant (important). (n ou m)", answer: "m", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Devant la lettre p, on écrit m : important. Pense à la règle m devant m, b, p.", strictAccents: true },
+        { order: 4, prompt: "Complète : la ca___pagne (campagne). (n ou m)", answer: "m", kindWhenWrong: "Pas grave du tout, on y retourne ensemble 😊", explanationWhenWrong: "Devant la lettre p, on écrit m : campagne. Relis-le à voix haute.", strictAccents: true },
+        { order: 5, prompt: "Complète : to___ber (tomber). (n ou m)", answer: "m", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Devant la lettre b, on écrit m : tomber. N'oublie pas la règle m devant m, b, p.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux mots. Il me se___ble (semble) qu'il faut e___porter (emporter) un parapluie.", answer: "m m", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble 😊", explanationWhenWrong: "Semble s'écrit avec m (devant b) et emporter s'écrit avec m (devant p) : les deux suivent la règle m devant m, b, p.", strictAccents: true }
       ]
     },
     {

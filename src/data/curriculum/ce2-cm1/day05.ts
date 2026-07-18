@@ -70,20 +70,21 @@ export const day05: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Demain, je ____ (être) content.", answer: "serai", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, être au futur devient serai." },
-        { order: 2, prompt: "Complète : Nous ____ (faire) un gâteau ce week-end.", answer: "ferons", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec nous, faire au futur devient ferons." },
-        { order: 3, prompt: "Complète : Quand j'étais petit, je ____ (jouer) dans le jardin.", answer: "jouais", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, l'imparfait de jouer est jouais." },
-        { order: 4, prompt: "Complète : Nous ____ (être) très fiers de notre travail.", answer: "étions", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec nous, l'imparfait de être est étions." },
+        { order: 1, prompt: "Complète : Demain, je ____ (être) content.", answer: "serai", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Avec je, le verbe être au futur devient serai.", strictAccents: true },
+        { order: 2, prompt: "Complète : Nous ____ (faire) un gâteau ce week-end.", answer: "ferons", kindWhenWrong: "Pas grave, on regarde ça ensemble 😊", explanationWhenWrong: "Avec nous, le verbe faire au futur devient ferons.", strictAccents: true },
+        { order: 3, prompt: "Complète : Quand j'étais petit, je ____ (jouer) dans le jardin.", answer: "jouais", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Avec je, l'imparfait de jouer est jouais.", strictAccents: true },
+        { order: 4, prompt: "Complète : Nous ____ (être) très fiers de notre travail.", answer: "étions", kindWhenWrong: "Pas grave du tout, on y retourne ensemble 😊", explanationWhenWrong: "Avec nous, l'imparfait de être est étions.", strictAccents: true },
         {
           order: 5,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Ils ____ (avoir) beaucoup de jouets quand ils étaient petits.",
           options: ["avaient", "auront", "avait"],
           answer: "avaient",
-          kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.",
-          explanationWhenWrong: "Avec ils, l'imparfait de avoir est avaient."
+          kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊",
+          explanationWhenWrong: "Avec ils, l'imparfait de avoir est avaient. Auront est le futur, avait est pour il ou elle.",
+          strictAccents: true
         },
-        { order: 6, prompt: "Défi : complète les deux verbes. Demain, nous ____ (aller) au parc et hier, nous y ____ (jouer) déjà.", answer: "irons jouions", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Nous irons (futur d'aller) et nous jouions (imparfait de jouer)." }
+        { order: 6, prompt: "Défi : complète les deux verbes. Demain, nous ____ (aller) au parc et hier, nous y ____ (jouer) déjà.", answer: "irons jouions", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble 😊", explanationWhenWrong: "Nous irons est le futur du verbe aller (demain), et nous jouions est l'imparfait du verbe jouer (hier).", strictAccents: true }
       ]
     },
     {
@@ -152,12 +153,12 @@ export const day05: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Il ___ mangé une pomme. (a/à)", answer: "a", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "On peut dire il avait mangé, donc c'est a." },
-        { order: 2, prompt: "Complète : J'aime le sport, ___ je préfère la lecture. (mais/mes)", answer: "mais", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Mais oppose deux idées." },
-        { order: 3, prompt: "Complète : Il range ___ affaires. (ces/ses)", answer: "ses", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Ses veut dire les affaires à lui." },
-        { order: 4, prompt: "Complète : Ce gâteau ___ délicieux. (et/est)", answer: "est", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "On peut dire ce gâteau était délicieux, donc c'est est." },
-        { order: 5, prompt: "Complète : Ils aiment ___ maison. (leur/leurs)", answer: "leur", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Maison est au singulier, donc leur sans s." },
-        { order: 6, prompt: "Défi : complète les trois mots. Balkis ___ (a) rangé ___ (ses) affaires, ___ (mais) elle est fatiguée.", answer: "a ses mais", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "A (avait rangé), ses (affaires à elle), mais (opposition)." }
+        { order: 1, prompt: "Complète : Il ___ mangé une pomme. (a/à)", answer: "a", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "On peut dire il avait mangé, ça fonctionne. Donc on écrit a, sans accent.", strictAccents: true },
+        { order: 2, prompt: "Complète : J'aime le sport, ___ je préfère la lecture. (mais/mes)", answer: "mais", kindWhenWrong: "Pas grave, on regarde ça ensemble 😊", explanationWhenWrong: "Mais oppose deux idées ici : j'aime le sport, mais je préfère la lecture.", strictAccents: true },
+        { order: 3, prompt: "Complète : Il range ___ affaires. (ces/ses)", answer: "ses", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Ses veut dire les affaires qui appartiennent à lui.", strictAccents: true },
+        { order: 4, prompt: "Complète : Ce gâteau ___ délicieux. (et/est)", answer: "est", kindWhenWrong: "Pas grave du tout, on y retourne ensemble 😊", explanationWhenWrong: "On peut dire ce gâteau était délicieux, ça fonctionne. Donc on écrit est, le verbe être.", strictAccents: true },
+        { order: 5, prompt: "Complète : Ils aiment ___ maison. (leur/leurs)", answer: "leur", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Maison est au singulier, donc on écrit leur sans s.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les trois mots. Balkis ___ (a) rangé ___ (ses) affaires, ___ (mais) elle est fatiguée.", answer: "a ses mais", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble 😊", explanationWhenWrong: "A (on peut dire elle avait rangé), ses (les affaires qui sont à elle), mais (opposition entre deux idées).", strictAccents: true }
       ]
     },
     {

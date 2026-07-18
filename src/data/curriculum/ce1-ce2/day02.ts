@@ -74,28 +74,30 @@ export const day02: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Nous ____ (être) prêts.", answer: "sommes", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec nous, être devient sommes." },
-        { order: 2, prompt: "Complète : Vous ____ (avoir) de la chance.", answer: "avez", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec vous, avoir devient avez." },
+        { order: 1, prompt: "Complète : Nous ____ (être) prêts.", answer: "sommes", kindWhenWrong: "Ce n'est pas grave ! On regarde ensemble.", explanationWhenWrong: "Le verbe être est irrégulier : avec nous, il devient sommes. Essaie de le lire à voix haute.", strictAccents: true },
+        { order: 2, prompt: "Complète : Vous ____ (avoir) de la chance.", answer: "avez", kindWhenWrong: "Pas grave, on continue ensemble.", explanationWhenWrong: "Avec vous, avoir devient avez, avec un z à la fin.", strictAccents: true },
         {
           order: 3,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Ils ____ (être) contents.",
           options: ["sommes", "êtes", "sont"],
           answer: "sont",
-          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec ils, être devient sont."
+          kindWhenWrong: "Ce n'est pas grave ! On regarde ensemble.",
+          explanationWhenWrong: "Avec ils, être devient sont, sans accent cette fois.",
+          strictAccents: true
         },
-        { order: 4, prompt: "Complète : Elles ____ (avoir) de beaux jouets.", answer: "ont", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec elles, avoir devient ont." },
+        { order: 4, prompt: "Complète : Elles ____ (avoir) de beaux jouets.", answer: "ont", kindWhenWrong: "Pas grave du tout, on y retourne ensemble.", explanationWhenWrong: "Avec elles, avoir devient ont, comme avec ils.", strictAccents: true },
         {
           order: 5,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Vous ____ (être) très gentils.",
           options: ["sommes", "êtes", "sont"],
           answer: "êtes",
-          kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.",
-          explanationWhenWrong: "Avec vous, être devient êtes, avec un accent circonflexe."
+          kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.",
+          explanationWhenWrong: "Tu étais proche ! Avec vous, être devient êtes, avec un accent circonflexe sur le e.",
+          strictAccents: true
         },
-        { order: 6, prompt: "Défi : complète les deux mots. Nous ____ (avoir) raison et vous ____ (être) d'accord.", answer: "avons êtes", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Nous avons (avoir) et vous êtes (être)." }
+        { order: 6, prompt: "Défi : complète les deux mots. Nous ____ (avoir) raison et vous ____ (être) d'accord.", answer: "avons êtes", kindWhenWrong: "Bravo d'avoir essayé ce défi ! On regarde ensemble.", explanationWhenWrong: "Nous avons vient d'avoir, et vous êtes vient d'être : deux verbes irréguliers différents dans la même phrase.", strictAccents: true }
       ]
     },
     {
@@ -180,12 +182,12 @@ export const day02: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : un ___âteau (gâteau). (g ou gu)", answer: "g", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Devant a, on écrit g : gâteau." },
-        { order: 2, prompt: "Complète : une ___itare (guitare). (g ou gu)", answer: "gu", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Devant i, on écrit gu pour garder le son dur : guitare." },
-        { order: 3, prompt: "Complète : un ___arçon (garçon). (g ou gu)", answer: "g", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Devant a, on écrit g : garçon." },
-        { order: 4, prompt: "Complète : la ___erre (guerre). (g ou gu)", answer: "gu", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Devant e, on écrit gu : guerre." },
-        { order: 5, prompt: "Complète : un ___oûter (goûter). (g ou gu)", answer: "g", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Devant o, on écrit g : goûter." },
-        { order: 6, prompt: "Défi : complète les deux mots. Le ___ide (guide) mange un ___âteau (gâteau).", answer: "gu g", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Guide (devant i, gu) et gâteau (devant a, g)." }
+        { order: 1, prompt: "Complète : un ___âteau (gâteau). (g ou gu)", answer: "g", kindWhenWrong: "Ce n'est pas grave ! On regarde ensemble.", explanationWhenWrong: "Devant la lettre a, on écrit simplement g : gâteau.", strictAccents: true },
+        { order: 2, prompt: "Complète : une ___itare (guitare). (g ou gu)", answer: "gu", kindWhenWrong: "Pas grave, on continue ensemble.", explanationWhenWrong: "Tu étais proche ! Devant i, il faut ajouter un u pour garder le son [g] dur : guitare.", strictAccents: true },
+        { order: 3, prompt: "Complète : un ___arçon (garçon). (g ou gu)", answer: "g", kindWhenWrong: "Ce n'est pas grave ! On regarde ensemble.", explanationWhenWrong: "Devant la lettre a, un seul g suffit : garçon.", strictAccents: true },
+        { order: 4, prompt: "Complète : la ___erre (guerre). (g ou gu)", answer: "gu", kindWhenWrong: "Pas grave du tout, on y retourne ensemble.", explanationWhenWrong: "Devant e, sans le u, le g ferait un son doux. On écrit donc gu : guerre.", strictAccents: true },
+        { order: 5, prompt: "Complète : un ___oûter (goûter). (g ou gu)", answer: "g", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "Devant o, on écrit simplement g : goûter.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux mots. Le ___ide (guide) mange un ___âteau (gâteau).", answer: "gu g", kindWhenWrong: "Bravo d'avoir essayé ce défi ! On regarde ensemble.", explanationWhenWrong: "Guide s'écrit avec gu devant i, et gâteau s'écrit avec un seul g devant a.", strictAccents: true }
       ]
     },
     {

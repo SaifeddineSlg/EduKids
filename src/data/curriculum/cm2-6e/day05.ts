@@ -70,20 +70,21 @@ export const day05: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Je ____ (prendre) mon cartable.", answer: "prends", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, prendre au présent devient prends." },
-        { order: 2, prompt: "Complète : Quand je suis arrivé, il ____ (avoir) déjà mangé.", answer: "avait", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec il, avoir à l'imparfait est avait : il avait mangé." },
-        { order: 3, prompt: "Complète : Demain, je ____ (venir) te voir.", answer: "viendrai", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, le futur de venir est viendrai." },
-        { order: 4, prompt: "Mets à l'impératif (tu) : (Manger) tes légumes !", answer: "mange", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "À l'impératif, tu manges devient mange (sans s)." },
+        { order: 1, prompt: "Complète : Je ____ (prendre) mon cartable.", answer: "prends", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "Avec je, prendre au présent devient prends, avec un d et un s à la fin.", strictAccents: true },
+        { order: 2, prompt: "Complète : Quand je suis arrivé, il ____ (avoir) déjà mangé.", answer: "avait", kindWhenWrong: "Pas grave, on regarde ça ensemble.", explanationWhenWrong: "Avec il, avoir à l'imparfait donne avait, donc au plus-que-parfait : il avait mangé.", strictAccents: true },
+        { order: 3, prompt: "Complète : Demain, je ____ (venir) te voir.", answer: "viendrai", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "Venir a un radical irrégulier au futur : viendr-. Avec je, on écrit viendrai.", strictAccents: true },
+        { order: 4, prompt: "Mets à l'impératif (tu) : (Manger) tes légumes !", answer: "mange", kindWhenWrong: "Pas grave du tout, on y retourne ensemble.", explanationWhenWrong: "À l'impératif, les verbes en -er perdent le s de la 2e personne du singulier : tu manges devient mange !", strictAccents: true },
         {
           order: 5,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Vous ____ (dire) la même chose.",
           options: ["dites", "disez", "dis"],
           answer: "dites",
-          kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.",
-          explanationWhenWrong: "Avec vous, dire au présent devient dites."
+          kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.",
+          explanationWhenWrong: "Dire fait exception au présent : avec vous, on écrit dites, et non disez.",
+          strictAccents: true
         },
-        { order: 6, prompt: "Défi : complète les deux verbes. Ils ____ (voir) leurs amis et ils ____ (avoir) déjà préparé un cadeau.", answer: "verront avaient", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Ils verront (futur de voir) et ils avaient préparé (plus-que-parfait de avoir)." }
+        { order: 6, prompt: "Défi : complète les deux verbes. Ils ____ (voir) leurs amis et ils ____ (avoir) déjà préparé un cadeau.", answer: "verront avaient", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble.", explanationWhenWrong: "Ils verront (radical irrégulier verr- au futur de voir) et ils avaient préparé (avoir à l'imparfait, plus-que-parfait).", strictAccents: true }
       ]
     },
     {
@@ -152,12 +153,12 @@ export const day05: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : ___ chien aboie fort. (se/ce)", answer: "ce", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Ce accompagne le nom chien." },
-        { order: 2, prompt: "Complète : Il aime beaucoup ___ maison. (sa/ça)", answer: "sa", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "On peut dire ta maison, donc c'est sa." },
-        { order: 3, prompt: "Complète : Il ___ venir demain. (peu/peux/peut)", answer: "peut", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec il, pouvoir donne peut." },
-        { order: 4, prompt: "Complète : Je préfère ___ le chocolat. (plutôt/plus tôt)", answer: "plutôt", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "C'est une préférence, donc plutôt en un mot." },
-        { order: 5, prompt: "Complète : Il est arrivé ___ que prévu. (plutôt/plus tôt)", answer: "plus tôt", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "On peut dire le contraire de plus tard, donc plus tôt." },
-        { order: 6, prompt: "Défi : complète les trois mots. ___ (ce) chat ___ (se) cache un ___ (peu) partout.", answer: "ce se peu", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Ce chat (nom), se cache (verbe pronominal), un peu (quantité)." }
+        { order: 1, prompt: "Complète : ___ chien aboie fort. (se/ce)", answer: "ce", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "Ce est suivi d'un nom (chien) : c'est un déterminant démonstratif, on écrit ce.", strictAccents: true },
+        { order: 2, prompt: "Complète : Il aime beaucoup ___ maison. (sa/ça)", answer: "sa", kindWhenWrong: "Pas grave, on regarde ça ensemble.", explanationWhenWrong: "On peut remplacer par ta maison, donc c'est le possessif sa, sans cédille.", strictAccents: true },
+        { order: 3, prompt: "Complète : Il ___ venir demain. (peu/peux/peut)", answer: "peut", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "Avec il, le verbe pouvoir au présent donne peut, avec un t.", strictAccents: true },
+        { order: 4, prompt: "Complète : Je préfère ___ le chocolat. (plutôt/plus tôt)", answer: "plutôt", kindWhenWrong: "Pas grave du tout, on y retourne ensemble.", explanationWhenWrong: "C'est une préférence : on écrit plutôt en un seul mot, avec un accent circonflexe.", strictAccents: true },
+        { order: 5, prompt: "Complète : Il est arrivé ___ que prévu. (plutôt/plus tôt)", answer: "plus tôt", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "On peut dire le contraire de plus tard, donc plus tôt, en deux mots.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les trois mots. ___ (ce) chat ___ (se) cache un ___ (peu) partout.", answer: "ce se peu", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble.", explanationWhenWrong: "Ce chat (devant un nom), se cache (devant un verbe pronominal), un peu (quantité, invariable).", strictAccents: true }
       ]
     },
     {

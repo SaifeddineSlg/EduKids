@@ -70,8 +70,8 @@ export const day01: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Hier, j'____ (avoir) mangé une pomme.", answer: "ai", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, avoir au présent devient ai : j'ai mangé." },
-        { order: 2, prompt: "Complète : Tu ____ (avoir) regardé la télévision hier soir.", answer: "as", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec tu, avoir au présent devient as : tu as regardé." },
+        { order: 1, prompt: "Complète : Hier, j'____ (avoir) mangé une pomme.", answer: "ai", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, le verbe avoir au présent devient ai. On écrit donc j'ai mangé. Essaie de le lire à voix haute pour bien l'entendre.", strictAccents: true },
+        { order: 2, prompt: "Complète : Tu ____ (avoir) regardé la télévision hier soir.", answer: "as", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec tu, le verbe avoir au présent devient as. On écrit donc tu as regardé, avec un s comme presque tous les verbes conjugués avec tu.", strictAccents: true },
         {
           order: 3,
           type: "mcq",
@@ -79,11 +79,12 @@ export const day01: DayCurriculum = {
           options: ["a", "as", "ont"],
           answer: "a",
           kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec elle, avoir au présent devient a : elle a joué."
+          explanationWhenWrong: "Avec elle, le verbe avoir au présent devient a, sans s. On écrit donc elle a joué.",
+          strictAccents: true
         },
-        { order: 4, prompt: "Complète : Nous ____ (avoir) parlé de nos vacances.", answer: "avons", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec nous, avoir au présent devient avons : nous avons parlé." },
-        { order: 5, prompt: "Complète : Vous ____ (avoir) rangé toute la maison.", answer: "avez", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Avec vous, avoir au présent devient avez : vous avez rangé." },
-        { order: 6, prompt: "Défi : complète les deux mots. Ils ____ (avoir) chanté et nous ____ (avoir) dansé toute la soirée.", answer: "ont avons", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Ils ont chanté (ils) et nous avons dansé (nous)." }
+        { order: 4, prompt: "Complète : Nous ____ (avoir) parlé de nos vacances.", answer: "avons", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec nous, le verbe avoir au présent devient avons. On écrit donc nous avons parlé.", strictAccents: true },
+        { order: 5, prompt: "Complète : Vous ____ (avoir) rangé toute la maison.", answer: "avez", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Avec vous, le verbe avoir au présent devient avez. On écrit donc vous avez rangé, avec un z et non un s.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux mots. Ils ____ (avoir) chanté et nous ____ (avoir) dansé toute la soirée.", answer: "ont avons", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Tu étais proche ! Avec ils, avoir devient ont : ils ont chanté. Avec nous, avoir devient avons : nous avons dansé.", strictAccents: true }
       ]
     },
     {
@@ -160,12 +161,12 @@ export const day01: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : ___ arrive bientôt. (on/on n')", answer: "on n'", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Arrive commence par une voyelle, donc on n'." },
-        { order: 2, prompt: "Complète : ___ joue dans le jardin. (on/on n')", answer: "on", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Joue commence par une consonne, donc on tout seul." },
-        { order: 3, prompt: "Complète : ___ oublie jamais ses amis. (on/on n')", answer: "on n'", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Oublie commence par une voyelle, donc on n'." },
-        { order: 4, prompt: "Complète : ___ part demain matin. (on/on n')", answer: "on", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Part commence par une consonne, donc on tout seul." },
-        { order: 5, prompt: "Complète : ___ invite toute la classe. (on/on n')", answer: "on n'", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Invite commence par une voyelle, donc on n'." },
-        { order: 6, prompt: "Défi : complète les deux mots. ___ (on) range la salle et ___ (on n') attend plus longtemps.", answer: "on on n'", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "On range (consonne) et on n'attend (voyelle)." }
+        { order: 1, prompt: "Complète : ___ arrive bientôt. (on/on n')", answer: "on n'", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Arrive commence par la voyelle a, donc on ajoute n' pour faciliter la prononciation : on n'arrive.", strictAccents: true },
+        { order: 2, prompt: "Complète : ___ joue dans le jardin. (on/on n')", answer: "on", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Joue commence par la consonne j, donc on reste tout seul : on joue.", strictAccents: true },
+        { order: 3, prompt: "Complète : ___ oublie jamais ses amis. (on/on n')", answer: "on n'", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Oublie commence par la voyelle o, donc on ajoute n' : on n'oublie.", strictAccents: true },
+        { order: 4, prompt: "Complète : ___ part demain matin. (on/on n')", answer: "on", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Part commence par la consonne p, donc on reste tout seul : on part.", strictAccents: true },
+        { order: 5, prompt: "Complète : ___ invite toute la classe. (on/on n')", answer: "on n'", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Invite commence par la voyelle i, donc on ajoute n' : on n'invite.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux mots. ___ (on) range la salle et ___ (on n') attend plus longtemps.", answer: "on on n'", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Tu étais proche ! Range commence par une consonne (on range), attend commence par une voyelle (on n'attend).", strictAccents: true }
       ]
     },
     {

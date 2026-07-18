@@ -86,7 +86,8 @@ export const day03: DayCurriculum = {
           prompt: "Complète : Je ____ (finir) mes devoirs.",
           answer: "finis",
           kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec je, finir devient finis : je finis."
+          explanationWhenWrong: "Avec je, finir devient finis, sans -iss- : je finis. Le -iss- n'apparaît qu'avec nous, vous, ils.",
+          strictAccents: true
         },
         {
           order: 2,
@@ -94,7 +95,8 @@ export const day03: DayCurriculum = {
           prompt: "Complète : Tu ____ (choisir) un livre.",
           answer: "choisis",
           kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.",
-          explanationWhenWrong: "Avec tu, choisir devient choisis."
+          explanationWhenWrong: "Avec tu, choisir devient choisis, comme je finis : pas de -iss- à cette personne.",
+          strictAccents: true
         },
         {
           order: 3,
@@ -103,7 +105,8 @@ export const day03: DayCurriculum = {
           options: ["grandis", "grandissons", "grandissez"],
           answer: "grandissons",
           kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec nous, grandir devient grandissons, avec -iss-."
+          explanationWhenWrong: "Avec nous, grandir devient grandissons : on ajoute -iss- avant la terminaison -ons.",
+          strictAccents: true
         },
         {
           order: 4,
@@ -111,7 +114,8 @@ export const day03: DayCurriculum = {
           prompt: "Complète : Vous ____ (finir) la course.",
           answer: "finissez",
           kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.",
-          explanationWhenWrong: "Avec vous, finir devient finissez."
+          explanationWhenWrong: "Avec vous, finir devient finissez : n'oublie pas le -iss- avant le -ez final.",
+          strictAccents: true
         },
         {
           order: 5,
@@ -120,7 +124,8 @@ export const day03: DayCurriculum = {
           options: ["choisit", "choisissez", "choisissent"],
           answer: "choisissent",
           kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.",
-          explanationWhenWrong: "Avec elles, choisir devient choisissent."
+          explanationWhenWrong: "Avec elles, choisir devient choisissent : le -iss- apparaît, suivi de -ent.",
+          strictAccents: true
         },
         {
           order: 6,
@@ -133,7 +138,8 @@ export const day03: DayCurriculum = {
             { left: "Ils", right: "réussissent" }
           ],
           kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.",
-          explanationWhenWrong: "Je réussis, nous réussissons (avec -iss-), ils réussissent (avec -iss-)."
+          explanationWhenWrong: "Je réussis (sans -iss-), nous réussissons (avec -iss-), ils réussissent (avec -iss-) : le petit morceau -iss- n'apparaît qu'à trois personnes.",
+          strictAccents: true
         }
       ]
     },
@@ -176,38 +182,80 @@ export const day03: DayCurriculum = {
     {
       subjectId: "orthographe",
       status: "ready",
-      title: "et ou est : le test avec etait",
+      title: "et ou est : le test avec était",
       xpReward: 24,
       story: {
-        hook: "Encore un petit test magique, cette fois pour et et est.",
-        concreteExample: "Regarde: Le chat ... noir. Est-ce que c est et ou est ?",
-        reveal: "On essaie de remplacer par etait : Le chat etait noir. Ca fonctionne ! Donc on ecrit est (le verbe etre). Bravo !",
-        bridgeToConcept: "Si etait fonctionne, on ecrit est (verbe etre). Sinon, on ecrit et (qui relie deux mots, comme dans papa et maman).",
+        hook: "Encore un petit test magique, cette fois pour ne plus confondre et et est.",
+        concreteExample: "Regarde : Le chat ... noir. Est-ce que c'est et ou est ?",
+        reveal: "On essaie de remplacer par était : Le chat était noir. Ça fonctionne ! Donc on écrit est, le verbe être. Bravo !",
+        bridgeToConcept: "Si était fonctionne, on écrit est (verbe être). Sinon, on écrit et, qui relie deux mots, comme dans papa et maman.",
         illustrationEmoji: "🪄"
       },
       examples: [
         {
           title: "Exemple 1 : Papa et maman arrivent",
           steps: [
-            { text: "On essaie etait : Papa etait maman arrivent. Ca ne fonctionne pas.", illustrationEmoji: "🚫" },
-            { text: "Donc on ecrit et (relie deux mots).", illustrationEmoji: "✅" }
+            { text: "On essaie était : Papa était maman arrivent. Ça ne fonctionne pas.", illustrationEmoji: "🚫" },
+            { text: "Donc on écrit et, qui relie papa et maman.", illustrationEmoji: "✅" }
           ]
         },
         {
           title: "Exemple 2 : Le ciel est bleu",
           steps: [
-            { text: "On essaie etait : Le ciel etait bleu. Ca fonctionne !", illustrationEmoji: "✅" },
-            { text: "Donc on ecrit est (verbe etre).", illustrationEmoji: "✅" }
+            { text: "On essaie était : Le ciel était bleu. Ça fonctionne !", illustrationEmoji: "✅" },
+            { text: "Donc on écrit est, le verbe être.", illustrationEmoji: "✅" }
           ]
         }
       ],
       questions: [
-        { order: 1, prompt: "Complete: Le soleil ___ chaud. (et ou est)", answer: "est", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Le soleil etait chaud fonctionne, donc c est est (verbe etre)." },
-        { order: 2, prompt: "Complete: Il mange une pomme ___ une banane. (et ou est)", answer: "et", kindWhenWrong: "Pas grave 😊 On regarde ca ensemble.", explanationWhenWrong: "On ne peut pas dire il mange une pomme etait une banane, donc c est et." },
-        { order: 3, prompt: "Complete: Mon chat ___ tres joueur. (et ou est)", answer: "est", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Mon chat etait tres joueur fonctionne, donc est." },
-        { order: 4, prompt: "Complete: Je prends mon sac ___ mes cles. (et ou est)", answer: "et", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "et relie sac et cles, etait ne fonctionne pas ici." },
-        { order: 5, prompt: "Complete: Cette histoire ___ tres jolie. (et ou est)", answer: "est", kindWhenWrong: "Ce n est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Cette histoire etait tres jolie fonctionne, donc est." },
-        { order: 6, prompt: "Defi : complete les deux mots. Mon frere ___ ma soeur jouent, et le jeu ___ amusant.", answer: "et est", kindWhenWrong: "Bravo d avoir essaye ce defi 😊 Regardons ensemble.", explanationWhenWrong: "et relie frere et soeur ; le jeu etait amusant fonctionne, donc est." }
+        {
+          order: 1,
+          prompt: "Complète : Le soleil ___ chaud. (et ou est)",
+          answer: "est",
+          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
+          explanationWhenWrong: "Le soleil était chaud fonctionne, donc c'est est, le verbe être.",
+          strictAccents: true
+        },
+        {
+          order: 2,
+          prompt: "Complète : Il mange une pomme ___ une banane. (et ou est)",
+          answer: "et",
+          kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.",
+          explanationWhenWrong: "On ne peut pas dire il mange une pomme était une banane, donc c'est et, qui relie pomme et banane.",
+          strictAccents: true
+        },
+        {
+          order: 3,
+          prompt: "Complète : Mon chat ___ très joueur. (et ou est)",
+          answer: "est",
+          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
+          explanationWhenWrong: "Mon chat était très joueur fonctionne, donc c'est est, le verbe être.",
+          strictAccents: true
+        },
+        {
+          order: 4,
+          prompt: "Complète : Je prends mon sac ___ mes clés. (et ou est)",
+          answer: "et",
+          kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.",
+          explanationWhenWrong: "et relie sac et clés ; était ne fonctionne pas ici, donc pas de verbe être.",
+          strictAccents: true
+        },
+        {
+          order: 5,
+          prompt: "Complète : Cette histoire ___ très jolie. (et ou est)",
+          answer: "est",
+          kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.",
+          explanationWhenWrong: "Cette histoire était très jolie fonctionne, donc c'est est, le verbe être.",
+          strictAccents: true
+        },
+        {
+          order: 6,
+          prompt: "Défi : complète les deux mots. Mon frère ___ ma sœur jouent, et le jeu ___ amusant.",
+          answer: "et est",
+          kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.",
+          explanationWhenWrong: "et relie frère et sœur ; le jeu était amusant fonctionne, donc est, le verbe être.",
+          strictAccents: true
+        }
       ]
     },
     {

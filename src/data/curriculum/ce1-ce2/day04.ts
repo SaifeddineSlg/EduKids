@@ -72,28 +72,30 @@ export const day04: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Nous ____ (aller) au parc.", answer: "allons", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec nous, aller devient allons." },
-        { order: 2, prompt: "Complète : Vous ____ (faire) un beau dessin.", answer: "faites", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec vous, faire devient faites." },
+        { order: 1, prompt: "Complète : Nous ____ (aller) au parc.", answer: "allons", kindWhenWrong: "Ce n'est pas grave ! On regarde ensemble.", explanationWhenWrong: "Avec nous, aller devient allons, avec la terminaison -ons.", strictAccents: true },
+        { order: 2, prompt: "Complète : Vous ____ (faire) un beau dessin.", answer: "faites", kindWhenWrong: "Pas grave, on continue ensemble.", explanationWhenWrong: "Avec vous, faire devient faites : une forme irrégulière à retenir par coeur, pas faisez.", strictAccents: true },
         {
           order: 3,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Ils ____ (aller) chez leurs cousins.",
           options: ["allons", "allez", "vont"],
           answer: "vont",
-          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec ils, aller devient vont."
+          kindWhenWrong: "Ce n'est pas grave ! On regarde ensemble.",
+          explanationWhenWrong: "Avec ils, aller devient vont, une forme très différente du verbe aller.",
+          strictAccents: true
         },
-        { order: 4, prompt: "Complète : Elles ____ (faire) leurs devoirs.", answer: "font", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec elles, faire devient font." },
+        { order: 4, prompt: "Complète : Elles ____ (faire) leurs devoirs.", answer: "font", kindWhenWrong: "Pas grave du tout, on y retourne ensemble.", explanationWhenWrong: "Avec elles, faire devient font, comme avec ils.", strictAccents: true },
         {
           order: 5,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Nous ____ (faire) un gâteau.",
           options: ["faisons", "faites", "font"],
           answer: "faisons",
-          kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.",
-          explanationWhenWrong: "Avec nous, faire devient faisons."
+          kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.",
+          explanationWhenWrong: "Avec nous, faire devient faisons : le son se prononce feu-zon, mais il s'écrit faisons.",
+          strictAccents: true
         },
-        { order: 6, prompt: "Défi : complète les deux mots. Vous ____ (aller) au marché et ils ____ (faire) les courses.", answer: "allez font", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Vous allez (aller) et ils font (faire)." }
+        { order: 6, prompt: "Défi : complète les deux mots. Vous ____ (aller) au marché et ils ____ (faire) les courses.", answer: "allez font", kindWhenWrong: "Bravo d'avoir essayé ce défi ! On regarde ensemble.", explanationWhenWrong: "Vous allez vient d'aller, et ils font vient de faire : deux verbes irréguliers différents.", strictAccents: true }
       ]
     },
     {
@@ -178,12 +180,12 @@ export const day04: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Tu veux un chat ___ un chien ? (ou/où)", answer: "ou", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Un chat ou bien un chien fonctionne, donc ou." },
-        { order: 2, prompt: "Complète : ___ vas-tu ce week-end ? (ou/où)", answer: "où", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Ou bien vas-tu ne fonctionne pas, donc où." },
-        { order: 3, prompt: "Complète : Je ne sais pas ___ j'ai rangé mes clés. (ou/où)", answer: "où", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Ça parle d'un lieu, donc où." },
-        { order: 4, prompt: "Complète : Tu préfères le rouge ___ le bleu ? (ou/où)", answer: "ou", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Le rouge ou bien le bleu fonctionne, donc ou." },
-        { order: 5, prompt: "Complète : Dis-moi ___ se trouve la sortie. (ou/où)", answer: "où", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Ça parle d'un lieu, donc où." },
-        { order: 6, prompt: "Défi : complète les deux mots. ___ veux-tu aller, à la mer ___ à la montagne ?", answer: "où ou", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Où veux-tu (lieu) et à la mer ou bien à la montagne (choix)." }
+        { order: 1, prompt: "Complète : Tu veux un chat ___ un chien ? (ou/où)", answer: "ou", kindWhenWrong: "Ce n'est pas grave ! On regarde ensemble.", explanationWhenWrong: "Un chat ou bien un chien fonctionne, donc on écrit ou, sans accent : c'est un choix.", strictAccents: true },
+        { order: 2, prompt: "Complète : ___ vas-tu ce week-end ? (ou/où)", answer: "où", kindWhenWrong: "Pas grave, on continue ensemble.", explanationWhenWrong: "Ou bien vas-tu ne fonctionne pas : ça parle d'un lieu, donc on écrit où, avec un accent.", strictAccents: true },
+        { order: 3, prompt: "Complète : Je ne sais pas ___ j'ai rangé mes clés. (ou/où)", answer: "où", kindWhenWrong: "Ce n'est pas grave ! On regarde ensemble.", explanationWhenWrong: "Ça parle d'un lieu, donc on écrit où, avec un accent grave.", strictAccents: true },
+        { order: 4, prompt: "Complète : Tu préfères le rouge ___ le bleu ? (ou/où)", answer: "ou", kindWhenWrong: "Pas grave du tout, on y retourne ensemble.", explanationWhenWrong: "Le rouge ou bien le bleu fonctionne, donc on écrit ou, sans accent : c'est un choix.", strictAccents: true },
+        { order: 5, prompt: "Complète : Dis-moi ___ se trouve la sortie. (ou/où)", answer: "où", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "Ça parle d'un lieu, donc on écrit où, avec un accent.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux mots. ___ veux-tu aller, à la mer ___ à la montagne ?", answer: "où ou", kindWhenWrong: "Bravo d'avoir essayé ce défi ! On regarde ensemble.", explanationWhenWrong: "Où veux-tu parle d'un lieu, avec accent ; à la mer ou bien à la montagne exprime un choix, sans accent.", strictAccents: true }
       ]
     },
     {

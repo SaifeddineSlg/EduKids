@@ -84,7 +84,8 @@ export const day05: DayCurriculum = {
           prompt: "Complète : Je ____ (parler) doucement.",
           answer: "parle",
           kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec je, parler devient parle."
+          explanationWhenWrong: "parler est un verbe régulier en -er : avec je, il devient parle.",
+          strictAccents: true
         },
         {
           order: 2,
@@ -92,7 +93,8 @@ export const day05: DayCurriculum = {
           prompt: "Complète : Tu ____ (finir) ton repas.",
           answer: "finis",
           kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.",
-          explanationWhenWrong: "Avec tu, finir devient finis."
+          explanationWhenWrong: "finir est un verbe en -ir qui grandit : avec tu, il devient finis, sans -iss- à cette personne.",
+          strictAccents: true
         },
         {
           order: 3,
@@ -101,7 +103,8 @@ export const day05: DayCurriculum = {
           options: ["sommes", "êtes", "sont"],
           answer: "sommes",
           kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec nous, être devient sommes."
+          explanationWhenWrong: "être est un verbe irrégulier : avec nous, il devient sommes, une forme à connaître par cœur.",
+          strictAccents: true
         },
         {
           order: 4,
@@ -109,7 +112,8 @@ export const day05: DayCurriculum = {
           prompt: "Complète : Vous ____ (avoir) raison.",
           answer: "avez",
           kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.",
-          explanationWhenWrong: "Avec vous, avoir devient avez."
+          explanationWhenWrong: "avoir est un verbe irrégulier : avec vous, il devient avez.",
+          strictAccents: true
         },
         {
           order: 5,
@@ -118,7 +122,8 @@ export const day05: DayCurriculum = {
           options: ["allons", "allez", "vont"],
           answer: "vont",
           kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.",
-          explanationWhenWrong: "Avec ils, aller devient vont."
+          explanationWhenWrong: "aller est un verbe irrégulier : avec ils, il devient vont.",
+          strictAccents: true
         },
         {
           order: 6,
@@ -131,7 +136,8 @@ export const day05: DayCurriculum = {
             { left: "Nous", right: "faisons" }
           ],
           kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.",
-          explanationWhenWrong: "Je fais, tu fais (les deux se ressemblent), nous faisons (avec -ons)."
+          explanationWhenWrong: "Je fais, tu fais (ces deux formes se ressemblent), nous faisons (avec -ons) : le verbe faire ne suit aucune règle simple.",
+          strictAccents: true
         }
       ]
     },
@@ -180,35 +186,77 @@ export const day05: DayCurriculum = {
       title: "Tous les petits tests magiques ensemble",
       xpReward: 24,
       story: {
-        hook: "Imagine une boite a outils avec tous tes petits tests magiques de la semaine : avait, etaient, etait, ou bien.",
-        concreteExample: "Cette semaine, tu as appris a tester a/à, son/sont, et/est, ou/où.",
-        reveal: "Chaque fois que tu hesites, tu peux utiliser le bon test dans ta tete. Bravo, ta boite a outils est complete !",
-        bridgeToConcept: "Reviser l orthographe, c est se rappeler quel test utiliser pour chaque mot qui se ressemble.",
+        hook: "Imagine une boîte à outils avec tous tes petits tests magiques de la semaine : avait, étaient, était, ou bien.",
+        concreteExample: "Cette semaine, tu as appris à tester a/à, son/sont, et/est, ou/où.",
+        reveal: "Chaque fois que tu hésites, tu peux utiliser le bon test dans ta tête. Bravo, ta boîte à outils est complète !",
+        bridgeToConcept: "Réviser l'orthographe, c'est se rappeler quel test utiliser pour chaque mot qui se ressemble.",
         illustrationEmoji: "🧰"
       },
       examples: [
         {
           title: "Exemple 1 : Il ... un ballon",
           steps: [
-            { text: "Test avait : Il avait un ballon. Ca fonctionne.", illustrationEmoji: "✅" },
-            { text: "Donc a sans accent.", illustrationEmoji: "✅" }
+            { text: "Test avait : Il avait un ballon. Ça fonctionne.", illustrationEmoji: "✅" },
+            { text: "Donc a, sans accent.", illustrationEmoji: "✅" }
           ]
         },
         {
-          title: "Exemple 2 : Les enfants ... la ou ils habitent",
+          title: "Exemple 2 : Les enfants ... là où ils habitent",
           steps: [
-            { text: "Test etaient : Les enfants etaient la. Ca fonctionne.", illustrationEmoji: "✅" },
+            { text: "Test étaient : Les enfants étaient là. Ça fonctionne.", illustrationEmoji: "✅" },
             { text: "Donc sont.", illustrationEmoji: "✅" }
           ]
         }
       ],
       questions: [
-        { order: 1, prompt: "Complete: Elle ___ une jolie robe. (a ou à)", answer: "a", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Elle avait une jolie robe fonctionne, donc a sans accent." },
-        { order: 2, prompt: "Complete: Nous allons ___ la plage. (a ou à)", answer: "à", kindWhenWrong: "Pas grave 😊 On regarde ca ensemble.", explanationWhenWrong: "avait ne fonctionne pas ici, donc à avec accent." },
-        { order: 3, prompt: "Complete: Mes cousins ___ arrivés hier. (son ou sont)", answer: "sont", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Mes cousins etaient arrivés fonctionne, donc sont." },
-        { order: 4, prompt: "Complete: Le ciel ___ gris aujourd hui. (et ou est)", answer: "est", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Le ciel etait gris fonctionne, donc est." },
-        { order: 5, prompt: "Complete: Tu prefere le the ___ le chocolat chaud ? (ou/où)", answer: "ou", kindWhenWrong: "Ce n est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "le the ou bien le chocolat fonctionne, donc ou sans accent." },
-        { order: 6, prompt: "Defi : complete les trois mots. Il ___ rangé ses affaires ___ ses jouets, mais il ne sait plus ___ il a mis ses cles.", answer: "a et où", kindWhenWrong: "Bravo d avoir essaye ce defi 😊 Regardons ensemble.", explanationWhenWrong: "Il a rangé (avait rangé fonctionne), affaires et jouets (relie deux mots), et où (lieu, avec accent)." }
+        {
+          order: 1,
+          prompt: "Complète : Elle ___ une jolie robe. (a ou à)",
+          answer: "a",
+          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
+          explanationWhenWrong: "Elle avait une jolie robe fonctionne, donc c'est a sans accent, le verbe avoir.",
+          strictAccents: true
+        },
+        {
+          order: 2,
+          prompt: "Complète : Nous allons ___ la plage. (a ou à)",
+          answer: "à",
+          kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.",
+          explanationWhenWrong: "avait ne fonctionne pas ici, donc c'est à avec l'accent grave, qui indique un lieu.",
+          strictAccents: true
+        },
+        {
+          order: 3,
+          prompt: "Complète : Mes cousins ___ arrivés hier. (son ou sont)",
+          answer: "sont",
+          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
+          explanationWhenWrong: "Mes cousins étaient arrivés fonctionne, donc c'est sont, le verbe être.",
+          strictAccents: true
+        },
+        {
+          order: 4,
+          prompt: "Complète : Le ciel ___ gris aujourd'hui. (et ou est)",
+          answer: "est",
+          kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.",
+          explanationWhenWrong: "Le ciel était gris fonctionne, donc c'est est, le verbe être.",
+          strictAccents: true
+        },
+        {
+          order: 5,
+          prompt: "Complète : Tu préfères le thé ___ le chocolat chaud ? (ou/où)",
+          answer: "ou",
+          kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.",
+          explanationWhenWrong: "le thé ou bien le chocolat chaud fonctionne, donc c'est ou sans accent : c'est un choix.",
+          strictAccents: true
+        },
+        {
+          order: 6,
+          prompt: "Défi : complète les trois mots. Il ___ rangé ses affaires ___ ses jouets, mais il ne sait plus ___ il a mis ses clés.",
+          answer: "a et où",
+          kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.",
+          explanationWhenWrong: "Il a rangé (il avait rangé fonctionne, donc a sans accent) ; affaires et jouets (et relie deux mots) ; et où il a mis ses clés (un lieu, avec l'accent).",
+          strictAccents: true
+        }
       ]
     },
     {

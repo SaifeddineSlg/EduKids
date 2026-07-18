@@ -57,6 +57,9 @@ export interface DayQuestion {
   explanationWhenWrong: string;
   options?: string[]; // requis si type = "mcq"
   matchPairs?: { left: string; right: string }[]; // requis si type = "match"
+  // true quand l'exercice porte precisement sur l'orthographe/les accents : la comparaison
+  // reste alors strictement sensible aux accents (pas de repli insensible aux accents).
+  strictAccents?: boolean;
 }
 
 export interface SubjectDayLesson extends DayContentStatus {

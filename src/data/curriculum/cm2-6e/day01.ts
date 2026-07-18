@@ -64,26 +64,27 @@ export const day01: DayCurriculum = {
         {
           title: "L'attention particulière à avoir",
           steps: [
-            { text: "Dire fait exception à la 2e personne du pluriel : vous dites (pas vous disez).", illustrationEmoji: "⚠️" },
+            { text: "Dire fait exception à la 2e personne du pluriel : vous dites (et non vous disez).", illustrationEmoji: "⚠️" },
             { text: "Prendre double le n au pluriel : ils prennent.", illustrationEmoji: "✅" }
           ]
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Je ____ (prendre) mon cartable.", answer: "prends", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, prendre au présent devient prends." },
-        { order: 2, prompt: "Complète : Tu ____ (dire) toujours la vérité.", answer: "dis", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec tu, dire au présent devient dis." },
+        { order: 1, prompt: "Complète : Je ____ (prendre) mon cartable.", answer: "prends", kindWhenWrong: "Ce n'est pas grave, on regarde ça ensemble.", explanationWhenWrong: "Avec je, prendre au présent devient prends, avec un d et un s à la fin. Essaie de le dire à voix haute : je prends.", strictAccents: true },
+        { order: 2, prompt: "Complète : Tu ____ (dire) toujours la vérité.", answer: "dis", kindWhenWrong: "Pas grave, on regarde ça ensemble.", explanationWhenWrong: "Avec tu, dire au présent devient dis, sans e à la fin (pas dies).", strictAccents: true },
         {
           order: 3,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Vous ____ (dire) la même chose que moi.",
           options: ["dites", "disez", "dis"],
           answer: "dites",
-          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec vous, dire au présent devient dites (exception)."
+          kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.",
+          explanationWhenWrong: "Tu étais proche ! Avec vous, dire fait exception au présent : on écrit dites, et non disez comme les autres verbes en -re.",
+          strictAccents: true
         },
-        { order: 4, prompt: "Complète : Nous ____ (prendre) le bus tous les matins.", answer: "prenons", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec nous, prendre au présent devient prenons." },
-        { order: 5, prompt: "Complète : Ils ____ (voir) un bel arc-en-ciel.", answer: "voient", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Avec ils, voir au présent devient voient." },
-        { order: 6, prompt: "Défi : complète les deux verbes. Elles ____ (prendre) leurs affaires et elles ____ (dire) au revoir.", answer: "prennent disent", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Elles prennent (prendre) et elles disent (dire)." }
+        { order: 4, prompt: "Complète : Nous ____ (prendre) le bus tous les matins.", answer: "prenons", kindWhenWrong: "Pas grave du tout, on y retourne ensemble.", explanationWhenWrong: "Avec nous, prendre au présent devient prenons, sans d avant le suffixe -ons.", strictAccents: true },
+        { order: 5, prompt: "Complète : Ils ____ (voir) un bel arc-en-ciel.", answer: "voient", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "Avec ils, voir au présent devient voient : on n'oublie pas le i avant -ent.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux verbes. Elles ____ (prendre) leurs affaires et elles ____ (dire) au revoir.", answer: "prennent disent", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble.", explanationWhenWrong: "Elles prennent (le n double au pluriel de prendre) et elles disent (dire devient disent avec elles, sans exception cette fois).", strictAccents: true }
       ]
     },
     {
@@ -152,12 +153,12 @@ export const day01: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Accorde : un (petit) chat noir → une petite chatte ___", answer: "noire", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Chatte est féminin, donc noire s'accorde au féminin." },
-        { order: 2, prompt: "Accorde : un grand arbre vert → de grands arbres ___", answer: "verts", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Arbres est pluriel, donc verts s'accorde au pluriel." },
-        { order: 3, prompt: "Accorde : une jolie fleur → de jolies ___", answer: "fleurs", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Jolies est pluriel, donc fleurs s'accorde au pluriel." },
-        { order: 4, prompt: "Accorde : un beau chien → une belle ___", answer: "chienne", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Belle est féminin, donc chienne s'accorde au féminin." },
-        { order: 5, prompt: "Accorde : le petit garçon sage → les petits garçons ___", answer: "sages", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Garçons est pluriel, donc sages s'accorde au pluriel." },
-        { order: 6, prompt: "Défi : accorde tout le groupe. un grand beau jardin fleuri devient au féminin : une grande belle cour ___", answer: "fleurie", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Cour est féminin, donc grande, belle et fleurie s'accordent au féminin." }
+        { order: 1, prompt: "Accorde : un (petit) chat noir → une petite chatte ___", answer: "noire", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "Chatte est féminin, donc l'adjectif noir prend un e final et devient noire.", strictAccents: true },
+        { order: 2, prompt: "Accorde : un grand arbre vert → de grands arbres ___", answer: "verts", kindWhenWrong: "Pas grave, on regarde ça ensemble.", explanationWhenWrong: "Arbres est masculin pluriel, donc l'adjectif vert prend un s final et devient verts.", strictAccents: true },
+        { order: 3, prompt: "Accorde : une jolie fleur → de jolies ___", answer: "fleurs", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "Jolies est féminin pluriel, donc le nom fleur prend un s et devient fleurs.", strictAccents: true },
+        { order: 4, prompt: "Accorde : un beau chien → une belle ___", answer: "chienne", kindWhenWrong: "Pas grave du tout, on y retourne ensemble.", explanationWhenWrong: "Belle est féminin, donc chien double le n et ajoute un e : chienne.", strictAccents: true },
+        { order: 5, prompt: "Accorde : le petit garçon sage → les petits garçons ___", answer: "sages", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "Garçons est pluriel, donc l'adjectif sage prend un s final et devient sages.", strictAccents: true },
+        { order: 6, prompt: "Défi : accorde tout le groupe. un grand beau jardin fleuri devient au féminin : une grande belle cour ___", answer: "fleurie", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble.", explanationWhenWrong: "Cour est féminin singulier, donc grande, belle et fleurie prennent tous un e final pour s'accorder.", strictAccents: true }
       ]
     },
     {

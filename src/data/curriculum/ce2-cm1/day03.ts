@@ -78,20 +78,21 @@ export const day03: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Quand j'étais petit, je ____ (jouer) dans le jardin.", answer: "jouais", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, l'imparfait de jouer est jouais." },
-        { order: 2, prompt: "Complète : Tu ____ (parler) toujours très fort.", answer: "parlais", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec tu, l'imparfait de parler est parlais." },
+        { order: 1, prompt: "Complète : Quand j'étais petit, je ____ (jouer) dans le jardin.", answer: "jouais", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Avec je, l'imparfait de jouer est jouais. On entend le son \"è\" avant la terminaison -ais.", strictAccents: true },
+        { order: 2, prompt: "Complète : Tu ____ (parler) toujours très fort.", answer: "parlais", kindWhenWrong: "Pas grave, on regarde ça ensemble 😊", explanationWhenWrong: "Avec tu, l'imparfait de parler est parlais. Tu étais peut-être proche, essaie de le lire à voix haute.", strictAccents: true },
         {
           order: 3,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Elle ____ (chanter) tous les soirs.",
           options: ["chantait", "chantais", "chantaient"],
           answer: "chantait",
-          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec elle, l'imparfait de chanter est chantait."
+          kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊",
+          explanationWhenWrong: "Avec elle, l'imparfait de chanter est chantait. Chantais est pour je ou tu, chantaient est pour ils.",
+          strictAccents: true
         },
-        { order: 4, prompt: "Complète : Nous ____ (habiter) à la campagne.", answer: "habitions", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec nous, l'imparfait de habiter est habitions." },
-        { order: 5, prompt: "Complète : Vous ____ (regarder) la télévision le dimanche.", answer: "regardiez", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Avec vous, l'imparfait de regarder est regardiez." },
-        { order: 6, prompt: "Défi : complète les deux verbes. Ils ____ (jouer) dehors pendant que nous ____ (préparer) le repas.", answer: "jouaient préparions", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Ils jouaient (ils) et nous préparions (nous)." }
+        { order: 4, prompt: "Complète : Nous ____ (habiter) à la campagne.", answer: "habitions", kindWhenWrong: "Pas grave du tout, on y retourne ensemble 😊", explanationWhenWrong: "Avec nous, l'imparfait de habiter est habitions, avec la terminaison -ions.", strictAccents: true },
+        { order: 5, prompt: "Complète : Vous ____ (regarder) la télévision le dimanche.", answer: "regardiez", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Avec vous, l'imparfait de regarder est regardiez, avec la terminaison -iez.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux verbes. Ils ____ (jouer) dehors pendant que nous ____ (préparer) le repas.", answer: "jouaient préparions", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble 😊", explanationWhenWrong: "Ils jouaient avec la terminaison -aient, et nous préparions avec la terminaison -ions.", strictAccents: true }
       ]
     },
     {
@@ -160,12 +161,12 @@ export const day03: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Balkis ___ Bayrem jouent ensemble. (et/est)", answer: "et", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "On peut dire Balkis et puis Bayrem, donc c'est et." },
-        { order: 2, prompt: "Complète : Il ___ très content aujourd'hui. (et/est)", answer: "est", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "On peut dire il était content, donc c'est est (verbe être)." },
-        { order: 3, prompt: "Complète : Le chat ___ le chien dorment. (et/est)", answer: "et", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "On peut dire le chat et puis le chien, donc c'est et." },
-        { order: 4, prompt: "Complète : Ce gâteau ___ délicieux. (et/est)", answer: "est", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "On peut dire ce gâteau était délicieux, donc c'est est." },
-        { order: 5, prompt: "Complète : Elle prend son cahier ___ son crayon. (et/est)", answer: "et", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "On peut dire son cahier et puis son crayon, donc c'est et." },
-        { order: 6, prompt: "Défi : complète les deux mots. Le ciel ___ (est) gris ___ (et) il va pleuvoir.", answer: "est et", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Le ciel est gris (verbe être) et il va pleuvoir (et puis)." }
+        { order: 1, prompt: "Complète : Balkis ___ Bayrem jouent ensemble. (et/est)", answer: "et", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "On peut dire Balkis et puis Bayrem, ça fonctionne. Donc on écrit et, sans s ni accent.", strictAccents: true },
+        { order: 2, prompt: "Complète : Il ___ très content aujourd'hui. (et/est)", answer: "est", kindWhenWrong: "Pas grave, on regarde ça ensemble 😊", explanationWhenWrong: "On peut dire il était content, ça fonctionne. Donc on écrit est, le verbe être.", strictAccents: true },
+        { order: 3, prompt: "Complète : Le chat ___ le chien dorment. (et/est)", answer: "et", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "On peut dire le chat et puis le chien, ça fonctionne. Donc on écrit et.", strictAccents: true },
+        { order: 4, prompt: "Complète : Ce gâteau ___ délicieux. (et/est)", answer: "est", kindWhenWrong: "Pas grave du tout, on y retourne ensemble 😊", explanationWhenWrong: "On peut dire ce gâteau était délicieux, ça fonctionne. Donc on écrit est.", strictAccents: true },
+        { order: 5, prompt: "Complète : Elle prend son cahier ___ son crayon. (et/est)", answer: "et", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "On peut dire son cahier et puis son crayon, ça fonctionne. Donc on écrit et.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux mots. Le ciel ___ (est) gris ___ (et) il va pleuvoir.", answer: "est et", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble 😊", explanationWhenWrong: "Le ciel est gris (on peut dire le ciel était gris, c'est le verbe être) et il va pleuvoir (on peut dire et puis il va pleuvoir).", strictAccents: true }
       ]
     },
     {

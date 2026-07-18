@@ -74,28 +74,30 @@ export const day03: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Je ____ (finir) mes devoirs.", answer: "finis", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, finir devient finis." },
-        { order: 2, prompt: "Complète : Nous ____ (choisir) un jeu.", answer: "choisissons", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec nous, choisir devient choisissons, avec -iss-." },
+        { order: 1, prompt: "Complète : Je ____ (finir) mes devoirs.", answer: "finis", kindWhenWrong: "Ce n'est pas grave ! On regarde ensemble.", explanationWhenWrong: "Avec je, finir devient finis, sans -iss- car c'est une personne du singulier.", strictAccents: true },
+        { order: 2, prompt: "Complète : Nous ____ (choisir) un jeu.", answer: "choisissons", kindWhenWrong: "Pas grave, on continue ensemble.", explanationWhenWrong: "Avec nous, choisir devient choisissons : n'oublie pas le petit -iss- au milieu.", strictAccents: true },
         {
           order: 3,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Vous ____ (grandir) vite.",
           options: ["grandis", "grandissez", "grandissent"],
           answer: "grandissez",
-          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec vous, grandir devient grandissez, avec -iss-."
+          kindWhenWrong: "Ce n'est pas grave ! On regarde ensemble.",
+          explanationWhenWrong: "Avec vous, grandir devient grandissez, avec -iss- et la terminaison -ez.",
+          strictAccents: true
         },
-        { order: 4, prompt: "Complète : Ils ____ (finir) la course ensemble.", answer: "finissent", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec ils, finir devient finissent, avec -iss-." },
+        { order: 4, prompt: "Complète : Ils ____ (finir) la course ensemble.", answer: "finissent", kindWhenWrong: "Pas grave du tout, on y retourne ensemble.", explanationWhenWrong: "Avec ils, finir devient finissent, avec -iss- comme pour nous et vous.", strictAccents: true },
         {
           order: 5,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Tu ____ (choisir) ton dessert.",
           options: ["choisis", "choisissez", "choisissent"],
           answer: "choisis",
-          kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.",
-          explanationWhenWrong: "Avec tu, choisir devient choisis, sans -iss-."
+          kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.",
+          explanationWhenWrong: "Avec tu, choisir devient choisis, sans -iss- car c'est une personne du singulier.",
+          strictAccents: true
         },
-        { order: 6, prompt: "Défi : complète les deux mots. Nous ____ (réussir) car vous ____ (réfléchir) bien.", answer: "réussissons réfléchissez", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Nous réussissons et vous réfléchissez, toujours avec -iss- pour nous/vous/ils." }
+        { order: 6, prompt: "Défi : complète les deux mots. Nous ____ (réussir) car vous ____ (réfléchir) bien.", answer: "réussissons réfléchissez", kindWhenWrong: "Bravo d'avoir essayé ce défi ! On regarde ensemble.", explanationWhenWrong: "Nous réussissons et vous réfléchissez : n'oublie pas le -iss- pour nous, vous et ils.", strictAccents: true }
       ]
     },
     {
@@ -180,12 +182,12 @@ export const day03: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Ils ___ dans la cour. (son ou sont)", answer: "sont", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Ils étaient dans la cour fonctionne, donc sont." },
-        { order: 2, prompt: "Complète : Il porte ___ manteau. (son ou sont)", answer: "son", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Il porte étaient manteau ne fonctionne pas, donc son." },
-        { order: 3, prompt: "Complète : Les fleurs ___ belles. (son ou sont)", answer: "sont", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Les fleurs étaient belles fonctionne, donc sont." },
-        { order: 4, prompt: "Complète : Elle range ___ cahier. (son ou sont)", answer: "son", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Elle range étaient cahier ne fonctionne pas, donc son." },
-        { order: 5, prompt: "Complète : Mes amis ___ arrivés. (son ou sont)", answer: "sont", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Mes amis étaient arrivés fonctionne, donc sont." },
-        { order: 6, prompt: "Défi : complète les deux mots. Paul et ___ chien ___ allés se promener.", answer: "son sont", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Son chien (petit mot) et ils étaient allés fonctionne, donc sont (verbe être)." }
+        { order: 1, prompt: "Complète : Ils ___ dans la cour. (son ou sont)", answer: "sont", kindWhenWrong: "Ce n'est pas grave ! On regarde ensemble.", explanationWhenWrong: "Ils étaient dans la cour fonctionne, donc c'est sont, le verbe être.", strictAccents: true },
+        { order: 2, prompt: "Complète : Il porte ___ manteau. (son ou sont)", answer: "son", kindWhenWrong: "Pas grave, on continue ensemble.", explanationWhenWrong: "Il porte étaient manteau ne fonctionne pas, donc c'est son, comme sa ou ses.", strictAccents: true },
+        { order: 3, prompt: "Complète : Les fleurs ___ belles. (son ou sont)", answer: "sont", kindWhenWrong: "Ce n'est pas grave ! On regarde ensemble.", explanationWhenWrong: "Les fleurs étaient belles fonctionne, donc c'est sont, le verbe être.", strictAccents: true },
+        { order: 4, prompt: "Complète : Elle range ___ cahier. (son ou sont)", answer: "son", kindWhenWrong: "Pas grave du tout, on y retourne ensemble.", explanationWhenWrong: "Elle range étaient cahier ne fonctionne pas, donc c'est son.", strictAccents: true },
+        { order: 5, prompt: "Complète : Mes amis ___ arrivés. (son ou sont)", answer: "sont", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "Mes amis étaient arrivés fonctionne, donc c'est sont.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux mots. Paul et ___ chien ___ allés se promener.", answer: "son sont", kindWhenWrong: "Bravo d'avoir essayé ce défi ! On regarde ensemble.", explanationWhenWrong: "Son chien est un petit mot devant un nom, et ils étaient allés fonctionne, donc sont, le verbe être.", strictAccents: true }
       ]
     },
     {

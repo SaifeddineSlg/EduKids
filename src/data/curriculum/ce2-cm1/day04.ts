@@ -70,20 +70,21 @@ export const day04: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Quand j'étais petit, j'____ (avoir) un chien.", answer: "avais", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec j', l'imparfait de avoir est avais." },
-        { order: 2, prompt: "Complète : Tu ____ (être) très content ce jour-là.", answer: "étais", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec tu, l'imparfait de être est étais." },
+        { order: 1, prompt: "Complète : Quand j'étais petit, j'____ (avoir) un chien.", answer: "avais", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Avec j', l'imparfait de avoir est avais. La racine av- reste toujours la même.", strictAccents: true },
+        { order: 2, prompt: "Complète : Tu ____ (être) très content ce jour-là.", answer: "étais", kindWhenWrong: "Pas grave, on regarde ça ensemble 😊", explanationWhenWrong: "Avec tu, l'imparfait de être est étais. La racine ét- reste toujours la même.", strictAccents: true },
         {
           order: 3,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Elle ____ (avoir) toujours faim l'après-midi.",
           options: ["avait", "avais", "avaient"],
           answer: "avait",
-          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec elle, l'imparfait de avoir est avait."
+          kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊",
+          explanationWhenWrong: "Avec elle, l'imparfait de avoir est avait. Avais est pour je ou tu, avaient est pour ils.",
+          strictAccents: true
         },
-        { order: 4, prompt: "Complète : Nous ____ (être) très fiers de notre travail.", answer: "étions", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec nous, l'imparfait de être est étions." },
-        { order: 5, prompt: "Complète : Vous ____ (avoir) raison depuis le début.", answer: "aviez", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Avec vous, l'imparfait de avoir est aviez." },
-        { order: 6, prompt: "Défi : complète les deux verbes. Ils ____ (être) fatigués car ils ____ (avoir) beaucoup marché.", answer: "étaient avaient", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Ils étaient (être) et ils avaient (avoir)." }
+        { order: 4, prompt: "Complète : Nous ____ (être) très fiers de notre travail.", answer: "étions", kindWhenWrong: "Pas grave du tout, on y retourne ensemble 😊", explanationWhenWrong: "Avec nous, l'imparfait de être est étions, avec la terminaison -ions.", strictAccents: true },
+        { order: 5, prompt: "Complète : Vous ____ (avoir) raison depuis le début.", answer: "aviez", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Avec vous, l'imparfait de avoir est aviez, avec la terminaison -iez.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux verbes. Ils ____ (être) fatigués car ils ____ (avoir) beaucoup marché.", answer: "étaient avaient", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble 😊", explanationWhenWrong: "Ils étaient (imparfait de être, racine ét-) et ils avaient (imparfait de avoir, racine av-).", strictAccents: true }
       ]
     },
     {
@@ -160,12 +161,12 @@ export const day04: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Les enfants rangent ___ jouets. (leur/leurs)", answer: "leurs", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Jouets est au pluriel, donc leurs prend un s." },
-        { order: 2, prompt: "Complète : Ils aiment ___ maison. (leur/leurs)", answer: "leur", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Maison est au singulier, donc leur ne prend pas de s." },
-        { order: 3, prompt: "Complète : Les élèves écoutent ___ maîtresse. (leur/leurs)", answer: "leur", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Maîtresse est au singulier, donc leur ne prend pas de s." },
-        { order: 4, prompt: "Complète : Les chats attrapent ___ souris. (leur/leurs)", answer: "leurs", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Souris est au pluriel ici, donc leurs prend un s." },
-        { order: 5, prompt: "Complète : Elles adorent ___ chien. (leur/leurs)", answer: "leur", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Chien est au singulier, donc leur ne prend pas de s." },
-        { order: 6, prompt: "Défi : complète les deux mots. Les parents préparent ___ (leur) repas et rangent ___ (leurs) affaires.", answer: "leur leurs", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Leur repas (singulier) et leurs affaires (pluriel)." }
+        { order: 1, prompt: "Complète : Les enfants rangent ___ jouets. (leur/leurs)", answer: "leurs", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Jouets est au pluriel, donc leurs prend un s.", strictAccents: true },
+        { order: 2, prompt: "Complète : Ils aiment ___ maison. (leur/leurs)", answer: "leur", kindWhenWrong: "Pas grave, on regarde ça ensemble 😊", explanationWhenWrong: "Maison est au singulier (chacun n'a qu'une seule maison), donc leur ne prend pas de s.", strictAccents: true },
+        { order: 3, prompt: "Complète : Les élèves écoutent ___ maîtresse. (leur/leurs)", answer: "leur", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Maîtresse est au singulier, donc leur ne prend pas de s.", strictAccents: true },
+        { order: 4, prompt: "Complète : Les chats attrapent ___ souris. (leur/leurs)", answer: "leurs", kindWhenWrong: "Pas grave du tout, on y retourne ensemble 😊", explanationWhenWrong: "Souris est au pluriel ici, donc leurs prend un s.", strictAccents: true },
+        { order: 5, prompt: "Complète : Elles adorent ___ chien. (leur/leurs)", answer: "leur", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Chien est au singulier, donc leur ne prend pas de s.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux mots. Les parents préparent ___ (leur) repas et rangent ___ (leurs) affaires.", answer: "leur leurs", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble 😊", explanationWhenWrong: "Leur repas (mot au singulier, donc leur sans s) et leurs affaires (mot au pluriel, donc leurs avec un s).", strictAccents: true }
       ]
     },
     {

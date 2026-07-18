@@ -73,28 +73,30 @@ export const day01: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Demain, je ____ (jouer) au parc.", answer: "jouerai", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, on ajoute -rai : je jouerai." },
-        { order: 2, prompt: "Complète : Tu ____ (chanter) à la fête.", answer: "chanteras", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec tu, on ajoute -ras : tu chanteras." },
+        { order: 1, prompt: "Complète : Demain, je ____ (jouer) au parc.", answer: "jouerai", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Avec je, on garde l'infinitif jouer et on ajoute -rai : je jouerai. Essaie de le lire à voix haute, tu entendras le son \"rai\".", strictAccents: true },
+        { order: 2, prompt: "Complète : Tu ____ (chanter) à la fête.", answer: "chanteras", kindWhenWrong: "Pas grave, on regarde ça ensemble 😊", explanationWhenWrong: "Avec tu, on garde l'infinitif chanter et on ajoute -ras : tu chanteras.", strictAccents: true },
         {
           order: 3,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Il ____ (regarder) un film ce soir.",
           options: ["regardera", "regarderas", "regarderai"],
           answer: "regardera",
-          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec il, on ajoute -ra : il regardera."
+          kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊",
+          explanationWhenWrong: "Avec il, on ajoute -ra à l'infinitif : il regardera. La terminaison -ras est pour tu, -rai est pour je.",
+          strictAccents: true
         },
-        { order: 4, prompt: "Complète : Nous ____ (manger) une glace.", answer: "mangerons", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec nous, on ajoute -rons : nous mangerons." },
+        { order: 4, prompt: "Complète : Nous ____ (manger) une glace.", answer: "mangerons", kindWhenWrong: "Pas grave du tout, on y retourne ensemble 😊", explanationWhenWrong: "Avec nous, on ajoute -rons à l'infinitif : nous mangerons. Tu étais peut-être proche, pense au son \"ons\" à la fin.", strictAccents: true },
         {
           order: 5,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Ils ____ (voyager) en train.",
           options: ["voyageront", "voyagerez", "voyagerons"],
           answer: "voyageront",
-          kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.",
-          explanationWhenWrong: "Avec ils, on ajoute -ront : ils voyageront."
+          kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊",
+          explanationWhenWrong: "Avec ils, on ajoute -ront à l'infinitif : ils voyageront. -rez est pour vous, -rons est pour nous.",
+          strictAccents: true
         },
-        { order: 6, prompt: "Défi : complète les deux mots. Demain, vous ____ (danser) et nous ____ (chanter).", answer: "danserez chanterons", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Vous danserez (-rez) et nous chanterons (-rons)." }
+        { order: 6, prompt: "Défi : complète les deux mots. Demain, vous ____ (danser) et nous ____ (chanter).", answer: "danserez chanterons", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble 😊", explanationWhenWrong: "Vous danserez avec la terminaison -rez, et nous chanterons avec la terminaison -rons. Chaque pronom a sa propre terminaison au futur.", strictAccents: true }
       ]
     },
     {
@@ -163,12 +165,12 @@ export const day01: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Il ___ un beau vélo. (a ou à)", answer: "a", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Il avait un beau vélo fonctionne, donc a." },
-        { order: 2, prompt: "Complète : Nous allons ___ la piscine. (a ou à)", answer: "à", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Nous allons avait la piscine ne fonctionne pas, donc à." },
-        { order: 3, prompt: "Complète : Elle ___ fini ses devoirs. (a ou à)", answer: "a", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Elle avait fini fonctionne, donc a." },
-        { order: 4, prompt: "Complète : Je pense ___ toi. (a ou à)", answer: "à", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Je pense avait toi ne fonctionne pas, donc à." },
-        { order: 5, prompt: "Complète : Mon frère ___ gagné le match. (a ou à)", answer: "a", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Mon frère avait gagné fonctionne, donc a." },
-        { order: 6, prompt: "Défi : complète les deux mots. Il ___ donné son cadeau ___ sa soeur.", answer: "a à", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Il a donné (avait donné fonctionne) et à sa soeur (avait sa soeur ne fonctionne pas)." }
+        { order: 1, prompt: "Complète : Il ___ un beau vélo. (a ou à)", answer: "a", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "On essaie de remplacer par avait : il avait un beau vélo, ça fonctionne. Donc on écrit a, sans accent, c'est le verbe avoir.", strictAccents: true },
+        { order: 2, prompt: "Complète : Nous allons ___ la piscine. (a ou à)", answer: "à", kindWhenWrong: "Pas grave, on regarde ça ensemble 😊", explanationWhenWrong: "On essaie avait : nous allons avait la piscine, ça ne fonctionne pas. Donc on écrit à, avec un accent grave.", strictAccents: true },
+        { order: 3, prompt: "Complète : Elle ___ fini ses devoirs. (a ou à)", answer: "a", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Elle avait fini ses devoirs fonctionne, donc on écrit a, sans accent.", strictAccents: true },
+        { order: 4, prompt: "Complète : Je pense ___ toi. (a ou à)", answer: "à", kindWhenWrong: "Pas grave du tout, on y retourne ensemble 😊", explanationWhenWrong: "Je pense avait toi ne fonctionne pas, donc on écrit à, avec un accent grave.", strictAccents: true },
+        { order: 5, prompt: "Complète : Mon frère ___ gagné le match. (a ou à)", answer: "a", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Mon frère avait gagné le match fonctionne, donc on écrit a, sans accent.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux mots. Il ___ donné son cadeau ___ sa sœur.", answer: "a à", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble 😊", explanationWhenWrong: "Il a donné (il avait donné fonctionne, donc a) son cadeau à sa sœur (à sa sœur avait ne fonctionne pas, donc à avec un accent).", strictAccents: true }
       ]
     },
     {

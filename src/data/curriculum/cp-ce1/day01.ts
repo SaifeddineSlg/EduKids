@@ -73,28 +73,30 @@ export const day01: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Je ____ content.", answer: "suis", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, on dit suis : je suis content." },
-        { order: 2, prompt: "Complète : Tu ____ mon ami.", answer: "es", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec tu, on dit es : tu es mon ami." },
+        { order: 1, prompt: "Complète : Je ____ content.", answer: "suis", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Tu étais proche ! Avec je, le verbe être devient suis : je suis content. Essaie de le lire à voix haute.", strictAccents: true },
+        { order: 2, prompt: "Complète : Tu ____ mon ami.", answer: "es", kindWhenWrong: "Pas grave, on regarde ça ensemble 😊", explanationWhenWrong: "Avec tu, le verbe être devient es (sans accent) : tu es mon ami. Répète-le doucement pour bien l'entendre.", strictAccents: true },
         {
           order: 3,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Il ____ gentil.",
           options: ["suis", "es", "est"],
           answer: "est",
-          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec il, on dit est : il est gentil."
+          kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊",
+          explanationWhenWrong: "Avec il ou elle, le verbe être devient est : il est gentil. Retiens bien ce petit mot, il revient souvent.",
+          strictAccents: true
         },
-        { order: 4, prompt: "Complète : Elle ____ grande.", answer: "est", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec elle, on dit est : elle est grande." },
+        { order: 4, prompt: "Complète : Elle ____ grande.", answer: "est", kindWhenWrong: "Pas grave du tout, on y retourne ensemble 😊", explanationWhenWrong: "Avec elle, comme avec il, le verbe être devient est : elle est grande. C'est la même forme pour les deux.", strictAccents: true },
         {
           order: 5,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Je ____ fatigué.",
           options: ["suis", "es", "est"],
           answer: "suis",
-          kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.",
-          explanationWhenWrong: "Avec je, on dit suis : je suis fatigué."
+          kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊",
+          explanationWhenWrong: "Avec je, on dit toujours suis : je suis fatigué. Essaie de retenir ce petit duo je/suis.",
+          strictAccents: true
         },
-        { order: 6, prompt: "Défi : complète les deux mots. Tu ____ petit et je ____ grand.", answer: "es suis", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Tu es (avec tu) et je suis (avec je)." }
+        { order: 6, prompt: "Défi : complète les deux mots. Tu ____ petit et je ____ grand.", answer: "es suis", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble 😊", explanationWhenWrong: "Tu es petit (avec tu, on écrit es) et je suis grand (avec je, on écrit suis). Relis la phrase entière pour bien la sentir.", strictAccents: true }
       ]
     },
     {
@@ -179,12 +181,12 @@ export const day01: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : ___ chat dort. (le ou la)", answer: "le", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Chat est masculin, donc on dit le chat." },
-        { order: 2, prompt: "Complète : ___ table est ronde. (le ou la)", answer: "la", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Table est féminin, donc on dit la table." },
-        { order: 3, prompt: "Complète : ___ ballon est rouge. (le ou la)", answer: "le", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Ballon est masculin, donc on dit le ballon." },
-        { order: 4, prompt: "Complète : ___ fleur sent bon. (le ou la)", answer: "la", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Fleur est féminin, donc on dit la fleur." },
-        { order: 5, prompt: "Complète : ___ maison est grande. (le ou la)", answer: "la", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Maison est féminin, donc on dit la maison." },
-        { order: 6, prompt: "Défi : complète les deux mots. ___ chien joue avec ___ balle.", answer: "le la", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Le chien (masculin) et la balle (féminin)." }
+        { order: 1, prompt: "Complète : ___ chat dort. (le ou la)", answer: "le", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Chat est un mot masculin, donc on dit le chat. Essaie de le dire à voix haute avec le et avec la : le chat sonne mieux.", strictAccents: true },
+        { order: 2, prompt: "Complète : ___ table est ronde. (le ou la)", answer: "la", kindWhenWrong: "Pas grave, on regarde ça ensemble 😊", explanationWhenWrong: "Table est un mot féminin, donc on dit la table. Répète la table pour bien l'entendre.", strictAccents: true },
+        { order: 3, prompt: "Complète : ___ ballon est rouge. (le ou la)", answer: "le", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Ballon est un mot masculin, donc on dit le ballon. Tu étais proche, continue à t'entraîner !", strictAccents: true },
+        { order: 4, prompt: "Complète : ___ fleur sent bon. (le ou la)", answer: "la", kindWhenWrong: "Pas grave du tout, on y retourne ensemble 😊", explanationWhenWrong: "Fleur est un mot féminin, donc on dit la fleur. Dis la phrase à voix haute pour bien la sentir.", strictAccents: true },
+        { order: 5, prompt: "Complète : ___ maison est grande. (le ou la)", answer: "la", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Maison est un mot féminin, donc on dit la maison. Essaie de le relire lentement.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux mots. ___ chien joue avec ___ balle.", answer: "le la", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble 😊", explanationWhenWrong: "Le chien est masculin (le chien) et la balle est féminin (la balle). Relis la phrase entière à voix haute.", strictAccents: true }
       ]
     },
     {

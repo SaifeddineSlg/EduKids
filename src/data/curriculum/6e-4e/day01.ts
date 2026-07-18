@@ -124,7 +124,8 @@ export const day01: DayCurriculum = {
           prompt: "Complète : Je ____ (parler) avec ma sœur.",
           answer: "parle",
           kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec je, la terminaison du présent est -e : je parle."
+          explanationWhenWrong: "Avec je, la terminaison du présent est -e : je parle. Essaie de le lire à voix haute, tu entendras que ça se termine en douceur, sans son « s ».",
+          strictAccents: true
         },
         {
           order: 2,
@@ -132,7 +133,8 @@ export const day01: DayCurriculum = {
           prompt: "Complète : Tu ____ (jouer) dans le jardin.",
           answer: "joues",
           kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.",
-          explanationWhenWrong: "Avec tu, on ajoute toujours un s : tu joues."
+          explanationWhenWrong: "Avec tu, on ajoute toujours un s à la fin : tu joues. C'est une règle qui ne change jamais, même si on ne l'entend pas à l'oral.",
+          strictAccents: true
         },
         {
           order: 3,
@@ -141,7 +143,8 @@ export const day01: DayCurriculum = {
           options: ["chante", "chantons", "chantez"],
           answer: "chantons",
           kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec nous, la terminaison est toujours -ons : nous chantons."
+          explanationWhenWrong: "Avec nous, la terminaison est toujours -ons : nous chantons. Tu peux t'en souvenir en pensant à « nous formons un groupe ».",
+          strictAccents: true
         },
         {
           order: 4,
@@ -149,7 +152,8 @@ export const day01: DayCurriculum = {
           prompt: "Complète : Vous ____ (regarder) un dessin animé.",
           answer: "regardez",
           kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.",
-          explanationWhenWrong: "Avec vous, la terminaison est toujours -ez : vous regardez."
+          explanationWhenWrong: "Avec vous, la terminaison est toujours -ez : vous regardez. Attention à ne pas écrire -é ou -ai à la place, c'est bien un z à la fin.",
+          strictAccents: true
         },
         {
           order: 5,
@@ -158,7 +162,8 @@ export const day01: DayCurriculum = {
           options: ["danse", "dansez", "dansent"],
           answer: "dansent",
           kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.",
-          explanationWhenWrong: "Avec ils, la terminaison est toujours -ent : ils dansent."
+          explanationWhenWrong: "Avec ils, la terminaison est toujours -ent : ils dansent. Ce -ent final ne s'entend pas à l'oral, mais il faut penser à l'écrire.",
+          strictAccents: true
         },
         {
           order: 6,
@@ -171,7 +176,8 @@ export const day01: DayCurriculum = {
             { left: "Elles", right: "aiment" }
           ],
           kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.",
-          explanationWhenWrong: "Je aime (-e), nous aimons (-ons), elles aiment (-ent) : chaque sujet a sa propre terminaison."
+          explanationWhenWrong: "J'aime (-e), nous aimons (-ons), elles aiment (-ent) : chaque sujet a sa propre terminaison, comme la petite musique -e, -es, -e, -ons, -ez, -ent.",
+          strictAccents: true
         }
       ]
     },
@@ -258,70 +264,76 @@ export const day01: DayCurriculum = {
       title: "a ou à : le petit test magique",
       xpReward: 24,
       story: {
-        hook: "Imagine un petit test magique que tu peux faire dans ta tete pour ne jamais te tromper.",
-        concreteExample: "Regarde: Il ... un velo. Est-ce que c est a ou à ?",
-        reveal: "On essaie de remplacer par avait : Il avait un velo, ca fonctionne ! Donc on ecrit a, sans accent, car c est le verbe avoir. Bravo, tu as reussi le test magique !",
-        bridgeToConcept: "Ce petit test s appelle le test avec avait. Si avait fonctionne, on ecrit a sans accent (le verbe avoir). Sinon, on ecrit à avec un accent.",
+        hook: "Imagine un petit test magique que tu peux faire dans ta tête pour ne jamais te tromper entre a et à.",
+        concreteExample: "Regarde : Il ... un vélo. Est-ce que c'est a ou à ?",
+        reveal: "On essaie de remplacer par avait : Il avait un vélo, ça fonctionne ! Donc on écrit a, sans accent, car c'est le verbe avoir conjugué. Bravo, tu as réussi le test magique !",
+        bridgeToConcept: "Ce petit test s'appelle le test avec avait. Si avait fonctionne, on écrit a sans accent (le verbe avoir). Sinon, on écrit à avec un accent grave.",
         illustrationEmoji: "🪄"
       },
       examples: [
         {
-          title: "Exemple 1 : Elle va à l ecole",
+          title: "Exemple 1 : Elle va à l'école",
           steps: [
-            { text: "On essaie avait : Elle va avait l ecole. Ca ne fonctionne pas.", illustrationEmoji: "🚫" },
-            { text: "Donc on ecrit à avec l accent (ca indique un lieu).", illustrationEmoji: "✅" }
+            { text: "On essaie avait : Elle va avait l'école. Ça ne fonctionne pas.", illustrationEmoji: "🚫" },
+            { text: "Donc on écrit à avec l'accent grave (ça indique un lieu).", illustrationEmoji: "✅" }
           ]
         },
         {
           title: "Exemple 2 : Il a mangé une pomme",
           steps: [
-            { text: "On essaie avait : Il avait mangé une pomme. Ca fonctionne !", illustrationEmoji: "✅" },
-            { text: "Donc on ecrit a sans accent (le verbe avoir).", illustrationEmoji: "✅" }
+            { text: "On essaie avait : Il avait mangé une pomme. Ça fonctionne !", illustrationEmoji: "✅" },
+            { text: "Donc on écrit a sans accent (le verbe avoir).", illustrationEmoji: "✅" }
           ]
         }
       ],
       questions: [
         {
           order: 1,
-          prompt: "Complete: Il ___ un chat. (a ou à)",
+          prompt: "Complète : Il ___ un chat. (a ou à)",
           answer: "a",
-          kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "On peut dire il avait un chat, donc c est a sans accent (verbe avoir)."
+          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
+          explanationWhenWrong: "On peut dire il avait un chat, donc c'est a sans accent, le verbe avoir. Essaie de refaire le test avec avait à chaque fois que tu hésites.",
+          strictAccents: true
         },
         {
           order: 2,
-          prompt: "Complete: Je vais ___ la piscine. (a ou à)",
+          prompt: "Complète : Je vais ___ la piscine. (a ou à)",
           answer: "à",
-          kindWhenWrong: "Pas grave 😊 On regarde ca ensemble.",
-          explanationWhenWrong: "On ne peut pas dire je vais avait la piscine, donc c est à avec accent."
+          kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.",
+          explanationWhenWrong: "On ne peut pas dire je vais avait la piscine : le test échoue, donc c'est à avec l'accent grave, qui indique ici un lieu.",
+          strictAccents: true
         },
         {
           order: 3,
-          prompt: "Complete: Elle ___ mangé à midi. (a ou à)",
+          prompt: "Complète : Elle ___ mangé à midi. (a ou à)",
           answer: "a",
-          kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "On peut dire elle avait mangé, donc c est a sans accent."
+          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
+          explanationWhenWrong: "On peut dire elle avait mangé, donc c'est a sans accent : ici, a est l'auxiliaire avoir devant le participe passé mangé.",
+          strictAccents: true
         },
         {
           order: 4,
-          prompt: "Complete: Nous jouons ___ la maison. (a ou à)",
+          prompt: "Complète : Nous jouons ___ la maison. (a ou à)",
           answer: "à",
           kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.",
-          explanationWhenWrong: "On ne peut pas dire nous jouons avait la maison, donc c est à avec accent."
+          explanationWhenWrong: "On ne peut pas dire nous jouons avait la maison, donc c'est à avec l'accent grave, qui indique le lieu où l'on joue.",
+          strictAccents: true
         },
         {
           order: 5,
-          prompt: "Complete: Mon frere ___ trouvé un tresor. (a ou à)",
+          prompt: "Complète : Mon frère ___ trouvé un trésor. (a ou à)",
           answer: "a",
-          kindWhenWrong: "Ce n est pas grave 😊 On regarde ensemble.",
-          explanationWhenWrong: "On peut dire mon frere avait trouvé, donc c est a sans accent."
+          kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.",
+          explanationWhenWrong: "On peut dire mon frère avait trouvé, donc c'est a sans accent : c'est l'auxiliaire avoir dans a trouvé.",
+          strictAccents: true
         },
         {
           order: 6,
-          prompt: "Defi : complete les deux mots. Il ___ donné son ballon ___ son ami.",
+          prompt: "Défi : complète les deux mots. Il ___ donné son ballon ___ son ami.",
           answer: "a à",
-          kindWhenWrong: "Bravo d avoir essaye ce defi 😊 Regardons ensemble.",
-          explanationWhenWrong: "Il a donné (avait donné fonctionne) et à son ami (avait son ami ne fonctionne pas)."
+          kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.",
+          explanationWhenWrong: "Il a donné (le test avec avait fonctionne : il avait donné) et à son ami (avait son ami ne fonctionne pas, donc à avec l'accent, un lieu au sens figuré : à qui).",
+          strictAccents: true
         }
       ]
     },

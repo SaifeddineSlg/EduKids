@@ -72,28 +72,30 @@ export const day02: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : J'____ un vélo. (ai)", answer: "ai", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, on dit ai : j'ai un vélo." },
-        { order: 2, prompt: "Complète : Tu ____ un chat.", answer: "as", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec tu, on dit as : tu as un chat." },
+        { order: 1, prompt: "Complète : J'____ un vélo. (ai)", answer: "ai", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Avec je (qui devient j' devant une voyelle), le verbe avoir donne ai : j'ai un vélo. Dis-le à voix haute pour bien l'entendre.", strictAccents: true },
+        { order: 2, prompt: "Complète : Tu ____ un chat.", answer: "as", kindWhenWrong: "Pas grave, on regarde ça ensemble 😊", explanationWhenWrong: "Avec tu, le verbe avoir devient as : tu as un chat. Tu étais proche, continue !", strictAccents: true },
         {
           order: 3,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Il ____ un ballon.",
           options: ["ai", "as", "a"],
           answer: "a",
-          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec il, on dit a : il a un ballon."
+          kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊",
+          explanationWhenWrong: "Avec il ou elle, le verbe avoir devient a (sans s ni accent) : il a un ballon.",
+          strictAccents: true
         },
-        { order: 4, prompt: "Complète : Elle ____ une trottinette.", answer: "a", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec elle, on dit a : elle a une trottinette." },
+        { order: 4, prompt: "Complète : Elle ____ une trottinette.", answer: "a", kindWhenWrong: "Pas grave du tout, on y retourne ensemble 😊", explanationWhenWrong: "Avec elle, comme avec il, le verbe avoir devient a : elle a une trottinette. Relis la phrase à voix haute.", strictAccents: true },
         {
           order: 5,
           type: "mcq",
           prompt: "Choisis la bonne réponse : J'____ un joli dessin.",
           options: ["ai", "as", "a"],
           answer: "ai",
-          kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.",
-          explanationWhenWrong: "Avec je, on dit ai : j'ai un joli dessin."
+          kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊",
+          explanationWhenWrong: "Avec je (j' devant une voyelle), on dit toujours ai : j'ai un joli dessin.",
+          strictAccents: true
         },
-        { order: 6, prompt: "Défi : complète les deux mots. Tu ____ un chien et j'____ un chat.", answer: "as ai", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Tu as (avec tu) et j'ai (avec je)." }
+        { order: 6, prompt: "Défi : complète les deux mots. Tu ____ un chien et j'____ un chat.", answer: "as ai", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble 😊", explanationWhenWrong: "Tu as un chien (avec tu, on écrit as) et j'ai un chat (avec je, on écrit ai). Relis la phrase entière pour bien la sentir.", strictAccents: true }
       ]
     },
     {
@@ -178,12 +180,12 @@ export const day02: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Écris au pluriel : un chat -> des ___", answer: "chats", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "On ajoute un s : des chats." },
-        { order: 2, prompt: "Écris au pluriel : une table -> des ___", answer: "tables", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "On ajoute un s : des tables." },
-        { order: 3, prompt: "Écris au pluriel : un livre -> des ___", answer: "livres", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "On ajoute un s : des livres." },
-        { order: 4, prompt: "Écris au pluriel : une fleur -> des ___", answer: "fleurs", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "On ajoute un s : des fleurs." },
-        { order: 5, prompt: "Écris au pluriel : un ami -> des ___", answer: "amis", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "On ajoute un s : des amis." },
-        { order: 6, prompt: "Défi : écris au pluriel les deux mots. un chien, une balle -> des ___, des ___", answer: "chiens balles", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "des chiens et des balles : on ajoute un s a chaque mot." }
+        { order: 1, prompt: "Écris au pluriel : un chat -> des ___", answer: "chats", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Pour mettre un nom au pluriel, on ajoute un s à la fin : des chats. Essaie de le réécrire lentement.", strictAccents: true },
+        { order: 2, prompt: "Écris au pluriel : une table -> des ___", answer: "tables", kindWhenWrong: "Pas grave, on regarde ça ensemble 😊", explanationWhenWrong: "On ajoute un s à la fin du mot : des tables. Tu étais proche !", strictAccents: true },
+        { order: 3, prompt: "Écris au pluriel : un livre -> des ___", answer: "livres", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "On ajoute un s à la fin du mot : des livres. Relis-le à voix haute.", strictAccents: true },
+        { order: 4, prompt: "Écris au pluriel : une fleur -> des ___", answer: "fleurs", kindWhenWrong: "Pas grave du tout, on y retourne ensemble 😊", explanationWhenWrong: "On ajoute un s à la fin du mot : des fleurs. N'oublie pas le s final.", strictAccents: true },
+        { order: 5, prompt: "Écris au pluriel : un ami -> des ___", answer: "amis", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "On ajoute un s à la fin du mot : des amis. Le s ne s'entend pas, mais il s'écrit toujours.", strictAccents: true },
+        { order: 6, prompt: "Défi : écris au pluriel les deux mots. un chien, une balle -> des ___, des ___", answer: "chiens balles", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble 😊", explanationWhenWrong: "Des chiens et des balles : on ajoute un s à chaque mot. Relis bien les deux mots l'un après l'autre.", strictAccents: true }
       ]
     },
     {

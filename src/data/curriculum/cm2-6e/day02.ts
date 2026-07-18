@@ -70,20 +70,21 @@ export const day02: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Quand je suis arrivé, il ____ (avoir) déjà mangé.", answer: "avait", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec il, avoir à l'imparfait est avait : il avait mangé." },
-        { order: 2, prompt: "Complète : Nous ____ (avoir) déjà fini nos devoirs.", answer: "avions", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec nous, avoir à l'imparfait est avions : nous avions fini." },
+        { order: 1, prompt: "Complète : Quand je suis arrivé, il ____ (avoir) déjà mangé.", answer: "avait", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "Avec il, avoir à l'imparfait donne avait, donc au plus-que-parfait : il avait mangé.", strictAccents: true },
+        { order: 2, prompt: "Complète : Nous ____ (avoir) déjà fini nos devoirs.", answer: "avions", kindWhenWrong: "Pas grave, on regarde ça ensemble.", explanationWhenWrong: "Avec nous, avoir à l'imparfait donne avions, donc au plus-que-parfait : nous avions fini.", strictAccents: true },
         {
           order: 3,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Elle ____ déjà partie quand j'ai appelé.",
           options: ["était", "avait", "fut"],
           answer: "était",
-          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Partir se conjugue avec être : elle était partie."
+          kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.",
+          explanationWhenWrong: "Partir est un verbe qui se conjugue avec l'auxiliaire être, pas avoir : on écrit donc elle était partie.",
+          strictAccents: true
         },
-        { order: 4, prompt: "Complète : Tu ____ (avoir) oublié ton cahier la veille.", answer: "avais", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec tu, avoir à l'imparfait est avais : tu avais oublié." },
-        { order: 5, prompt: "Complète : Ils ____ (avoir) déjà mangé quand nous sommes arrivés.", answer: "avaient", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Avec ils, avoir à l'imparfait est avaient : ils avaient mangé." },
-        { order: 6, prompt: "Défi : complète les deux verbes. Elle ____ (être) déjà sortie quand nous ____ (avoir) fini de manger.", answer: "était avions", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Elle était sortie (être) et nous avions fini (avoir)." }
+        { order: 4, prompt: "Complète : Tu ____ (avoir) oublié ton cahier la veille.", answer: "avais", kindWhenWrong: "Pas grave du tout, on y retourne ensemble.", explanationWhenWrong: "Avec tu, avoir à l'imparfait donne avais, donc au plus-que-parfait : tu avais oublié.", strictAccents: true },
+        { order: 5, prompt: "Complète : Ils ____ (avoir) déjà mangé quand nous sommes arrivés.", answer: "avaient", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "Avec ils, avoir à l'imparfait donne avaient, donc au plus-que-parfait : ils avaient mangé.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux verbes. Elle ____ (être) déjà sortie quand nous ____ (avoir) fini de manger.", answer: "était avions", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble.", explanationWhenWrong: "Elle était sortie (sortir se conjugue avec être) et nous avions fini (finir se conjugue avec avoir).", strictAccents: true }
       ]
     },
     {
@@ -160,12 +161,12 @@ export const day02: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : ___ chien aboie fort. (se/ce)", answer: "ce", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Ce accompagne le nom chien." },
-        { order: 2, prompt: "Complète : Il ___ lave les mains avant de manger. (se/ce)", answer: "se", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Se précède le verbe pronominal se laver." },
-        { order: 3, prompt: "Complète : Il aime beaucoup ___ maison. (sa/ça)", answer: "sa", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "On peut dire ta maison, donc c'est sa." },
-        { order: 4, prompt: "Complète : J'aime bien ___, c'est très amusant. (sa/ça)", answer: "ça", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "On peut dire j'aime bien cela, donc c'est ça." },
-        { order: 5, prompt: "Complète : ___ livre est passionnant. (se/ce)", answer: "ce", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Ce accompagne le nom livre." },
-        { order: 6, prompt: "Défi : complète les trois mots. ___ (ce) chat ___ (se) cache et ___ (ça) l'amuse beaucoup.", answer: "ce se ça", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Ce chat (nom), se cache (verbe pronominal), ça l'amuse (cela l'amuse)." }
+        { order: 1, prompt: "Complète : ___ chien aboie fort. (se/ce)", answer: "ce", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "Ce est suivi d'un nom (chien), c'est un déterminant démonstratif : on écrit ce, sans s.", strictAccents: true },
+        { order: 2, prompt: "Complète : Il ___ lave les mains avant de manger. (se/ce)", answer: "se", kindWhenWrong: "Pas grave, on regarde ça ensemble.", explanationWhenWrong: "Se est suivi d'un verbe (laver), c'est un pronom réfléchi : il se lave.", strictAccents: true },
+        { order: 3, prompt: "Complète : Il aime beaucoup ___ maison. (sa/ça)", answer: "sa", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "Tu étais proche ! On peut remplacer par ta maison, donc c'est le possessif sa, sans cédille.", strictAccents: true },
+        { order: 4, prompt: "Complète : J'aime bien ___, c'est très amusant. (sa/ça)", answer: "ça", kindWhenWrong: "Pas grave du tout, on y retourne ensemble.", explanationWhenWrong: "On peut remplacer par j'aime bien cela, donc c'est ça, avec une cédille sous le c.", strictAccents: true },
+        { order: 5, prompt: "Complète : ___ livre est passionnant. (se/ce)", answer: "ce", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "Ce est suivi d'un nom (livre), c'est un déterminant démonstratif : on écrit ce.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les trois mots. ___ (ce) chat ___ (se) cache et ___ (ça) l'amuse beaucoup.", answer: "ce se ça", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble.", explanationWhenWrong: "Ce chat (devant un nom), se cache (devant un verbe pronominal), ça l'amuse (on peut dire cela l'amuse).", strictAccents: true }
       ]
     },
     {

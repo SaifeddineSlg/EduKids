@@ -71,28 +71,30 @@ export const day02: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Demain, je ____ (être) content.", answer: "serai", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, être au futur devient serai." },
-        { order: 2, prompt: "Complète : Tu ____ (avoir) 10 ans bientôt.", answer: "auras", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec tu, avoir au futur devient auras." },
+        { order: 1, prompt: "Complète : Demain, je ____ (être) content.", answer: "serai", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Avec je, le verbe être au futur devient serai. Ce verbe change complètement, il faut l'apprendre par cœur.", strictAccents: true },
+        { order: 2, prompt: "Complète : Tu ____ (avoir) 10 ans bientôt.", answer: "auras", kindWhenWrong: "Pas grave, on regarde ça ensemble 😊", explanationWhenWrong: "Avec tu, le verbe avoir au futur devient auras. Tu étais peut-être proche, pense au son \"ras\" à la fin.", strictAccents: true },
         {
           order: 3,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Il ____ (aller) à la piscine demain.",
           options: ["ira", "iras", "irai"],
           answer: "ira",
-          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec il, aller au futur devient ira."
+          kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊",
+          explanationWhenWrong: "Avec il, le verbe aller au futur devient ira. Iras est pour tu, irai est pour je.",
+          strictAccents: true
         },
-        { order: 4, prompt: "Complète : Nous ____ (faire) un gâteau ce week-end.", answer: "ferons", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec nous, faire au futur devient ferons." },
+        { order: 4, prompt: "Complète : Nous ____ (faire) un gâteau ce week-end.", answer: "ferons", kindWhenWrong: "Pas grave du tout, on y retourne ensemble 😊", explanationWhenWrong: "Avec nous, le verbe faire au futur devient ferons.", strictAccents: true },
         {
           order: 5,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Ils ____ (être) fiers de toi.",
           options: ["seront", "serez", "serons"],
           answer: "seront",
-          kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.",
-          explanationWhenWrong: "Avec ils, être au futur devient seront."
+          kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊",
+          explanationWhenWrong: "Avec ils, le verbe être au futur devient seront. Serez est pour vous, serons est pour nous.",
+          strictAccents: true
         },
-        { order: 6, prompt: "Défi : complète les deux mots. Vous ____ (avoir) de la chance et nous ____ (aller) vous voir.", answer: "aurez irons", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Vous aurez (avoir) et nous irons (aller)." }
+        { order: 6, prompt: "Défi : complète les deux mots. Vous ____ (avoir) de la chance et nous ____ (aller) vous voir.", answer: "aurez irons", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble 😊", explanationWhenWrong: "Vous aurez (futur du verbe avoir) et nous irons (futur du verbe aller). Ces deux verbes sont irréguliers au futur, ils ne suivent pas la règle habituelle.", strictAccents: true }
       ]
     },
     {
@@ -161,12 +163,12 @@ export const day02: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : J'aime le sport, ___ je préfère la lecture. (mais/mes)", answer: "mais", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Mais oppose deux idées : j'aime le sport, mais je préfère la lecture." },
-        { order: 2, prompt: "Complète : Voici ___ crayons de couleur. (mais/mes)", answer: "mes", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Mes veut dire plusieurs crayons à moi." },
-        { order: 3, prompt: "Complète : ___ enfants jouent dans la cour. (ces/ses)", answer: "ces", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Ces désigne des enfants précis (ceux-là)." },
-        { order: 4, prompt: "Complète : Il range ___ affaires avant de partir. (ces/ses)", answer: "ses", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Ses veut dire les affaires à lui." },
-        { order: 5, prompt: "Complète : Elle voulait venir, ___ elle était malade. (mais/mes)", answer: "mais", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Mais oppose deux idées ici." },
-        { order: 6, prompt: "Défi : complète les deux mots. J'aime ___ (mes) jouets, ___ (mais) je préfère ceux de mon frère.", answer: "mes mais", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Mes jouets (plusieurs à moi) et mais (opposition d'idées)." }
+        { order: 1, prompt: "Complète : J'aime le sport, ___ je préfère la lecture. (mais/mes)", answer: "mais", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Mais oppose deux idées, comme \"pourtant\" : j'aime le sport, mais je préfère la lecture.", strictAccents: true },
+        { order: 2, prompt: "Complète : Voici ___ crayons de couleur. (mais/mes)", answer: "mes", kindWhenWrong: "Pas grave, on regarde ça ensemble 😊", explanationWhenWrong: "Mes veut dire plusieurs crayons qui m'appartiennent. Essaie de le lire à voix haute : voici mes crayons.", strictAccents: true },
+        { order: 3, prompt: "Complète : ___ enfants jouent dans la cour. (ces/ses)", answer: "ces", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Ces désigne des enfants précis, comme si on montrait du doigt : ces enfants-là.", strictAccents: true },
+        { order: 4, prompt: "Complète : Il range ___ affaires avant de partir. (ces/ses)", answer: "ses", kindWhenWrong: "Pas grave du tout, on y retourne ensemble 😊", explanationWhenWrong: "Ses veut dire les affaires qui appartiennent à lui.", strictAccents: true },
+        { order: 5, prompt: "Complète : Elle voulait venir, ___ elle était malade. (mais/mes)", answer: "mais", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Mais oppose deux idées ici : elle voulait venir, mais elle était malade.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux mots. J'aime ___ (mes) jouets, ___ (mais) je préfère ceux de mon frère.", answer: "mes mais", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble 😊", explanationWhenWrong: "Mes jouets veut dire plusieurs jouets à moi, et mais oppose deux idées : j'aime mes jouets, mais je préfère ceux de mon frère.", strictAccents: true }
       ]
     },
     {

@@ -70,8 +70,8 @@ export const day02: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Hier, je ____ (être) allé à la piscine.", answer: "suis", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, être au présent devient suis : je suis allé." },
-        { order: 2, prompt: "Complète : Tu ____ (être) parti tôt ce matin.", answer: "es", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec tu, être au présent devient es : tu es parti." },
+        { order: 1, prompt: "Complète : Hier, je ____ (être) allé à la piscine.", answer: "suis", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, le verbe être au présent devient suis. On écrit donc je suis allé.", strictAccents: true },
+        { order: 2, prompt: "Complète : Tu ____ (être) parti tôt ce matin.", answer: "es", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec tu, le verbe être au présent devient es. On écrit donc tu es parti.", strictAccents: true },
         {
           order: 3,
           type: "mcq",
@@ -79,11 +79,12 @@ export const day02: DayCurriculum = {
           options: ["est", "es", "sont"],
           answer: "est",
           kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec elle, être au présent devient est : elle est arrivée."
+          explanationWhenWrong: "Avec elle, le verbe être au présent devient est. On écrit donc elle est arrivée, et arrivée prend un e car le sujet est féminin.",
+          strictAccents: true
         },
-        { order: 4, prompt: "Complète : Nous ____ (être) venus vous voir.", answer: "sommes", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec nous, être au présent devient sommes : nous sommes venus." },
-        { order: 5, prompt: "Complète : Ils ____ (être) sortis dans le jardin.", answer: "sont", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Avec ils, être au présent devient sont : ils sont sortis." },
-        { order: 6, prompt: "Défi : complète les deux mots. Balkis ____ (être) venue et Bayrem ____ (être) resté à la maison.", answer: "est est", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Balkis est venue et Bayrem est resté : les deux sont au singulier avec est." }
+        { order: 4, prompt: "Complète : Nous ____ (être) venus vous voir.", answer: "sommes", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec nous, le verbe être au présent devient sommes. On écrit donc nous sommes venus.", strictAccents: true },
+        { order: 5, prompt: "Complète : Ils ____ (être) sortis dans le jardin.", answer: "sont", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Avec ils, le verbe être au présent devient sont. On écrit donc ils sont sortis, avec sortis au pluriel.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux mots. Balkis ____ (être) venue et Bayrem ____ (être) resté à la maison.", answer: "est est", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Tu étais proche ! Balkis et Bayrem sont chacun seuls (singulier), donc être devient est dans les deux cas : Balkis est venue, Bayrem est resté.", strictAccents: true }
       ]
     },
     {
@@ -160,12 +161,12 @@ export const day02: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : ___ mon livre préféré. (c'est/s'est)", answer: "c'est", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "On ne peut pas dire s'était ici, donc c'est c'est." },
-        { order: 2, prompt: "Complète : Il ___ trompé de route. (c'est/s'est)", answer: "s'est", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "On peut dire il s'était trompé, donc c'est s'est." },
-        { order: 3, prompt: "Complète : ___ une belle journée aujourd'hui. (c'est/s'est)", answer: "c'est", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "On ne peut pas dire s'était ici, donc c'est c'est." },
-        { order: 4, prompt: "Complète : Elle ___ coiffée avant de partir. (c'est/s'est)", answer: "s'est", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "On peut dire elle s'était coiffée, donc c'est s'est." },
-        { order: 5, prompt: "Complète : ___ décidé, nous partons demain. (c'est/s'est)", answer: "c'est", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "On ne peut pas dire s'était ici, donc c'est c'est." },
-        { order: 6, prompt: "Défi : complète les deux mots. ___ (c'est) le chat qui ___ (s'est) caché sous le lit.", answer: "c'est s'est", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "C'est le chat (présentation) qui s'est caché (verbe pronominal se cacher)." }
+        { order: 1, prompt: "Complète : ___ mon livre préféré. (c'est/s'est)", answer: "c'est", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "On ne peut pas dire s'était mon livre préféré, donc on écrit c'est, qui sert ici à présenter.", strictAccents: true },
+        { order: 2, prompt: "Complète : Il ___ trompé de route. (c'est/s'est)", answer: "s'est", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "On peut dire il s'était trompé, donc on écrit s'est, le verbe pronominal se tromper au passé composé.", strictAccents: true },
+        { order: 3, prompt: "Complète : ___ une belle journée aujourd'hui. (c'est/s'est)", answer: "c'est", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "On ne peut pas dire s'était une belle journée, donc on écrit c'est, qui présente la journée.", strictAccents: true },
+        { order: 4, prompt: "Complète : Elle ___ coiffée avant de partir. (c'est/s'est)", answer: "s'est", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "On peut dire elle s'était coiffée, donc on écrit s'est, le verbe pronominal se coiffer au passé composé.", strictAccents: true },
+        { order: 5, prompt: "Complète : ___ décidé, nous partons demain. (c'est/s'est)", answer: "c'est", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "On ne peut pas dire s'était décidé ici, donc on écrit c'est, qui annonce la décision.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux mots. ___ (c'est) le chat qui ___ (s'est) caché sous le lit.", answer: "c'est s'est", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Tu étais proche ! C'est le chat sert à présenter, et s'est caché vient du verbe pronominal se cacher au passé composé.", strictAccents: true }
       ]
     },
     {

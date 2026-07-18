@@ -71,28 +71,30 @@ export const day05: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Je ____ (être) content.", answer: "suis", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, être devient suis." },
-        { order: 2, prompt: "Complète : Tu ____ (avoir) un chat.", answer: "as", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec tu, avoir devient as." },
+        { order: 1, prompt: "Complète : Je ____ (être) content.", answer: "suis", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Avec je, le verbe être devient suis : je suis content. Essaie de le lire à voix haute.", strictAccents: true },
+        { order: 2, prompt: "Complète : Tu ____ (avoir) un chat.", answer: "as", kindWhenWrong: "Pas grave, on regarde ça ensemble 😊", explanationWhenWrong: "Avec tu, le verbe avoir devient as : tu as un chat.", strictAccents: true },
         {
           order: 3,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Il ____ (aller) à la piscine.",
           options: ["vais", "vas", "va"],
           answer: "va",
-          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec il, aller devient va."
+          kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊",
+          explanationWhenWrong: "Avec il, le verbe aller devient va : il va à la piscine.",
+          strictAccents: true
         },
-        { order: 4, prompt: "Complète : Elle ____ (chanter) une chanson.", answer: "chante", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec elle, chanter devient chante." },
+        { order: 4, prompt: "Complète : Elle ____ (chanter) une chanson.", answer: "chante", kindWhenWrong: "Pas grave du tout, on y retourne ensemble 😊", explanationWhenWrong: "Avec elle, un verbe en -er se termine par e : elle chante.", strictAccents: true },
         {
           order: 5,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Tu ____ (jouer) dans le jardin.",
           options: ["joue", "joues", "jouons"],
           answer: "joues",
-          kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.",
-          explanationWhenWrong: "Avec tu, jouer devient joues."
+          kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊",
+          explanationWhenWrong: "Avec tu, un verbe en -er se termine par es : tu joues.",
+          strictAccents: true
         },
-        { order: 6, prompt: "Défi : complète les trois mots. Je ____ (être) content car j'____ (avoir) un cadeau et je ____ (aller) le montrer.", answer: "suis ai vais", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Je suis (être), j'ai (avoir), je vais (aller)." }
+        { order: 6, prompt: "Défi : complète les trois mots. Je ____ (être) content car j'____ (avoir) un cadeau et je ____ (aller) le montrer.", answer: "suis ai vais", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble 😊", explanationWhenWrong: "Je suis (être), j'ai (avoir) et je vais (aller). Relis la phrase entière pour bien la sentir.", strictAccents: true }
       ]
     },
     {
@@ -177,12 +179,12 @@ export const day05: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : ___ maison est jolie. (le ou la)", answer: "la", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Maison est féminin, donc on dit la maison." },
-        { order: 2, prompt: "Écris au pluriel : un jouet -> des ___", answer: "jouets", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "On ajoute un s : des jouets." },
-        { order: 3, prompt: "Complète : ___atre chats jouent. (c ou qu)", answer: "qu", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Devant a dans ce mot, le son [k] s'écrit qu : quatre." },
-        { order: 4, prompt: "Complète : un ti___bre. (n ou m)", answer: "m", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Devant b, on écrit m : timbre." },
-        { order: 5, prompt: "Complète : ___ crayon est cassé. (un ou une)", answer: "un", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Crayon est masculin, donc on dit un crayon." },
-        { order: 6, prompt: "Défi : complète les deux mots. ___ ballon (le/la) et ___ tables (des). Combien y a-t-il de tables : une seule ou plusieurs ?", answer: "le des plusieurs", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Le ballon (masculin), des tables (pluriel, donc plusieurs)." }
+        { order: 1, prompt: "Complète : ___ maison est jolie. (le ou la)", answer: "la", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Maison est un mot féminin, donc on dit la maison. Essaie de le relire à voix haute.", strictAccents: true },
+        { order: 2, prompt: "Écris au pluriel : un jouet -> des ___", answer: "jouets", kindWhenWrong: "Pas grave, on regarde ça ensemble 😊", explanationWhenWrong: "On ajoute un s à la fin du mot : des jouets.", strictAccents: true },
+        { order: 3, prompt: "Complète : ___atre chats jouent. (c ou qu)", answer: "qu", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Dans ce mot, le son [k] s'écrit qu : quatre. C'est une exception à retenir par cœur.", strictAccents: true },
+        { order: 4, prompt: "Complète : un ti___bre. (n ou m)", answer: "m", kindWhenWrong: "Pas grave du tout, on y retourne ensemble 😊", explanationWhenWrong: "Devant la lettre b, on écrit m : timbre. Pense à la règle m devant m, b, p.", strictAccents: true },
+        { order: 5, prompt: "Complète : ___ crayon est cassé. (un ou une)", answer: "un", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Crayon est un mot masculin, donc on dit un crayon.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux mots. ___ ballon (le/la) et ___ tables (des). Combien y a-t-il de tables : une seule ou plusieurs ?", answer: "le des plusieurs", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble 😊", explanationWhenWrong: "Le ballon est masculin (le ballon) et des tables est au pluriel : il y a donc plusieurs tables.", strictAccents: true }
       ]
     },
     {

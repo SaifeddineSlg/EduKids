@@ -71,28 +71,30 @@ export const day03: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Je ____ (jouer) dans le jardin.", answer: "joue", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec je, on dit joue : je joue." },
-        { order: 2, prompt: "Complète : Tu ____ (chanter) une belle chanson.", answer: "chantes", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec tu, on ajoute un s : tu chantes." },
+        { order: 1, prompt: "Complète : Je ____ (jouer) dans le jardin.", answer: "joue", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Avec je, un verbe en -er se termine par e, sans s : je joue. Essaie de le lire à voix haute.", strictAccents: true },
+        { order: 2, prompt: "Complète : Tu ____ (chanter) une belle chanson.", answer: "chantes", kindWhenWrong: "Pas grave, on regarde ça ensemble 😊", explanationWhenWrong: "Avec tu, un verbe en -er se termine par es : tu chantes. Le s ne s'entend pas, mais il s'écrit.", strictAccents: true },
         {
           order: 3,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Il ____ (regarder) un dessin animé.",
           options: ["regarde", "regardes", "regardons"],
           answer: "regarde",
-          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec il, on dit regarde : il regarde."
+          kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊",
+          explanationWhenWrong: "Avec il ou elle, un verbe en -er se termine par e, sans s : il regarde.",
+          strictAccents: true
         },
-        { order: 4, prompt: "Complète : Elle ____ (parler) doucement.", answer: "parle", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec elle, on dit parle : elle parle." },
+        { order: 4, prompt: "Complète : Elle ____ (parler) doucement.", answer: "parle", kindWhenWrong: "Pas grave du tout, on y retourne ensemble 😊", explanationWhenWrong: "Avec elle, comme avec il, un verbe en -er se termine par e : elle parle.", strictAccents: true },
         {
           order: 5,
           type: "mcq",
-          prompt: "Choisis la bonne réponse : Tu ____ (danser) avec ta soeur.",
+          prompt: "Choisis la bonne réponse : Tu ____ (danser) avec ta sœur.",
           options: ["danse", "danses", "dansons"],
           answer: "danses",
-          kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.",
-          explanationWhenWrong: "Avec tu, on ajoute un s : tu danses."
+          kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊",
+          explanationWhenWrong: "Avec tu, un verbe en -er se termine par es : tu danses. Pense à ajouter le s même si tu ne l'entends pas.",
+          strictAccents: true
         },
-        { order: 6, prompt: "Défi : complète les deux mots. Je ____ (aimer) quand tu ____ (chanter).", answer: "aime chantes", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Je aime (sans s) et tu chantes (avec s)." }
+        { order: 6, prompt: "Défi : complète les deux mots. J'____ (aimer) quand tu ____ (chanter).", answer: "aime chantes", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble 😊", explanationWhenWrong: "J'aime (avec je, qui devient j' devant une voyelle, pas de s) et tu chantes (avec tu, on ajoute un s). Relis la phrase entière à voix haute.", strictAccents: true }
       ]
     },
     {
@@ -161,12 +163,12 @@ export const day03: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : un ___ deau (cadeau). (c ou qu)", answer: "ca", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Devant a, le son [k] s'écrit c : cadeau." },
-        { order: 2, prompt: "Complète : ___ atre (quatre). (c ou qu)", answer: "qu", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Devant a dans ce mot, le son [k] s'écrit qu : quatre." },
-        { order: 3, prompt: "Complète : un ___ilo (kilo). (c, qu ou k)", answer: "k", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Kilo s'écrit avec un k." },
-        { order: 4, prompt: "Complète : ___i est là ? (qui). (c ou qu)", answer: "qu", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Devant i, le son [k] s'écrit qu : qui." },
-        { order: 5, prompt: "Complète : une ___abane (cabane). (c ou qu)", answer: "c", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Devant a, le son [k] s'écrit c : cabane." },
-        { order: 6, prompt: "Défi : complète les deux mots. Le ___oq (coq) a ___atre (quatre) plumes.", answer: "c qu", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Coq (devant o, on écrit c) et quatre (devant a dans ce mot, on écrit qu)." }
+        { order: 1, prompt: "Complète : un ___deau (cadeau). (c ou qu)", answer: "ca", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Devant la lettre a, le son [k] s'écrit souvent c : cadeau. Essaie de le réécrire lentement.", strictAccents: true },
+        { order: 2, prompt: "Complète : ___atre (quatre). (c ou qu)", answer: "qu", kindWhenWrong: "Pas grave, on regarde ça ensemble 😊", explanationWhenWrong: "Dans ce mot, le son [k] s'écrit qu : quatre. C'est une exception à retenir par cœur.", strictAccents: true },
+        { order: 3, prompt: "Complète : un ___ilo (kilo). (c, qu ou k)", answer: "k", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Kilo s'écrit avec un k. C'est un mot à retenir tel quel.", strictAccents: true },
+        { order: 4, prompt: "Complète : ___i est là ? (qui). (c ou qu)", answer: "qu", kindWhenWrong: "Pas grave du tout, on y retourne ensemble 😊", explanationWhenWrong: "Devant la lettre i, le son [k] s'écrit presque toujours qu : qui.", strictAccents: true },
+        { order: 5, prompt: "Complète : une ___abane (cabane). (c ou qu)", answer: "c", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble 😊", explanationWhenWrong: "Devant la lettre a, le son [k] s'écrit c : cabane. Relis-le à voix haute.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux mots. Le ___oq (coq) a ___atre (quatre) plumes.", answer: "c qu", kindWhenWrong: "Bravo d'avoir essayé ce défi, on regarde ensemble 😊", explanationWhenWrong: "Coq s'écrit avec un c (devant o) et quatre s'écrit avec qu (une exception à retenir).", strictAccents: true }
       ]
     },
     {

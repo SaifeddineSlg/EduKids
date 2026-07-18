@@ -86,7 +86,8 @@ export const day02: DayCurriculum = {
           prompt: "Complète : Je ____ (être) content.",
           answer: "suis",
           kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec je, le verbe être devient suis : je suis content."
+          explanationWhenWrong: "Avec je, le verbe être devient suis : je suis content. C'est une forme à mémoriser, elle ne ressemble pas à l'infinitif être.",
+          strictAccents: true
         },
         {
           order: 2,
@@ -94,7 +95,8 @@ export const day02: DayCurriculum = {
           prompt: "Complète : Tu ____ (avoir) un chat.",
           answer: "as",
           kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.",
-          explanationWhenWrong: "Avec tu, le verbe avoir devient as : tu as un chat."
+          explanationWhenWrong: "Avec tu, le verbe avoir devient as : tu as un chat. Attention, ce as ne prend pas d'accent.",
+          strictAccents: true
         },
         {
           order: 3,
@@ -103,7 +105,8 @@ export const day02: DayCurriculum = {
           options: ["sommes", "êtes", "sont"],
           answer: "sommes",
           kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec nous, le verbe être devient sommes."
+          explanationWhenWrong: "Avec nous, le verbe être devient sommes. Tu peux retenir ce mot en le chantant : nous sommes, comme une petite comptine.",
+          strictAccents: true
         },
         {
           order: 4,
@@ -111,7 +114,8 @@ export const day02: DayCurriculum = {
           prompt: "Complète : Vous ____ (avoir) de la chance.",
           answer: "avez",
           kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.",
-          explanationWhenWrong: "Avec vous, le verbe avoir devient avez."
+          explanationWhenWrong: "Avec vous, le verbe avoir devient avez, avec un z à la fin, comme beaucoup de formes en vous.",
+          strictAccents: true
         },
         {
           order: 5,
@@ -120,7 +124,8 @@ export const day02: DayCurriculum = {
           options: ["sommes", "êtes", "sont"],
           answer: "sont",
           kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.",
-          explanationWhenWrong: "Avec ils, le verbe être devient sont."
+          explanationWhenWrong: "Avec ils, le verbe être devient sont. Ne confonds pas avec son (le petit mot devant un nom, comme son cahier) : ici il n'y a pas d'accent, mais bien un t final.",
+          strictAccents: true
         },
         {
           order: 6,
@@ -133,7 +138,8 @@ export const day02: DayCurriculum = {
             { left: "Il", right: "a" }
           ],
           kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.",
-          explanationWhenWrong: "Nous avons, elles ont, il a : le verbe avoir change complètement de forme selon la personne."
+          explanationWhenWrong: "Nous avons, elles ont, il a : le verbe avoir change complètement de forme selon la personne, il n'y a pas de terminaison régulière à appliquer.",
+          strictAccents: true
         }
       ]
     },
@@ -179,38 +185,80 @@ export const day02: DayCurriculum = {
     {
       subjectId: "orthographe",
       status: "ready",
-      title: "son ou sont : le test avec etaient",
+      title: "son ou sont : le test avec étaient",
       xpReward: 24,
       story: {
-        hook: "Comme hier avec a et a, il existe un autre petit test magique pour son et sont.",
-        concreteExample: "Regarde: Les enfants ... dans le jardin. Est-ce que c est son ou sont ?",
-        reveal: "On essaie de remplacer par etaient : Les enfants etaient dans le jardin. Ca fonctionne ! Donc on ecrit sont (le verbe etre). Bravo, tu as reussi le test !",
-        bridgeToConcept: "Si etaient fonctionne, on ecrit sont (verbe etre). Sinon, on ecrit son (petit mot devant un nom, comme sa ou ses).",
+        hook: "Comme hier avec a et à, il existe un autre petit test magique pour ne plus confondre son et sont.",
+        concreteExample: "Regarde : Les enfants ... dans le jardin. Est-ce que c'est son ou sont ?",
+        reveal: "On essaie de remplacer par étaient : Les enfants étaient dans le jardin. Ça fonctionne ! Donc on écrit sont, le verbe être. Bravo, tu as réussi le test !",
+        bridgeToConcept: "Si étaient fonctionne, on écrit sont (verbe être). Sinon, on écrit son, le petit mot devant un nom, comme sa ou ses.",
         illustrationEmoji: "🪄"
       },
       examples: [
         {
           title: "Exemple 1 : Il prend son sac",
           steps: [
-            { text: "On essaie etaient : Il prend etaient sac. Ca ne fonctionne pas.", illustrationEmoji: "🚫" },
-            { text: "Donc on ecrit son (petit mot devant sac).", illustrationEmoji: "✅" }
+            { text: "On essaie étaient : Il prend étaient sac. Ça ne fonctionne pas.", illustrationEmoji: "🚫" },
+            { text: "Donc on écrit son, le petit mot devant sac.", illustrationEmoji: "✅" }
           ]
         },
         {
           title: "Exemple 2 : Elles sont contentes",
           steps: [
-            { text: "On essaie etaient : Elles etaient contentes. Ca fonctionne !", illustrationEmoji: "✅" },
-            { text: "Donc on ecrit sont (verbe etre).", illustrationEmoji: "✅" }
+            { text: "On essaie étaient : Elles étaient contentes. Ça fonctionne !", illustrationEmoji: "✅" },
+            { text: "Donc on écrit sont, le verbe être.", illustrationEmoji: "✅" }
           ]
         }
       ],
       questions: [
-        { order: 1, prompt: "Complete: Ils ___ dans la cour. (son ou sont)", answer: "sont", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Ils etaient dans la cour fonctionne, donc c est sont (verbe etre)." },
-        { order: 2, prompt: "Complete: Il porte ___ manteau. (son ou sont)", answer: "son", kindWhenWrong: "Pas grave 😊 On regarde ca ensemble.", explanationWhenWrong: "Il porte etaient manteau ne fonctionne pas, donc c est son (petit mot)." },
-        { order: 3, prompt: "Complete: Les fleurs ___ belles. (son ou sont)", answer: "sont", kindWhenWrong: "Ce n est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Les fleurs etaient belles fonctionne, donc c est sont." },
-        { order: 4, prompt: "Complete: Elle range ___ cahier. (son ou sont)", answer: "son", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Elle range etaient cahier ne fonctionne pas, donc c est son." },
-        { order: 5, prompt: "Complete: Mes amis ___ arrivés. (son ou sont)", answer: "sont", kindWhenWrong: "Ce n est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Mes amis etaient arrivés fonctionne, donc c est sont." },
-        { order: 6, prompt: "Defi : complete les deux mots. Paul et ___ chien ___ alles se promener.", answer: "son sont", kindWhenWrong: "Bravo d avoir essaye ce defi 😊 Regardons ensemble.", explanationWhenWrong: "son chien (petit mot) et ils etaient alles fonctionne donc sont (verbe etre)." }
+        {
+          order: 1,
+          prompt: "Complète : Ils ___ dans la cour. (son ou sont)",
+          answer: "sont",
+          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
+          explanationWhenWrong: "Ils étaient dans la cour fonctionne, donc c'est sont, le verbe être conjugué avec ils.",
+          strictAccents: true
+        },
+        {
+          order: 2,
+          prompt: "Complète : Il porte ___ manteau. (son ou sont)",
+          answer: "son",
+          kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.",
+          explanationWhenWrong: "Il porte étaient manteau ne fonctionne pas, donc c'est son : le petit mot qui annonce le nom manteau, comme sa ou ses.",
+          strictAccents: true
+        },
+        {
+          order: 3,
+          prompt: "Complète : Les fleurs ___ belles. (son ou sont)",
+          answer: "sont",
+          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
+          explanationWhenWrong: "Les fleurs étaient belles fonctionne, donc c'est sont, le verbe être.",
+          strictAccents: true
+        },
+        {
+          order: 4,
+          prompt: "Complète : Elle range ___ cahier. (son ou sont)",
+          answer: "son",
+          kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.",
+          explanationWhenWrong: "Elle range étaient cahier ne fonctionne pas, donc c'est son, le petit mot devant cahier.",
+          strictAccents: true
+        },
+        {
+          order: 5,
+          prompt: "Complète : Mes amis ___ arrivés. (son ou sont)",
+          answer: "sont",
+          kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.",
+          explanationWhenWrong: "Mes amis étaient arrivés fonctionne, donc c'est sont, le verbe être.",
+          strictAccents: true
+        },
+        {
+          order: 6,
+          prompt: "Défi : complète les deux mots. Paul et ___ chien ___ allés se promener.",
+          answer: "son sont",
+          kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.",
+          explanationWhenWrong: "son chien (le petit mot devant chien) et ils étaient allés se promener fonctionne, donc sont, le verbe être.",
+          strictAccents: true
+        }
       ]
     },
     {

@@ -70,28 +70,30 @@ export const day05: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : Nous ____ (jouer) dans le jardin.", answer: "jouons", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Avec nous, jouer devient jouons." },
-        { order: 2, prompt: "Complète : Vous ____ (être) très gentils.", answer: "êtes", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Avec vous, être devient êtes." },
+        { order: 1, prompt: "Complète : Nous ____ (jouer) dans le jardin.", answer: "jouons", kindWhenWrong: "Ce n'est pas grave ! On regarde ensemble.", explanationWhenWrong: "Avec nous, un verbe en -er comme jouer prend la terminaison -ons : nous jouons.", strictAccents: true },
+        { order: 2, prompt: "Complète : Vous ____ (être) très gentils.", answer: "êtes", kindWhenWrong: "Pas grave, on continue ensemble.", explanationWhenWrong: "Avec vous, être devient êtes, avec un accent circonflexe sur le e.", strictAccents: true },
         {
           order: 3,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Ils ____ (finir) leur repas.",
           options: ["finis", "finissez", "finissent"],
           answer: "finissent",
-          kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.",
-          explanationWhenWrong: "Avec ils, finir devient finissent."
+          kindWhenWrong: "Ce n'est pas grave ! On regarde ensemble.",
+          explanationWhenWrong: "Avec ils, finir devient finissent, avec le -iss- des verbes comme finir.",
+          strictAccents: true
         },
-        { order: 4, prompt: "Complète : Elles ____ (avoir) de la chance.", answer: "ont", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Avec elles, avoir devient ont." },
+        { order: 4, prompt: "Complète : Elles ____ (avoir) de la chance.", answer: "ont", kindWhenWrong: "Pas grave du tout, on y retourne ensemble.", explanationWhenWrong: "Avec elles, avoir devient ont.", strictAccents: true },
         {
           order: 5,
           type: "mcq",
           prompt: "Choisis la bonne réponse : Nous ____ (aller) à la piscine.",
           options: ["allons", "allez", "vont"],
           answer: "allons",
-          kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.",
-          explanationWhenWrong: "Avec nous, aller devient allons."
+          kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.",
+          explanationWhenWrong: "Avec nous, aller devient allons.",
+          strictAccents: true
         },
-        { order: 6, prompt: "Défi : complète les trois mots. Vous ____ (faire) un gâteau, nous ____ (être) contents et ils ____ (finir) de manger.", answer: "faites sommes finissent", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Vous faites (faire), nous sommes (être), ils finissent (finir)." }
+        { order: 6, prompt: "Défi : complète les trois mots. Vous ____ (faire) un gâteau, nous ____ (être) contents et ils ____ (finir) de manger.", answer: "faites sommes finissent", kindWhenWrong: "Bravo d'avoir essayé ce défi ! On regarde ensemble.", explanationWhenWrong: "Vous faites vient de faire, nous sommes vient d'être, et ils finissent vient de finir : trois verbes différents à bien reconnaître.", strictAccents: true }
       ]
     },
     {
@@ -176,12 +178,12 @@ export const day05: DayCurriculum = {
         }
       ],
       questions: [
-        { order: 1, prompt: "Complète : un poi___on (poisson). (s ou ss)", answer: "ss", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Entre deux voyelles, on écrit ss : poisson." },
-        { order: 2, prompt: "Complète : une ___itare (guitare). (g ou gu)", answer: "gu", kindWhenWrong: "Pas grave 😊 On regarde ça ensemble.", explanationWhenWrong: "Devant i, on écrit gu : guitare." },
-        { order: 3, prompt: "Complète : Elles ___ arrivées. (son ou sont)", answer: "sont", kindWhenWrong: "Ce n'est pas grave 😊 Regardons ensemble.", explanationWhenWrong: "Elles étaient arrivées fonctionne, donc sont." },
-        { order: 4, prompt: "Complète : Tu préfères le lait ___ le jus ? (ou/où)", answer: "ou", kindWhenWrong: "Pas grave du tout 😊 On y retourne ensemble.", explanationWhenWrong: "Le lait ou bien le jus fonctionne, donc ou." },
-        { order: 5, prompt: "Complète : un ___âteau (gâteau). (g ou gu)", answer: "g", kindWhenWrong: "Ce n'est pas grave 😊 On regarde ensemble.", explanationWhenWrong: "Devant a, on écrit g : gâteau." },
-        { order: 6, prompt: "Défi : complète les deux mots. ___ ranges-tu ta tro___e (trousse) ? (ou/où, s/ss)", answer: "où ss", kindWhenWrong: "Bravo d'avoir essayé ce défi 😊 Regardons ensemble.", explanationWhenWrong: "Où ranges-tu (lieu) et trousse (ss entre deux voyelles)." }
+        { order: 1, prompt: "Complète : un poi___on (poisson). (s ou ss)", answer: "ss", kindWhenWrong: "Ce n'est pas grave ! On regarde ensemble.", explanationWhenWrong: "Entre deux voyelles (le i et le o), on écrit ss : poisson.", strictAccents: true },
+        { order: 2, prompt: "Complète : une ___itare (guitare). (g ou gu)", answer: "gu", kindWhenWrong: "Pas grave, on continue ensemble.", explanationWhenWrong: "Devant i, on ajoute un u pour garder le son [g] dur : guitare.", strictAccents: true },
+        { order: 3, prompt: "Complète : Elles ___ arrivées. (son ou sont)", answer: "sont", kindWhenWrong: "Ce n'est pas grave ! On regarde ensemble.", explanationWhenWrong: "Elles étaient arrivées fonctionne, donc c'est sont, le verbe être.", strictAccents: true },
+        { order: 4, prompt: "Complète : Tu préfères le lait ___ le jus ? (ou/où)", answer: "ou", kindWhenWrong: "Pas grave du tout, on y retourne ensemble.", explanationWhenWrong: "Le lait ou bien le jus fonctionne, donc c'est ou, sans accent : c'est un choix.", strictAccents: true },
+        { order: 5, prompt: "Complète : un ___âteau (gâteau). (g ou gu)", answer: "g", kindWhenWrong: "Ce n'est pas grave, on regarde ensemble.", explanationWhenWrong: "Devant a, un seul g suffit : gâteau.", strictAccents: true },
+        { order: 6, prompt: "Défi : complète les deux mots. ___ ranges-tu ta tro___e (trousse) ? (ou/où, s/ss)", answer: "où ss", kindWhenWrong: "Bravo d'avoir essayé ce défi ! On regarde ensemble.", explanationWhenWrong: "Où ranges-tu parle d'un lieu, avec accent ; trousse a le son [s] entre deux voyelles, donc ss.", strictAccents: true }
       ]
     },
     {
