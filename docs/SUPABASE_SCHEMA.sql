@@ -267,6 +267,21 @@ alter table public.active_day_sessions alter column child_id drop not null;
 alter table public.day_attempts alter column child_id drop not null;
 alter table public.question_attempts alter column child_id drop not null;
 
+-- Les contraintes student_id ci-dessus n'avaient pas ON DELETE CASCADE : supprimer
+-- un eleve (ou un parent, via profiles -> students -> ces tables) echouait avec une
+-- violation de contrainte des qu'il existait de l'historique de progression.
+alter table public.day_attempts drop constraint if exists day_attempts_student_id_fkey;
+alter table public.day_attempts add constraint day_attempts_student_id_fkey
+  foreign key (student_id) references public.students(id) on delete cascade;
+
+alter table public.question_attempts drop constraint if exists question_attempts_student_id_fkey;
+alter table public.question_attempts add constraint question_attempts_student_id_fkey
+  foreign key (student_id) references public.students(id) on delete cascade;
+
+alter table public.active_day_sessions drop constraint if exists active_day_sessions_student_id_fkey;
+alter table public.active_day_sessions add constraint active_day_sessions_student_id_fkey
+  foreign key (student_id) references public.students(id) on delete cascade;
+
 -- Fonction RPC mise a jour : accepte student_id/school_level_id en plus de day_number/attempt_number.
 create or replace function public.complete_day_attempt(
   p_student_id uuid,
