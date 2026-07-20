@@ -38,7 +38,7 @@ export async function POST(request: Request) {
   // un lien vers /reset-password ou le parent choisit son propre mot de passe.
   const { data, error } = await supabase.auth.admin.inviteUserByEmail(normalizedEmail, {
     data: { display_name: payload.displayName },
-    redirectTo: `${origin}/reset-password`,
+    redirectTo: `${origin}/auth/callback?next=/reset-password`,
   });
 
   if (error) {
