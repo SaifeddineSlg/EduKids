@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { getSupabaseServerClient, isSupabaseServerConfigured } from "@/lib/supabase/server";
 import { requireAdminProfile } from "@/lib/auth/requireAdmin";
 import { resolveSiteUrl } from "@/lib/server/siteUrl";
+import { isResendConfigured, sendEmail } from "@/lib/email/resend";
+import { inviteEmailTemplate } from "@/lib/email/templates";
 
 interface InvitePayload {
   email: string;
@@ -19,6 +21,10 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "Supabase server not configured" }, { status: 500 });
   }
 
+  if (!isResendConfigured()) {
+    return NextResponse.json({ ok: false, error: "Envoi d'email non configure (RESEND_API_KEY manquant)" }, { status: 500 });
+  }
+
   const admin = await requireAdminProfile();
   if (!admin) {
     return NextResponse.json({ ok: false, error: "Acces refuse" }, { status: 403 });
@@ -34,11 +40,16 @@ export async function POST(request: Request) {
   const origin = resolveSiteUrl(request);
   const normalizedEmail = payload.email.trim().toLowerCase();
 
-  // Cree le compte (sans mot de passe) et envoie un email d'invitation contenant
-  // un lien vers /reset-password ou le parent choisit son propre mot de passe.
-  const { data, error } = await supabase.auth.admin.inviteUserByEmail(normalizedEmail, {
-    data: { display_name: payload.displayName },
-    redirectTo: `${origin}/auth/callback?next=/reset-password`,
+  // Cree le compte (sans mot de passe) et genere un lien d'invitation, SANS que
+  // Supabase envoie lui-meme l'email (quota gratuit tres limite). On envoie
+  // l'email nous-memes via Resend juste apres.
+  const { data, error } = await supabase.auth.admin.generateLink({
+    type: "invite",
+    email: normalizedEmail,
+    options: {
+      data: { display_name: payload.displayName },
+      redirectTo: `${origin}/auth/callback?next=/reset-password`,
+    },
   });
 
   if (error) {
@@ -51,6 +62,15 @@ export async function POST(request: Request) {
     .from("profiles")
     .update({ display_name: payload.displayName })
     .eq("id", data.user.id);
+
+  const { subject, html } = inviteEmailTemplate(payload.displayName, data.properties.action_link);
+
+  try {
+    await sendEmail({ to: normalizedEmail, subject, html });
+  } catch (sendError) {
+    const message = sendError instanceof Error ? sendError.message : "Echec de l'envoi de l'email";
+    return NextResponse.json({ ok: false, error: message }, { status: 500 });
+  }
 
   return NextResponse.json({ ok: true, profileId: data.user.id });
 }

@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Card } from "@/components/ui/Card";
-import { createSupabaseBrowserClient } from "@/lib/supabase/browserClient";
 
 export default function ForgotPasswordPage() {
   const [email, setEmail] = useState("");
@@ -15,15 +14,17 @@ export default function ForgotPasswordPage() {
     setLoading(true);
     setError(null);
 
-    const supabase = createSupabaseBrowserClient();
-    const { error: resetError } = await supabase.auth.resetPasswordForEmail(email.trim().toLowerCase(), {
-      redirectTo: `${window.location.origin}/auth/callback?next=/reset-password`,
+    const response = await fetch("/api/auth/forgot-password", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email }),
     });
+    const json = await response.json();
 
     setLoading(false);
 
-    if (resetError) {
-      setError(resetError.message);
+    if (!response.ok || !json.ok) {
+      setError("Une erreur est survenue. Reessaie dans un instant.");
       return;
     }
 
