@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Card } from "@/components/ui/Card";
+import { PasswordInput } from "@/components/ui/PasswordInput";
 
 interface ParentRow {
   id: string;
@@ -29,6 +30,9 @@ export default function AdminDashboardPage() {
   const [inviteError, setInviteError] = useState<string | null>(null);
   const [inviteSuccess, setInviteSuccess] = useState(false);
   const [inviting, setInviting] = useState(false);
+  const [editingPasswordId, setEditingPasswordId] = useState<string | null>(null);
+  const [newPassword, setNewPassword] = useState("");
+  const [passwordError, setPasswordError] = useState<string | null>(null);
 
   async function load() {
     const [parentsJson, studentsJson] = await Promise.all([
@@ -81,9 +85,61 @@ export default function AdminDashboardPage() {
 
   async function resetPassword(profileId: string) {
     setBusyId(profileId);
-    await fetch(`/api/admin/accounts/${profileId}`, { method: "POST" });
+    const response = await fetch(`/api/admin/accounts/${profileId}`, { method: "POST" });
+    const json = await response.json();
     setBusyId(null);
-    alert("Lien de reinitialisation genere.");
+    alert(json.ok ? "Email de reinitialisation envoye." : (json.error ?? "Echec de l'envoi."));
+  }
+
+  function startEditPassword(profileId: string) {
+    setEditingPasswordId(profileId);
+    setNewPassword("");
+    setPasswordError(null);
+  }
+
+  async function submitNewPassword(profileId: string) {
+    if (newPassword.length < 6) {
+      setPasswordError("Le mot de passe doit faire au moins 6 caracteres.");
+      return;
+    }
+    setBusyId(profileId);
+    setPasswordError(null);
+
+    const response = await fetch(`/api/admin/accounts/${profileId}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ newPassword }),
+    });
+    const json = await response.json();
+    setBusyId(null);
+
+    if (!response.ok || !json.ok) {
+      setPasswordError(json.error ?? "Echec de la mise a jour.");
+      return;
+    }
+
+    setEditingPasswordId(null);
+    setNewPassword("");
+    alert("Mot de passe mis a jour.");
+  }
+
+  async function deleteAccount(profileId: string, label: string) {
+    const confirmed = window.confirm(
+      `Supprimer definitivement le compte de ${label} ? Cette action supprime aussi ses enfants et tout leur historique pedagogique. Cette action est irreversible.`,
+    );
+    if (!confirmed) return;
+
+    setBusyId(profileId);
+    const response = await fetch(`/api/admin/accounts/${profileId}`, { method: "DELETE" });
+    const json = await response.json();
+    setBusyId(null);
+
+    if (!response.ok || !json.ok) {
+      alert(json.error ?? "Echec de la suppression.");
+      return;
+    }
+
+    await load();
   }
 
   return (
@@ -166,9 +222,55 @@ export default function AdminDashboardPage() {
                   disabled={busyId === parent.id}
                   onClick={() => resetPassword(parent.id)}
                 >
-                  Reinitialiser le mot de passe
+                  Envoyer un lien de reinitialisation
+                </button>
+                <button
+                  type="button"
+                  className="ghost-btn"
+                  disabled={busyId === parent.id}
+                  onClick={() => startEditPassword(parent.id)}
+                >
+                  Definir un mot de passe
+                </button>
+                <button
+                  type="button"
+                  className="ghost-btn"
+                  disabled={busyId === parent.id}
+                  onClick={() => deleteAccount(parent.id, parent.displayName ?? parent.email)}
+                >
+                  Supprimer le compte
                 </button>
               </div>
+
+              {editingPasswordId === parent.id ? (
+                <div className="stack-lg" style={{ marginTop: "0.75rem", maxWidth: "320px" }}>
+                  <PasswordInput
+                    id={`new-password-${parent.id}`}
+                    value={newPassword}
+                    onChange={setNewPassword}
+                    minLength={6}
+                    autoComplete="new-password"
+                  />
+                  {passwordError ? <p className="feedback-help">{passwordError}</p> : null}
+                  <div className="chips-row">
+                    <button
+                      type="button"
+                      className="primary-btn"
+                      disabled={busyId === parent.id}
+                      onClick={() => submitNewPassword(parent.id)}
+                    >
+                      Enregistrer
+                    </button>
+                    <button
+                      type="button"
+                      className="ghost-btn"
+                      onClick={() => setEditingPasswordId(null)}
+                    >
+                      Annuler
+                    </button>
+                  </div>
+                </div>
+              ) : null}
             </li>
           ))}
         </ul>
