@@ -155,10 +155,18 @@ export async function DELETE(
   // correspondante, et les students rattaches (parent_id references profiles
   // on delete cascade). Action irreversible, y compris pour l'historique
   // pedagogique des enfants de ce parent.
-  const { error } = await supabase.auth.admin.deleteUser(profileId);
+  try {
+    const { error } = await supabase.auth.admin.deleteUser(profileId);
 
-  if (error) {
-    return NextResponse.json({ ok: false, error: error.message }, { status: 500 });
+    if (error) {
+      console.error("DELETE /api/admin/accounts deleteUser error:", error);
+      const message = error.message || `Erreur Supabase (${error.status ?? "inconnue"})`;
+      return NextResponse.json({ ok: false, error: message }, { status: 500 });
+    }
+  } catch (thrown) {
+    console.error("DELETE /api/admin/accounts unexpected error:", thrown);
+    const message = thrown instanceof Error ? thrown.message : "Erreur inattendue lors de la suppression";
+    return NextResponse.json({ ok: false, error: message }, { status: 500 });
   }
 
   return NextResponse.json({ ok: true });

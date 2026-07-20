@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Card } from "@/components/ui/Card";
 import { PasswordInput } from "@/components/ui/PasswordInput";
+import { ConfirmDialog } from "@/components/ui/ConfirmDialog";
 
 interface ParentRow {
   id: string;
@@ -33,6 +34,8 @@ export default function AdminDashboardPage() {
   const [editingPasswordId, setEditingPasswordId] = useState<string | null>(null);
   const [newPassword, setNewPassword] = useState("");
   const [passwordError, setPasswordError] = useState<string | null>(null);
+  const [deleteTarget, setDeleteTarget] = useState<{ id: string; label: string } | null>(null);
+  const [deleteError, setDeleteError] = useState<string | null>(null);
 
   async function load() {
     const [parentsJson, studentsJson] = await Promise.all([
@@ -123,23 +126,22 @@ export default function AdminDashboardPage() {
     alert("Mot de passe mis a jour.");
   }
 
-  async function deleteAccount(profileId: string, label: string) {
-    const confirmed = window.confirm(
-      `Supprimer definitivement le compte de ${label} ? Cette action supprime aussi ses enfants et tout leur historique pedagogique. Cette action est irreversible.`,
-    );
-    if (!confirmed) return;
+  async function confirmDeleteAccount() {
+    if (!deleteTarget) return;
 
-    setBusyId(profileId);
-    const response = await fetch(`/api/admin/accounts/${profileId}`, { method: "DELETE" });
+    setBusyId(deleteTarget.id);
+    setDeleteError(null);
+    const response = await fetch(`/api/admin/accounts/${deleteTarget.id}`, { method: "DELETE" });
     const json = await response.json();
-    setBusyId(null);
 
     if (!response.ok || !json.ok) {
-      alert(json.error ?? "Echec de la suppression.");
+      setBusyId(null);
+      setDeleteError(json.error ?? "Echec de la suppression.");
       return;
     }
 
-    await load();
+    // Rechargement complet pour garantir un etat totalement a jour.
+    window.location.reload();
   }
 
   return (
@@ -236,7 +238,10 @@ export default function AdminDashboardPage() {
                   type="button"
                   className="ghost-btn"
                   disabled={busyId === parent.id}
-                  onClick={() => deleteAccount(parent.id, parent.displayName ?? parent.email)}
+                  onClick={() => {
+                    setDeleteError(null);
+                    setDeleteTarget({ id: parent.id, label: parent.displayName ?? parent.email });
+                  }}
                 >
                   Supprimer le compte
                 </button>
@@ -286,6 +291,21 @@ export default function AdminDashboardPage() {
           ))}
         </ul>
       </Card>
+
+      {deleteTarget ? (
+        <ConfirmDialog
+          title="Supprimer ce compte ?"
+          message={`Supprimer definitivement le compte de ${deleteTarget.label} ? Cette action supprime aussi ses enfants et tout leur historique pedagogique. Cette action est irreversible.${deleteError ? `\n\nErreur : ${deleteError}` : ""}`}
+          confirmLabel="Supprimer"
+          busy={busyId === deleteTarget.id}
+          onConfirm={confirmDeleteAccount}
+          onCancel={() => {
+            setDeleteTarget(null);
+            setDeleteError(null);
+            setBusyId(null);
+          }}
+        />
+      ) : null}
     </section>
   );
 }
