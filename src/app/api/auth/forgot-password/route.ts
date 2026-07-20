@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getSupabaseServerClient, isSupabaseServerConfigured } from "@/lib/supabase/server";
 import { resolveSiteUrl } from "@/lib/server/siteUrl";
-import { isResendConfigured, sendEmail } from "@/lib/email/resend";
+import { isSmtpConfigured, sendEmail } from "@/lib/email/smtp";
 import { resetPasswordEmailTemplate } from "@/lib/email/templates";
 
 interface ForgotPasswordPayload {
@@ -15,7 +15,7 @@ function isForgotPasswordPayload(value: unknown): value is ForgotPasswordPayload
 }
 
 export async function POST(request: Request) {
-  if (!isSupabaseServerConfigured() || !isResendConfigured()) {
+  if (!isSupabaseServerConfigured() || !isSmtpConfigured()) {
     // Reponse generique meme en cas de mauvaise configuration : on ne veut pas
     // reveler de details techniques a un utilisateur non authentifie.
     return NextResponse.json({ ok: true });

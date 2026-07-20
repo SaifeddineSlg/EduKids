@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { getSupabaseServerClient, isSupabaseServerConfigured } from "@/lib/supabase/server";
 import { requireAdminProfile } from "@/lib/auth/requireAdmin";
 import { resolveSiteUrl } from "@/lib/server/siteUrl";
-import { isResendConfigured, sendEmail } from "@/lib/email/resend";
+import { isSmtpConfigured, sendEmail } from "@/lib/email/smtp";
 import { inviteEmailTemplate } from "@/lib/email/templates";
 
 interface InvitePayload {
@@ -21,8 +21,8 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "Supabase server not configured" }, { status: 500 });
   }
 
-  if (!isResendConfigured()) {
-    return NextResponse.json({ ok: false, error: "Envoi d'email non configure (RESEND_API_KEY manquant)" }, { status: 500 });
+  if (!isSmtpConfigured()) {
+    return NextResponse.json({ ok: false, error: "Envoi d'email non configure (variables SMTP manquantes)" }, { status: 500 });
   }
 
   const admin = await requireAdminProfile();
@@ -42,7 +42,7 @@ export async function POST(request: Request) {
 
   // Cree le compte (sans mot de passe) et genere un lien d'invitation, SANS que
   // Supabase envoie lui-meme l'email (quota gratuit tres limite). On envoie
-  // l'email nous-memes via Resend juste apres.
+  // l'email nous-memes via SMTP juste apres.
   const { data, error } = await supabase.auth.admin.generateLink({
     type: "invite",
     email: normalizedEmail,
