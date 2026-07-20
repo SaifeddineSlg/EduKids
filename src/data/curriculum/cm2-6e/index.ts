@@ -9,6 +9,11 @@ import { day07 } from "./day07";
 import { day08 } from "./day08";
 import { day09 } from "./day09";
 import { day10 } from "./day10";
+import { day11 } from "./day11";
+import { day12 } from "./day12";
+import { day13 } from "./day13";
+import { day14 } from "./day14";
+import { day15 } from "./day15";
 import { buildPlaceholderDays } from "../sharedPlaceholders";
 
 export const curriculum: DayCurriculum[] = [
@@ -22,5 +27,10 @@ export const curriculum: DayCurriculum[] = [
   day08,
   day09,
   day10,
-  ...buildPlaceholderDays(11, 30)
+  day11,
+  day12,
+  day13,
+  day14,
+  day15,
+  ...buildPlaceholderDays(16, 30)
 ];
